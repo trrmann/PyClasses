@@ -13,12 +13,15 @@ class YAxisError(AxisError):
         return f"{type(self).__name__}"
 
 #linear axis
-class YAxis(Axis("YAxis")):
+class YAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, y, className = "YAxis"):
-        super().__init__(self, className)
+    def __init__(self,
+            y,
+            className = "YAxis"
+        ):
+        super().__init__(self, className = className)
         self.value = y
 
     def __repr__(self) -> str:

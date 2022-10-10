@@ -13,7 +13,7 @@ class XAxisError(AxisError):
         return f"{type(self).__name__}"
 
 #linear axis
-class XAxis(Axis("XAxis")):
+class XAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
