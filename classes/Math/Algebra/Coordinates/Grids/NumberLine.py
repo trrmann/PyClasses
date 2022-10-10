@@ -127,7 +127,7 @@ class NumberLine(Coordinates):
             value: float=0.0,
             className = "NumberLine"
         ):
-        super().__init__(self, className)
+        super().__init__(self, className = className)
         self.origin(origin, True)
         self.major_display_tick_period(major_display_tick_period, True)
         self.minor_display_tick_period(minor_display_tick_period, True)
