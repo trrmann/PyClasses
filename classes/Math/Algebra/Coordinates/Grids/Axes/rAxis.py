@@ -17,8 +17,11 @@ class rAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, r, className = "rAxis"):
-        super().__init__(self, className)
+    def __init__(self,
+            r,
+            className = "rAxis"
+        ):
+        super().__init__(self, className = className)
         self.value = r
 
     def __repr__(self) -> str:

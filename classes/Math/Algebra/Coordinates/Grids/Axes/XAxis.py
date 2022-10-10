@@ -17,8 +17,11 @@ class XAxis(Axis("XAxis")):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, x, className = "XAxis"):
-        super().__init__(self, className)
+    def __init__(self,
+            x,
+            className = "XAxis"
+        ):
+        super().__init__(self, className = className)
         self.value = x
 
     def __repr__(self) -> str:
