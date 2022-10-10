@@ -5,7 +5,7 @@ from Classes.Math.Algebra.Coordinates.Grids.Axes.YAxis import YAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis import ZAxis
 from Classes.Math.Algebra.Coordinates.ThreeDCoordinates import ThreeDCoordinates, ThreeDCoordinatesError
 
-class ThreeDCartesianGridCoordinates(TwoDCartesianGridCoordinatesError, ThreeDCoordinatesError):
+class ThreeDCartesianGridCoordinatesError(TwoDCartesianGridCoordinatesError, ThreeDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

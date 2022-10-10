@@ -6,7 +6,7 @@ from Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis import ZAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.TimeLine import TimeLine
 from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates, FourDCoordinatesError
 
-class FourDCartesianGridCoordinates(ThreeDCartesianGridCoordinatesError, FourDCoordinatesError):
+class FourDCartesianGridCoordinatesError(ThreeDCartesianGridCoordinatesError, FourDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
