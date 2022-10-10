@@ -115,37 +115,18 @@ class NumberLine(Coordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, value: float=0.0, className = "NumberLine"):
-        self.__init__(
-            origin = 0.0,
-            major_display_tick_period = 5,
-            minor_display_tick_period = 1,
-            value = value)
-
-    def __init__(self, origin: float, major_display_tick_period:  float, minor_display_tick_period: float, value: float, className = "NumberLine"):
-        self.__init__(
-            origin = origin,
-            major_display_tick_period = major_display_tick_period,
-            minor_display_tick_period = minor_display_tick_period,
-            min = "none",
-            min_limit = False,
-            max = "none",
-            max_limit = False,
-            value = value)
-
-    def __init__(self, origin: float, major_display_tick_period:  float, minor_display_tick_period: float, min: float, min_limit: bool, max: float, max_limit: bool, value: float, className = "NumberLine"):
-        self.__init__(
-            origin = origin,
-            major_display_tick_period = major_display_tick_period,
-            minor_display_tick_period = minor_display_tick_period,
-            min = min,
-            min_limit = min_limit,
-            max = max,
-            max_limit = max_limit,
-            period = "none",
-            value = value)
-
-    def __init__(self, origin: float, major_display_tick_period:  float, minor_display_tick_period: float, min: float, min_limit: bool, max: float, max_limit: bool, period: float, value: float, className = "NumberLine"):
+    def __init__(self,
+            origin: float = 0.0,
+            major_display_tick_period: float = 5,
+            minor_display_tick_period: float = 1,
+            min: float = "none",
+            min_limit: bool = False,
+            max: float = "none",
+            max_limit: bool= False,
+            period: float = "none",
+            value: float=0.0,
+            className = "NumberLine"
+        ):
         super().__init__(self, className)
         self.origin(origin, True)
         self.major_display_tick_period(major_display_tick_period, True)
