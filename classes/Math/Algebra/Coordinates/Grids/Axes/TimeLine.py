@@ -16,8 +16,11 @@ class TimeLine(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, t, className = "TimeLine"):
-        super().__init__(self, className)
+    def __init__(self,
+            t,
+            className = "TimeLine"
+        ):
+        super().__init__(self, className = className)
         self.value = t
 
     def __repr__(self) -> str:

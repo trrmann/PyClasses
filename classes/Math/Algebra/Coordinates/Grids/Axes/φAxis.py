@@ -13,12 +13,15 @@ class φAxisError(AxisError):
         return f"{type(self).__name__}"
 
 #angular axis - 0 to 360 degrees or 0 to 2π, where + is clockwise (cw) and negative is counter-clockwise (ccw), each full revolution can be represented by an integer value.
-class φAxis(Axis("φAxis")):
+class φAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, φ, className = "φAxis"):
-        super().__init__(self, className)
+    def __init__(self,
+            φ,
+            className = "φAxis"
+        ):
+        super().__init__(self, className = className)
         self.value = φ
 
     def __repr__(self) -> str:
