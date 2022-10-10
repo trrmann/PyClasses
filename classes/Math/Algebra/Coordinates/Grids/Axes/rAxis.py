@@ -1,8 +1,8 @@
 # rAxis.py
-import Axis
+from Classes.Math.Algebra.Coordinates.Grids.Axes import Axis, AxisError
 import math
 
-class rAxisError(Axis.AxisError):
+class rAxisError(AxisError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -13,22 +13,23 @@ class rAxisError(Axis.AxisError):
         return f"{type(self).__name__}"
 
 #radial axis to be used with an angular axis
-class rAxis(Axis("rAxis")):
+class rAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, r):
+    def __init__(self, r, className = "rAxis"):
+        super().__init__(self, className)
         self.value = r
 
     def __repr__(self) -> str:
         if(self.__inf and self.__negInf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, ∞, -∞, r={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, ∞, -∞, r={self.value})"
         elif(self.__inf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, ∞, r={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, ∞, r={self.value})"
         elif(self.__negInf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, -∞, r={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, -∞, r={self.value})"
         else:
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, r={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, r={self.value})"
 
     def cartesian_in(self, x, y):
         self.value = math.sqrt((float(x) ** 2) + (float(y) ** 2))

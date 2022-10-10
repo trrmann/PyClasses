@@ -1,8 +1,8 @@
 # YAxis.py
-import Axis
+from Classes.Math.Algebra.Coordinates.Grids.Axes import Axis, AxisError
 import math
 
-class YAxisError(Axis.AxisError):
+class YAxisError(AxisError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -17,18 +17,19 @@ class YAxis(Axis("YAxis")):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, y):
+    def __init__(self, y, className = "YAxis"):
+        super().__init__(self, className)
         self.value = y
 
     def __repr__(self) -> str:
         if(self.__inf and self.__negInf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, ∞, -∞, y={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, ∞, -∞, y={self.value})"
         elif(self.__inf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, ∞, y={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, ∞, y={self.value})"
         elif(self.__negInf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, -∞, y={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, -∞, y={self.value})"
         else:
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, y={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, y={self.value})"
 
     def radial_angular_in_wDegrees(self, r, φ):
         self.value = float(r) * math.sin(math.radians(float(φ)))

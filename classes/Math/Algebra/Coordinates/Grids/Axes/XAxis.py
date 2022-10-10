@@ -1,8 +1,8 @@
 # XAxis.py
-import Axis
+from Classes.Math.Algebra.Coordinates.Grids.Axes import Axis, AxisError
 import math
 
-class XAxisError(Axis.AxisError):
+class XAxisError(AxisError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -17,18 +17,19 @@ class XAxis(Axis("XAxis")):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, x):
+    def __init__(self, x, className = "XAxis"):
+        super().__init__(self, className)
         self.value = x
 
     def __repr__(self) -> str:
         if(self.__inf and self.__negInf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, ∞, -∞, x={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, ∞, -∞, x={self.value})"
         elif(self.__inf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, ∞, x={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, ∞, x={self.value})"
         elif(self.__negInf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, -∞, x={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, -∞, x={self.value})"
         else:
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, x={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, x={self.value})"
 
     def radial_angular_in_wDegrees(self, r, φ):
         self.value = float(r) * math.cos(math.radians(float(φ)))

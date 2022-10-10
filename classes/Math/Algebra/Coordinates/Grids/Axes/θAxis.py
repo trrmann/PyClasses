@@ -1,8 +1,8 @@
 # θAxis.py
-import Axis
+from Classes.Math.Algebra.Coordinates.Grids.Axes import Axis, AxisError
 import math
 
-class θAxisError(Axis.AxisError):
+class θAxisError(AxisError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -17,18 +17,19 @@ class θAxis(Axis("θAxis")):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, θ):
+    def __init__(self, θ, className = "θAxis"):
+        super().__init__(self, className)
         self.value = θ
 
     def __repr__(self) -> str:
         if(self.__inf and self.__negInf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, ∞, -∞, θ={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, ∞, -∞, θ={self.value})"
         elif(self.__inf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, ∞, θ={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, ∞, θ={self.value})"
         elif(self.__negInf):
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, -∞, θ={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, -∞, θ={self.value})"
         else:
-            return f"{type(self).__name__}(name={self.name}, origin={self.__origin}, θ={self.value})"
+            return f"{type(self).__name__}(className={self.className}, origin={self.__origin}, θ={self.value})"
 
     def full_radians(self):
         return math.radians(self.value)
