@@ -13,12 +13,15 @@ class ρAxisError(AxisError):
         return f"{type(self).__name__}"
 
 #radial axis to be used with an angular axis
-class ρAxis(Axis("ρAxis")):
+class ρAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, ρ, className = "ρAxis"):
-        super().__init__(self, className)
+    def __init__(self,
+            ρ,
+            className = "ρAxis"
+        ):
+        super().__init__(self, className = className)
         self.value = ρ
 
     def __repr__(self) -> str:

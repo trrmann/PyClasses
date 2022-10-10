@@ -12,12 +12,15 @@ class ZAxisError(AxisError):
         return f"{type(self).__name__}"
 
 #linear axis
-class ZAxis(Axis("ZAxis")):
+class ZAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, z, className = "ZAxis"):
-        super().__init__(self, className)
+    def __init__(self,
+            z,
+            className = "ZAxis"
+        ):
+        super().__init__(self, className = className)
         self.value = z
 
     def __repr__(self) -> str:
