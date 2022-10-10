@@ -1,7 +1,7 @@
 # CartesianGridCoordinates.py
-import Grid
+from Classes.Math.Algebra.Coordinates.Grids.Grid import Grid, GridError
 
-class CartesianGridCoordinatesError(Grid.GridError):
+class CartesianGridCoordinatesError(GridError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,12 +11,15 @@ class CartesianGridCoordinatesError(Grid.GridError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class CartesianGridCoordinates(Grid("CartesianGridCoordinates")):
+class CartesianGridCoordinates(Grid):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, axes_list):
-        self.axes_list = axes_list
+    def __init__(self,
+            axes_list,
+            className = "CartesianGridCoordinates"
+        ):
+        super().__init__(self, axes_list = axes_list, className = className)
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(name={self.name}, axes_list={self.axes_list})"
+        return f"{type(self).__name__}(className={self.className}, axes_list={self.axes_list})"
