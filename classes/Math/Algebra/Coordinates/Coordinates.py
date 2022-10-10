@@ -18,7 +18,7 @@ class Coordinates(Algebra):
     def __init__(self,
             className = "Coordinates"
         ):
-        super().__init__(self, className)
+        super().__init__(self, className = className)
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}(className={self.className})"
