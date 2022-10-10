@@ -1,7 +1,7 @@
 # SphericalGridCoordinates.py
-import Grid
+from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.CylindricalGridCoordinates import CylindricalGridCoordinates, CylindricalGridCoordinatesError
 
-class SphericalGridCoordinatesError(Grid.GridError):
+class SphericalGridCoordinatesError(CylindricalGridCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,12 +11,16 @@ class SphericalGridCoordinatesError(Grid.GridError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class SphericalGridCoordinates(Grid("SphericalGridCoordinates")):
+class SphericalGridCoordinates(CylindricalGridCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, axes_list):
-        self.axes_list = axes_list
+    def __init__(self,
+            axes_list,
+            className = "SphericalGridCoordinates"
+        ):
+        super().__init__(self, axes_list = axes_list, className = className)
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(name={self.name}, axes_list={self.axes_list})"
+        return f"{type(self).__name__}(className={self.className}, axes_list={self.axes_list})"
+

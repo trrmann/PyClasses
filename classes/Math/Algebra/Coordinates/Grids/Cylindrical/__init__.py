@@ -1,4 +1,4 @@
-import CylindricalGridCoordinates
-import TwoDCylindricalGridCoordinates
-import ThreeDCylindricalGridCoordinates
-import Spherical
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.TwoDCylindricalGridCoordinates as TwoDCylindricalGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.ThreeDCylindricalGridCoordinates as ThreeDCylindricalGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.FourDCylindricalGridCoordinates as FourDCylindricalGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.SphericalGridCoordinates as SphericalGridCoordinates
