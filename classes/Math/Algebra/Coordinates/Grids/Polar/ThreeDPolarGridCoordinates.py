@@ -5,7 +5,7 @@ from Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis import θAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.φAxis import φAxis
 from Classes.Math.Algebra.Coordinates.ThreeDCoordinates import ThreeDCoordinates, ThreeDCoordinatesError
 
-class ThreeDPolorGridCoordinatesError(TwoDPolorGridCoordinatesError, ThreeDCoordinatesError):
+class ThreeDPolarGridCoordinatesError(TwoDPolorGridCoordinatesError, ThreeDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -15,7 +15,7 @@ class ThreeDPolorGridCoordinatesError(TwoDPolorGridCoordinatesError, ThreeDCoord
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class ThreeDPolorGridCoordinates(TwoDPolorGridCoordinates, ThreeDCoordinates):
+class ThreeDPolarGridCoordinates(TwoDPolorGridCoordinates, ThreeDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
