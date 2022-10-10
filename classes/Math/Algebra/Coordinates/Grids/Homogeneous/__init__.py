@@ -1,2 +1,2 @@
-import HomogeneousGridCoordinates
-import ThreeDHomogeneousGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Homogeneous.ThreeDHomogeneousGridCoordinates as ThreeDHomogeneousGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Homogeneous.ThreeDHomogeneousGridCoordinates as ThreeDHomogeneousGridCoordinates

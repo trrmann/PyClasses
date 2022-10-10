@@ -1,7 +1,7 @@
-# HomogeneousGridCoordinates.py
+# PolorGridCoordinates.py
 from Classes.Math.Algebra.Coordinates.Grids.Grid import Grid, GridError
 
-class HomogeneousGridCoordinatesError(GridError):
+class PolorGridCoordinatesError(GridError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,13 +11,13 @@ class HomogeneousGridCoordinatesError(GridError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class HomogeneousGridCoordinates(Grid):
+class PolorGridCoordinates(Grid("PolorGridCoordinates")):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
             axes_list,
-            className = "HomogeneousGridCoordinates"
+            className = "PolorGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)
 

@@ -22,7 +22,10 @@ class Point(Coordinates):
 #        super().__init__(self, className = className)
 #        super().__init__(self, classification, type, dimensions, className = className)
 #        self.coordinates = coordinates
-    def __init__(self, coordinates, className = "Point"):
+    def __init__(self,
+            coordinates,
+            className = "Point"
+        ):
         super().__init__(self, className = className)
         self.coordinates = coordinates
 
