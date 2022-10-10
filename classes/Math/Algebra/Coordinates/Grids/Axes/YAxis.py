@@ -1,5 +1,5 @@
 # YAxis.py
-from Classes.Math.Algebra.Coordinates.Grids.Axes import Axis, AxisError
+from Classes.Math.Algebra.Coordinates.Grids.Axes.Axis import Axis, AxisError
 import math
 
 class YAxisError(AxisError):

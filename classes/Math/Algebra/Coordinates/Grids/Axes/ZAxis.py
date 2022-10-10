@@ -1,5 +1,5 @@
 # ZAxis.py
-from Classes.Math.Algebra.Coordinates.Grids.Axes import Axis, AxisError
+from Classes.Math.Algebra.Coordinates.Grids.Axes.Axis import Axis, AxisError
 
 class ZAxisError(AxisError):
     def __new__(cls, *args, **kwargs):
