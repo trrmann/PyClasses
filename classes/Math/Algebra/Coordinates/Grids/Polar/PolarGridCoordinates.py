@@ -11,7 +11,7 @@ class PolorGridCoordinatesError(GridError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class PolorGridCoordinates(Grid("PolorGridCoordinates")):
+class PolorGridCoordinates(Grid):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
