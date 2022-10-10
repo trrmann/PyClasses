@@ -4,7 +4,7 @@ from Classes.Math.Algebra.Coordinates.TwoDCoordinates import TwoDCoordinates, Tw
 from Classes.Math.Algebra.Coordinates.Grids.Axes.XAxis import XAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.YAxis import YAxis
 
-class TwoDCartesianGridCoordinates(CartesianGridCoordinatesError, TwoDCoordinatesError):
+class TwoDCartesianGridCoordinatesError(CartesianGridCoordinatesError, TwoDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

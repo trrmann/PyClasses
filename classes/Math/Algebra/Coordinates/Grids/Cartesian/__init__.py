@@ -1,2 +1,3 @@
 import Classes.Math.Algebra.Coordinates.Grids.Cartesian.TwoDCartesianGridCoordinates as TwoDCartesianGridCoordinates
 import Classes.Math.Algebra.Coordinates.Grids.Cartesian.ThreeDCartesianGridCoordinates as ThreeDCartesianGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cartesian.FourDCartesianGridCoordinates as FourDCartesianGridCoordinates
