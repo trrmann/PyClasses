@@ -1,8 +1,9 @@
 # StraightLineSegment.py
 from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment, LineSegmentError
-from Classes.Math.Algebra.Lines.StraightLine import StraightLine, StraightLineError
+#from Classes.Math.Algebra.Lines.StraightLine import StraightLine, StraightLineError
 
-class StraightLineSegmentError(StraightLineError, LineSegmentError):
+#class StraightLineSegmentError(StraightLineError, LineSegmentError):
+class StraightLineSegmentError(LineSegmentError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -12,7 +13,8 @@ class StraightLineSegmentError(StraightLineError, LineSegmentError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class StraightLineSegment(StraightLine, LineSegment):
+#class StraightLineSegment(StraightLine, LineSegment):
+class StraightLineSegment(LineSegment):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
