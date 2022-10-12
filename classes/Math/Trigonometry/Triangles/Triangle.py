@@ -1,8 +1,11 @@
 # Triangle.py
+from Classes.Math.Trigonometry.Trigonometry import Trigonometry, TrigonometryError
+from Classes.Math.Geometry.Shapes.Shape import Shape, ShapeError
 import math
-from Geometry import Shape, MissingDimension, A_right_triangle
 
-class TriangleError(Shape.ShapeError):
+from Geometry import MissingDimension, A_right_triangle
+
+class TriangleError(TrigonometryError, ShapeError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -22,11 +25,13 @@ class PythagorianError(TriangleError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Triangle(Shape("Triangle", "2 dimensions", "Triangle", ["a", "b", "c"])):
+class Triangle(Trigonometry, Shape):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, a, b, c):
+    def __init__(self, a, b, c, className = "Triangle"):
+        super().__init__(self, className)
+        super().__init__(self, className, "2 dimensions", "Triangle", ["a", "b", "c"])
         self.a = a
         self.b = b
         self.c = c
@@ -37,7 +42,7 @@ class Triangle(Shape("Triangle", "2 dimensions", "Triangle", ["a", "b", "c"])):
         #    raise PythagorianError(f"a: {a}, b: {b}, c: {c}:: {c ** 2} != {(a ** 2) + (b ** 2)} == {a ** 2} + {b ** 2}")
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(name={self.name}, classification={self.classification}, type={self.type}, dimensions={self.dimensions}, a={self.a}, b={self.b}, c={self.c})"
+        return f"{type(self).__name__}(className={self.className}, classification={self.classification}, type={self.type}, dimensions={self.dimensions}, a={self.a}, b={self.b}, c={self.c})"
 
     def angle_A():
         try:

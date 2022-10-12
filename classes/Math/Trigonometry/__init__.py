@@ -1,2 +1,1 @@
-import Trigonometry
-import Triangles
+import Classes.Math.Trigonometry.Triangles.Triangle as Triangle

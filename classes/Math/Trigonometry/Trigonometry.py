@@ -1,8 +1,8 @@
 # Trigonometry.py
+from Classes.Math.Geometry.Geometry import Geometry, GeometryError
 import math
-import Geometry
 
-class TrigonometryError(Geometry.GeometryError):
+class TrigonometryError(GeometryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -12,15 +12,15 @@ class TrigonometryError(Geometry.GeometryError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Trigonometry(Geometry("Trigonometry")):
+class Trigonometry(Geometry):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self):
-        pass
+    def __init__(self, className = "Trigonometry"):
+        super().__init__(self, className)
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(name={self.name})"
+        return f"{type(self).__name__}(className={self.className})"
 
 def a_from_angle_and_hypotenuse(dimensions):
     #"(hl/sin(90))*sin(<)"
