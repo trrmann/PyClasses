@@ -1,7 +1,7 @@
 # Scalene.py
-import Triangle
+from Classes.Math.Trigonometry.Triangles.Triangle import Triangle, TriangleError
 
-class ScaleneTriangleError(Triangle.TriangleError):
+class ScaleneTriangleError(TriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,12 +11,13 @@ class ScaleneTriangleError(Triangle.TriangleError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Scalene(Triangle("Scalene", "2 dimensions", "Scalene", ["a", "b", "c"])):
+class ScaleneTriangle(Triangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self):
-        pass
+    def __init__(self, className = "ScaleneTriangle"):
+        super().__init__(self, className)
+        super().__init__(self, className, "2 dimensions", "ScaleneTriangle", ["a", "b", "c"])
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(name={self.name}, classification={self.classification}, type={self.type}, dimensions={self.dimensions}, a={self.a}, b={self.b}, c={self.c})"
+        return f"{type(self).__name__}(className={self.className}, classification={self.classification}, type={self.type}, dimensions={self.dimensions}, a={self.a}, b={self.b}, c={self.c})"
