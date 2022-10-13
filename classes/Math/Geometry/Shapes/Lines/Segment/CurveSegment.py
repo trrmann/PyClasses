@@ -1,8 +1,8 @@
 # CurveSegment.py
-from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment, LineSegmentError
-from Classes.Math.Algebra.Lines.Curve import Curve, CurveError
+from Classes.Math.Geometry.Shapes.Lines.Segment.LineSegment import LineSegment, LineSegmentError
+from Classes.Math.Algebra.Lines.Segment.CurveSegment import CurveSegment as AlgebraCurveSegment, CurveSegmentError as AlgebraCurveSegmentError
 
-class CurveSegmentError(CurveError, LineSegmentError):
+class CurveSegmentError(AlgebraCurveSegmentError, LineSegmentError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -12,7 +12,7 @@ class CurveSegmentError(CurveError, LineSegmentError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class CurveSegment(Curve, LineSegment):
+class CurveSegment(AlgebraCurveSegment, LineSegment):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

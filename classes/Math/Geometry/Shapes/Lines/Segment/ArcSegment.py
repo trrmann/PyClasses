@@ -1,8 +1,8 @@
 # ArcSegment.py
-from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment, LineSegmentError
-from Classes.Math.Algebra.Lines.Arc import Arc, ArcError
+from Classes.Math.Geometry.Shapes.Lines.Segment.LineSegment import LineSegment, LineSegmentError
+from Classes.Math.Algebra.Lines.Segment.ArcSegment import ArcSegment as AlgebraArcSegment, ArcSegmentError as AlgebraArcSegmentError
 
-class ArcSegmentError(ArcError, LineSegmentError):
+class ArcSegmentError(AlgebraArcSegmentError, LineSegmentError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -12,7 +12,7 @@ class ArcSegmentError(ArcError, LineSegmentError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class ArcSegment(Arc, LineSegment):
+class ArcSegment(AlgebraArcSegment, LineSegment):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
