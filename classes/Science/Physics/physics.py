@@ -1,9 +1,10 @@
 # Physics.py
-import EarthScience
+from Classes.Science.EarthScience.EarthScience import EarthScience, EarthScienceError
 import math
+
 from Math import UndefinedOrientation, UndefinedShape, A
 
-class PhysicsError(EarthScience.EarthScienceError):
+class PhysicsError(EarthScienceError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -21,16 +22,15 @@ class UndefinedFluidType(PhysicsError):
     """Raised when the item is unknown"""
     pass
 
-class Physics(EarthScience("Physics")):
+class Physics(EarthScience):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self):
-        pass
+    def __init__(self, className = "Physics"):
+        super().__init__(self, className)
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(name={self.name})"
-
+        return f"{type(self).__name__}(className={self.className})"
 
 
 physics_constants = {

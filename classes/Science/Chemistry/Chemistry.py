@@ -1,7 +1,7 @@
 # Chemestry.py
-import EarthScience
+from Classes.Science.EarthScience.EarthScience import EarthScience, EarthScienceError
 
-class ChemestryError(EarthScience.EarthScienceError):
+class ChemestryError(EarthScienceError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,12 +11,12 @@ class ChemestryError(EarthScience.EarthScienceError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Chemestry(EarthScience("Chemestry")):
+class Chemestry(EarthScience):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self):
-        pass
+    def __init__(self, className = "Chemestry"):
+        super().__init__(self, className)
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(name={self.name})"
+        return f"{type(self).__name__}(className={self.className})"
