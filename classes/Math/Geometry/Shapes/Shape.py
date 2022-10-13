@@ -1,5 +1,5 @@
 # Shape.py
-from Classes.Math.Geometry import Geometry, GeometryError
+from Classes.Math.Geometry.Geometry import Geometry, GeometryError
 
 class ShapeError(GeometryError):
     def __new__(cls, *args, **kwargs):
