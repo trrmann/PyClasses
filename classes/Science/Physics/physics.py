@@ -1,8 +1,7 @@
 # Physics.py
+from Classes.Math.Math import Math
 from Classes.Science.EarthScience.EarthScience import EarthScience, EarthScienceError
 import math
-
-from Math import UndefinedOrientation, UndefinedShape, A
 
 class PhysicsError(EarthScienceError):
     def __new__(cls, *args, **kwargs):
@@ -81,13 +80,13 @@ def C(shape, shape_orientation = "default"):
             else:
                 return C(shape, physics_constants["shape"][shape.lower()]["drag_constant"][shape_orientation.lower()])
         else:
-            raise UndefinedOrientation(f"The Drag force constant for shape type {shape} orientation {shape_orientation} is undefined in the constants dictionary!")
+            raise Math.UndefinedOrientation(f"The Drag force constant for shape type {shape} orientation {shape_orientation} is undefined in the constants dictionary!")
     else:
-        raise UndefinedShape(f"Shape type {shape} is undefined in the constants dictionary!")
+        raise Math.UndefinedShape(f"Shape type {shape} is undefined in the constants dictionary!")
 
 # speed of light
 def c(type_of_fluid, shape, shape_dimensions = {}, shape_orientation = "default"):
-    return 1 / 2 * fluid_density(type_of_fluid) * A(shape, shape_dimensions) * C(shape, shape_orientation)
+    return 1 / 2 * fluid_density(type_of_fluid) * Math.A(shape, shape_dimensions) * C(shape, shape_orientation)
 
 # t = time in seconds
 # m = mass in kg
