@@ -1,7 +1,8 @@
 # Straight.py
-from Classes.Math.Algebra.Lines.Line import Line, LineError
+from Classes.Math.Geometry.Shapes.Lines.Line import Line, LineError
+from Classes.Math.Algebra.Lines.StraightLine import StraightLine as AlgebraStraightLine, StraightLineError as AlgebraStraightLineError
 
-class StraightLineError(LineError):
+class StraightLineError(LineError, AlgebraStraightLineError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,7 +12,7 @@ class StraightLineError(LineError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Straight(Line):
+class Straight(Line, AlgebraStraightLine):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

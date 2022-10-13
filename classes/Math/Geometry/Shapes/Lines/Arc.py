@@ -1,7 +1,8 @@
 # Arc.py
-from Classes.Math.Algebra.Lines.Line import Line, LineError
+from Classes.Math.Geometry.Shapes.Lines.Line import Line, LineError
+from Classes.Math.Algebra.Lines.Arc import Arc as AlgebraArc, ArcError as AlgebraArcError
 
-class ArcError(LineError):
+class ArcError(LineError, AlgebraArcError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,7 +12,7 @@ class ArcError(LineError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Arc(Line):
+class Arc(Line, AlgebraArc):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

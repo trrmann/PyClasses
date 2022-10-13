@@ -1,7 +1,8 @@
 # Curve.py
-from Classes.Math.Algebra.Lines.Line import Line, LineError
+from Classes.Math.Geometry.Shapes.Lines.Line import Line, LineError
+from Classes.Math.Algebra.Lines.Curve import Curve as AlgebraCurve, CurveError as AlgebraCurveError
 
-class CurveError(LineError):
+class CurveError(LineError, AlgebraCurveError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,7 +12,7 @@ class CurveError(LineError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Curve(Line):
+class Curve(Line, AlgebraCurve):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

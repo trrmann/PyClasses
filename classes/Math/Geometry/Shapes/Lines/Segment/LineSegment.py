@@ -1,7 +1,8 @@
 # LineSegment.py
-from Classes.Math.Algebra.Lines.Line import Line, LineError
+from Classes.Math.Geometry.Shapes.Lines.Line import Line, LineError
+from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment as AlgebraLineSegment, LineSegmentError as AlgebraLineSegmentError
 
-class LineSegmentError(LineError):
+class LineSegmentError(LineError, AlgebraLineSegmentError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,7 +12,7 @@ class LineSegmentError(LineError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class LineSegment(Line):
+class LineSegment(Line, AlgebraLineSegment):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
