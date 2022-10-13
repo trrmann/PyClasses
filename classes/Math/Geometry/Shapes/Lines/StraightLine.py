@@ -12,7 +12,7 @@ class StraightLineError(LineError, AlgebraStraightLineError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Straight(Line, AlgebraStraightLine):
+class StraightLine(Line, AlgebraStraightLine):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
