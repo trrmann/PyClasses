@@ -1,7 +1,7 @@
 # Calculus.py
-import Trigonometry
+from Classes.Math.Trigonometry.Trigonometry import Trigonometry, TrigonometryError
 
-class CalculusError(Trigonometry.TrigonometryError):
+class CalculusError(TrigonometryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,12 +11,12 @@ class CalculusError(Trigonometry.TrigonometryError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Calculus(Trigonometry("Calculus")):
+class Calculus(Trigonometry):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self):
-        pass
+    def __init__(self, className = "Calculus"):
+        super().__init__(self, className)
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(name={self.name})"
+        return f"{type(self).__name__}(className={self.className})"
