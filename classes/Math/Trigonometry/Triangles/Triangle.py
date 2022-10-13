@@ -1,11 +1,11 @@
 # Triangle.py
 from Classes.Math.Trigonometry.Trigonometry import Trigonometry, TrigonometryError
-from Classes.Math.Geometry.Shapes.Shape import Shape, ShapeError
+from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle as GeometryTriangle, TriangleError as GeometryTriangleError
 import math
 
 from Geometry import MissingDimension, A_right_triangle
 
-class TriangleError(TrigonometryError, ShapeError):
+class TriangleError(TrigonometryError, GeometryTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -25,7 +25,7 @@ class PythagorianError(TriangleError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class Triangle(Trigonometry, Shape):
+class Triangle(Trigonometry, GeometryTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

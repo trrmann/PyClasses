@@ -1,7 +1,8 @@
 # Scalene.py
 from Classes.Math.Trigonometry.Triangles.Triangle import Triangle, TriangleError
+from Classes.Math.Geometry.Shapes.Triangles.Scalene import ScaleneTriangle as GeometryScaleneTriangle,  ScaleneTriangleError as GeometryScaleneTriangleError
 
-class ScaleneTriangleError(TriangleError):
+class ScaleneTriangleError(TriangleError, GeometryScaleneTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -11,7 +12,7 @@ class ScaleneTriangleError(TriangleError):
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
 
-class ScaleneTriangle(Triangle):
+class ScaleneTriangle(Triangle, GeometryScaleneTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
