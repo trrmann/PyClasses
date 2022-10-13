@@ -1,115 +1,15 @@
 # NumberLine.py
-from Classes.Math.Algebra.Coordinates.Coordinates import Coordinates, CoordinatesError
-
-class NumberLineError(CoordinatesError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class InvalidOriginError(NumberLineError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class InvalidMinimumError(NumberLineError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class InvalidMinimumLimitError(InvalidMinimumError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class InvalidMaximumError(NumberLineError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class InvalidMaximumLimitError(InvalidMaximumError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class InvalidValueError(NumberLineError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class ValueExceedsMinimumError(InvalidValueError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class ValueExceedsMinimumLimitError(ValueExceedsMinimumError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class ValueExceedsMaxiumError(InvalidValueError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class ValueExceedsMaxiumLimitError(ValueExceedsMaxiumError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Algebra.Coordinates.Coordinates import Coordinates
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumError import InvalidMaximumError
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumLimitError import InvalidMaximumLimitError
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumError import InvalidMinimumError
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumLimitError import InvalidMinimumLimitError
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidOriginError import InvalidOriginError
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidValueError import InvalidValueError
+from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumError import ValueExceedsMaxiumError
+from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumLimitError import ValueExceedsMaxiumLimitError
+from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumError import ValueExceedsMinimumError
+from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumLimitError import ValueExceedsMinimumLimitError
 
 class NumberLine(Coordinates):
     def __new__(cls, *args, **kwargs):

@@ -1,16 +1,6 @@
 # θAxis.py
-from Classes.Math.Algebra.Coordinates.Grids.Axes.Axis import Axis, AxisError
+from Classes.Math.Algebra.Coordinates.Grids.Axes.Axis import Axis
 import math
-
-class θAxisError(AxisError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
 
 #angular axis - 0 to 360 degrees or 0 to 2π, where + is clockwise (cw) and negative is counter-clockwise (ccw), each full revolution can be represented by an integer value.
 class θAxis(Axis):

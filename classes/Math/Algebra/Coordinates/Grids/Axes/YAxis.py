@@ -1,16 +1,6 @@
 # YAxis.py
-from Classes.Math.Algebra.Coordinates.Grids.Axes.Axis import Axis, AxisError
+from Classes.Math.Algebra.Coordinates.Grids.Axes.Axis import Axis
 import math
-
-class YAxisError(AxisError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
 
 #linear axis
 class YAxis(Axis):
