@@ -2,7 +2,8 @@
 from Classes.Math.Geometry.Shapes.Shape import Shape, ShapeError
 import math
 
-from Classes.Math.Geometry.Geometry import MissingDimension, A_right_triangle
+from Classes.Math.Geometry.Geometry import MissingDimension
+from Classes.Math.Trigonometry.Triangles.Triangle import A_right_triangle
 
 class TriangleError(ShapeError):
     def __new__(cls, *args, **kwargs):
