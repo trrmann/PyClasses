@@ -1,8 +1,5 @@
 # Geometry.py
 from Classes.Math.Algebra.Algebra import Algebra, AlgebraError
-#from Classes.Math.Trigonometry.Triangles import Triangle
-#from Classes.Math.Trigonometry.Trigonometry import a_from_angle_and_hypotenuse, b_from_angle_and_hypotenuse, a_from_angle_and_adjacent_side, hypotenuse_from_angle_and_adjacent_side, b_from_angle_and_opposite_side, hypotenuse_from_angle_and_opposite_side, b_from_leg_and_hypotenuse
-
 from Classes.Input import *
 
 import math

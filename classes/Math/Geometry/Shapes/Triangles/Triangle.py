@@ -3,7 +3,6 @@ from Classes.Math.Geometry.Shapes.Shape import Shape, ShapeError
 import math
 
 from Classes.Math.Geometry.Geometry import MissingDimension
-from Classes.Math.Trigonometry.Triangles.Triangle import A_right_triangle
 
 class TriangleError(ShapeError):
     def __new__(cls, *args, **kwargs):
@@ -79,7 +78,7 @@ class Triangle(Shape):
                 raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def A():
-        return A_right_triangle(Triangle.base(), Triangle.height())
+        return Triangle.A_right_triangle(Triangle.base(), Triangle.height())
 
     def P():
         try:
@@ -108,6 +107,9 @@ class Triangle(Shape):
                     raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
                 raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+
+    def A_right_triangle(base, height):
+        return 1 / 2 * base * height
 
     def base():
         try:
