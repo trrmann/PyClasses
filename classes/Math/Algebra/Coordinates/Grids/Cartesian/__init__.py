@@ -1,3 +1,6 @@
+import Classes.Math.Algebra.Coordinates.Grids.Cartesian.errors.TwoDCartesianGridCoordinatesError as TwoDCartesianGridCoordinatesError
 import Classes.Math.Algebra.Coordinates.Grids.Cartesian.TwoDCartesianGridCoordinates as TwoDCartesianGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cartesian.errors.ThreeDCartesianGridCoordinatesError as ThreeDCartesianGridCoordinatesError
 import Classes.Math.Algebra.Coordinates.Grids.Cartesian.ThreeDCartesianGridCoordinates as ThreeDCartesianGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cartesian.errors.FourDCartesianGridCoordinatesError as FourDCartesianGridCoordinatesError
 import Classes.Math.Algebra.Coordinates.Grids.Cartesian.FourDCartesianGridCoordinates as FourDCartesianGridCoordinates

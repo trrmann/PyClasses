@@ -1,15 +1,5 @@
 # SphericalGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.CylindricalGridCoordinates import CylindricalGridCoordinates, CylindricalGridCoordinatesError
-
-class SphericalGridCoordinatesError(CylindricalGridCoordinatesError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.CylindricalGridCoordinates import CylindricalGridCoordinates
 
 class SphericalGridCoordinates(CylindricalGridCoordinates):
     def __new__(cls, *args, **kwargs):

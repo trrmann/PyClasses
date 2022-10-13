@@ -1,20 +1,10 @@
 # FourDSphericalGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.ThreeDSphericalGridCoordinates import ThreeDSphericalGridCoordinates, ThreeDSphericalGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.ThreeDSphericalGridCoordinates import ThreeDSphericalGridCoordinates
 from Classes.Math.Algebra.Coordinates.Grids.Axes.ρAxis import ρAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis import θAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.φAxis import φAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.TimeLine import TimeLine
-from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates, FourDCoordinatesError
-
-class FourDSphericalGridCoordinatesError(ThreeDSphericalGridCoordinatesError, FourDCoordinatesError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates
 
 class FourDSphericalGridCoordinates(ThreeDSphericalGridCoordinates, FourDCoordinates):
     def __new__(cls, *args, **kwargs):

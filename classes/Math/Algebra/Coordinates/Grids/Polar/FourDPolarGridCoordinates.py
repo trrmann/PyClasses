@@ -1,20 +1,10 @@
 # FourDPolarGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Polar.ThreeDPolarGridCoordinates import ThreeDPolarGridCoordinates, ThreeDPolarGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Polar.ThreeDPolarGridCoordinates import ThreeDPolarGridCoordinates
 from Classes.Math.Algebra.Coordinates.Grids.Axes.ρAxis import ρAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis import θAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.φAxis import φAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.TimeLine import TimeLine
-from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates, FourDCoordinatesError
-
-class FourDPolarGridCoordinatesError(ThreeDPolarGridCoordinatesError, FourDCoordinatesError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates
 
 class FourDPolarGridCoordinates(ThreeDPolarGridCoordinates, FourDCoordinates):
     def __new__(cls, *args, **kwargs):

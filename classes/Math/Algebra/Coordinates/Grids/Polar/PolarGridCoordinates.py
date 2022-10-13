@@ -1,15 +1,5 @@
 # PolorGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Grid import Grid, GridError
-
-class PolorGridCoordinatesError(GridError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Algebra.Coordinates.Grids.Grid import Grid
 
 class PolorGridCoordinates(Grid):
     def __new__(cls, *args, **kwargs):

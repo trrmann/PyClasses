@@ -1,2 +1,4 @@
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.errors.ThreeDSphericalGridCoordinatesError as ThreeDSphericalGridCoordinatesError
 import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.ThreeDSphericalGridCoordinates as ThreeDSphericalGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.errors.FourDSphericalGridCoordinatesError as FourDSphericalGridCoordinatesError
 import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.FourDSphericalGridCoordinates as FourDSphericalGridCoordinates

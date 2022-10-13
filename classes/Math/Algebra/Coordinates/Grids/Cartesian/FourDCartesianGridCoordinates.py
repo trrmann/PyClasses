@@ -1,20 +1,10 @@
 # FourDCartesianGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Cartesian.ThreeDCartesianGridCoordinates import ThreeDCartesianGridCoordinates, ThreeDCartesianGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Cartesian.ThreeDCartesianGridCoordinates import ThreeDCartesianGridCoordinates
 from Classes.Math.Algebra.Coordinates.Grids.Axes.XAxis import XAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.YAxis import YAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis import ZAxis
 from Classes.Math.Algebra.Coordinates.Grids.Axes.TimeLine import TimeLine
-from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates, FourDCoordinatesError
-
-class FourDCartesianGridCoordinatesError(ThreeDCartesianGridCoordinatesError, FourDCoordinatesError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates
 
 class FourDCartesianGridCoordinates(ThreeDCartesianGridCoordinates, FourDCoordinates):
     def __new__(cls, *args, **kwargs):

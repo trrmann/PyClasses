@@ -1,3 +1,6 @@
+import Classes.Math.Algebra.Coordinates.Grids.Polar.errors.TwoDPolarGridCoordinatesError as TwoDPolarGridCoordinatesError
 import Classes.Math.Algebra.Coordinates.Grids.Polar.TwoDPolarGridCoordinates as TwoDPolarGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Polar.errors.ThreeDPolarGridCoordinatesError as ThreeDPolarGridCoordinatesError
 import Classes.Math.Algebra.Coordinates.Grids.Polar.ThreeDPolarGridCoordinates as ThreeDPolarGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Polar.errors.FourDPolarGridCoordinatesError as FourDPolarGridCoordinatesError
 import Classes.Math.Algebra.Coordinates.Grids.Polar.FourDPolarGridCoordinates as FourDPolarGridCoordinates
