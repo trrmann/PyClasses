@@ -1,7 +1,7 @@
 # Geometry.py
 from Classes.Math.Algebra.Algebra import Algebra, AlgebraError
-from Classes.Math.Trigonometry.Triangles import Triangle
-from Classes.Math.Trigonometry.Trigonometry import a_from_angle_and_hypotenuse, b_from_angle_and_hypotenuse, a_from_angle_and_adjacent_side, hypotenuse_from_angle_and_adjacent_side, b_from_angle_and_opposite_side, hypotenuse_from_angle_and_opposite_side, b_from_leg_and_hypotenuse
+#from Classes.Math.Trigonometry.Triangles import Triangle
+#from Classes.Math.Trigonometry.Trigonometry import a_from_angle_and_hypotenuse, b_from_angle_and_hypotenuse, a_from_angle_and_adjacent_side, hypotenuse_from_angle_and_adjacent_side, b_from_angle_and_opposite_side, hypotenuse_from_angle_and_opposite_side, b_from_leg_and_hypotenuse
 
 from Classes.Input import *
 
@@ -236,13 +236,13 @@ geometry_constants = {
             "dimensions" : 2,
             # a^2 + b^2 = c^2
             "generic" : [["side_a", "side_b", "side_c"]],
-            "P" : Triangle.P,
-            "A" : Triangle.A,
-            "medianA" : Triangle.median_a,
-            "medianB" : Triangle.median_b,
-            "medianC" : Triangle.median_c,
-            "inradius" : Triangle.inradius,
-            "circumradius" : Triangle.circumradius
+#            "P" : Triangle.P,
+#            "A" : Triangle.A,
+#            "medianA" : Triangle.median_a,
+#            "medianB" : Triangle.median_b,
+#            "medianC" : Triangle.median_c,
+#            "inradius" : Triangle.inradius,
+#            "circumradius" : Triangle.circumradius
         },
         "scaleneTriangle" : {
             "dimensions" : 2,
@@ -384,28 +384,29 @@ geometry_constants = {
                 ["<","ol"],
                 ["hl","ll"]],
             "inherit" : [
-                "scaleneTriangle",
-                [{
-                    "side_a" : a_from_angle_and_hypotenuse,
-                    "side_b" : b_from_angle_and_hypotenuse,
-                    "side_c" : "hl"},
-                {
-                    "side_a" : a_from_angle_and_adjacent_side,
-                    "side_b" : "al",
-                    "side_c" : hypotenuse_from_angle_and_adjacent_side},
-                {
-                    "side_a" : "ol",
-                    "side_b" : b_from_angle_and_opposite_side,
-                    "side_c" : hypotenuse_from_angle_and_opposite_side},
-                {
-                    "side_a" : "ll",
-                    "side_b" : b_from_leg_and_hypotenuse,
-                    "side_c" : "hl"}] ]
+#                "scaleneTriangle",
+#                [{
+#                    "side_a" : a_from_angle_and_hypotenuse,
+#                    "side_b" : b_from_angle_and_hypotenuse,
+#                    "side_c" : "hl"},
+#                {
+#                    "side_a" : a_from_angle_and_adjacent_side,
+#                    "side_b" : "al",
+#                    "side_c" : hypotenuse_from_angle_and_adjacent_side},
+#                {
+#                    "side_a" : "ol",
+#                    "side_b" : b_from_angle_and_opposite_side,
+#                    "side_c" : hypotenuse_from_angle_and_opposite_side},
+#                {
+#                    "side_a" : "ll",
+#                    "side_b" : b_from_leg_and_hypotenuse,
+#                    "side_c" : "hl"}]
+            ]
         },
         "rectangle" : {
             "dimensions" : 2,
             "generic" : [["l", "w"]],
-            "P" : P_rectangle,
+#            "P" : P_rectangle,
             "A" : A_rectangle
         },
         "square" : {
