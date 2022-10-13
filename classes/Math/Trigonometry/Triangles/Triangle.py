@@ -1,9 +1,9 @@
 # Triangle.py
 from Classes.Math.Trigonometry.Trigonometry import Trigonometry, TrigonometryError
 from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle as GeometryTriangle, TriangleError as GeometryTriangleError
+from Classes.Math.Geometry.Geometry import MissingDimension
+from Classes.Math.Geometry.Shapes.Triangles.Triangle import A_right_triangle
 import math
-
-from Geometry import MissingDimension, A_right_triangle
 
 class TriangleError(TrigonometryError, GeometryTriangleError):
     def __new__(cls, *args, **kwargs):
