@@ -1,5 +1,6 @@
 # InvalidOriginError.py
-import NumberLineError
+
+from Classes.Math.Algebra.Coordinates.Grids.errors.NumberLineError import NumberLineError
 
 class InvalidOriginError(NumberLineError):
     def __new__(cls, *args, **kwargs):
