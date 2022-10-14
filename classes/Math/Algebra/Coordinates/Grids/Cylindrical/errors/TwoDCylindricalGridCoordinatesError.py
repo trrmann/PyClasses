@@ -1,5 +1,5 @@
 # TwoDCylindricalGridCoordinatesError.py
-import CylindricalGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.errors.CylindricalGridCoordinatesError import CylindricalGridCoordinatesError
 from Classes.Math.Algebra.Coordinates.errors.TwoDCoordinatesError import TwoDCoordinatesError
 
 class TwoDCylindricalGridCoordinatesError(CylindricalGridCoordinatesError, TwoDCoordinatesError):

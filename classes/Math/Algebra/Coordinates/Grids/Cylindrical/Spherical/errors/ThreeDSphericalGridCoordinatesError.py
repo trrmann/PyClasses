@@ -1,5 +1,5 @@
 # ThreeDSphericalGridCoordinates.py
-import SphericalGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.errors.SphericalGridCoordinatesError import SphericalGridCoordinatesError
 from Classes.Math.Algebra.Coordinates.errors.ThreeDCoordinatesError import ThreeDCoordinatesError
 
 class ThreeDSphericalGridCoordinatesError(SphericalGridCoordinatesError, ThreeDCoordinatesError):

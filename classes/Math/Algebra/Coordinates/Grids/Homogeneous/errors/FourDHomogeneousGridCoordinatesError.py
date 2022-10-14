@@ -1,5 +1,5 @@
 # FourDHomogeneousGridCoordinates.py
-import ThreeDHomogeneousGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Homogeneous.errors.ThreeDHomogeneousGridCoordinatesError import ThreeDHomogeneousGridCoordinatesError
 from Classes.Math.Algebra.Coordinates.errors.FourDCoordinatesError import FourDCoordinatesError
 
 class FourDHomogeneousGridCoordinatesError(ThreeDHomogeneousGridCoordinatesError, FourDCoordinatesError):

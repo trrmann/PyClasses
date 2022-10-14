@@ -1,5 +1,5 @@
 # FourDPolarGridCoordinatesError.py
-import ThreeDPolarGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Polar.errors.ThreeDPolarGridCoordinatesError import ThreeDPolarGridCoordinatesError
 from Classes.Math.Algebra.Coordinates.errors.FourDCoordinatesError import FourDCoordinatesError
 
 class FourDPolarGridCoordinatesError(ThreeDPolarGridCoordinatesError, FourDCoordinatesError):

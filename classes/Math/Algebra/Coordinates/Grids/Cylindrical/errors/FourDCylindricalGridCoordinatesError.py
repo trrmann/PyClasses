@@ -1,5 +1,5 @@
 # FourDCylindricalGridCoordinatesError.py
-import ThreeDCylindricalGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.errors.ThreeDCylindricalGridCoordinatesError import ThreeDCylindricalGridCoordinatesError
 from Classes.Math.Algebra.Coordinates.errors.FourDCoordinatesError import FourDCoordinatesError
 
 class FourDCylindricalGridCoordinatesError(ThreeDCylindricalGridCoordinatesError, FourDCoordinatesError):
