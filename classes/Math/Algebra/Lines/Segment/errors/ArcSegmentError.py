@@ -1,5 +1,5 @@
 # ArcSegmentError.py
-import LineSegmentError
+from Classes.Math.Algebra.Lines.Segment.errors.LineSegmentError import LineSegmentError
 from Classes.Math.Algebra.Lines.errors.ArcError import ArcError
 
 class ArcSegmentError(ArcError, LineSegmentError):

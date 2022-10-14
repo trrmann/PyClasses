@@ -1,5 +1,5 @@
 # StraightLineSegmentError.py
-import LineSegmentError
+from Classes.Math.Algebra.Lines.Segment.errors.LineSegmentError import LineSegmentError
 from Classes.Math.Algebra.Lines.errors.StraightLineError import StraightLineError
 
 class StraightLineSegmentError(StraightLineError, LineSegmentError):
