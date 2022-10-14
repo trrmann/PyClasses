@@ -1,5 +1,5 @@
 # ScaleneTriangleError.py
-import TriangleError
+from Classes.Math.Trigonometry.Triangles.errors.TriangleError import TriangleError
 from Classes.Math.Geometry.Shapes.Triangles.errors.ScaleneTriangleError import ScaleneTriangleError as GeometryScaleneTriangleError
 
 class ScaleneTriangleError(TriangleError, GeometryScaleneTriangleError):
