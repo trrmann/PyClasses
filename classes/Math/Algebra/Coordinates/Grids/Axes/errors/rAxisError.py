@@ -1,5 +1,6 @@
 # rAxisError.py
-import AxisError
+
+from Classes.Math.Algebra.Coordinates.Grids.Axes.errors.AxisError import AxisError
 
 class rAxisError(AxisError):
     def __new__(cls, *args, **kwargs):
