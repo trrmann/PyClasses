@@ -1,5 +1,5 @@
 # TwoDCartesianGridCoordinatesError.py
-import CartesianGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Cartesian.errors.CartesianGridCoordinatesError import CartesianGridCoordinatesError
 from Classes.Math.Algebra.Coordinates.errors.TwoDCoordinatesError import TwoDCoordinatesError
 
 class TwoDCartesianGridCoordinatesError(CartesianGridCoordinatesError, TwoDCoordinatesError):

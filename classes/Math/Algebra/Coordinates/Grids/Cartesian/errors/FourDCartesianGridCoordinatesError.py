@@ -1,5 +1,5 @@
 # FourDCartesianGridCoordinatesError.py
-import ThreeDCartesianGridCoordinatesError
+from Classes.Math.Algebra.Coordinates.Grids.Cartesian.errors.ThreeDCartesianGridCoordinatesError import ThreeDCartesianGridCoordinatesError
 from Classes.Math.Algebra.Coordinates.errors.FourDCoordinatesError import FourDCoordinatesError
 
 class FourDCartesianGridCoordinatesError(ThreeDCartesianGridCoordinatesError, FourDCoordinatesError):
