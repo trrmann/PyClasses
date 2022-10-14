@@ -1,5 +1,6 @@
 # InvalidMinimumLimitError.py
-import InvalidMinimumError
+
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumError import InvalidMinimumError
 
 class InvalidMinimumLimitError(InvalidMinimumError):
     def __new__(cls, *args, **kwargs):

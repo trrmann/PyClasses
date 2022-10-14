@@ -1,5 +1,6 @@
 # ValueExceedsMaxiumError.py
-import InvalidValueError
+
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidValueError import InvalidValueError
 
 class ValueExceedsMaxiumError(InvalidValueError):
     def __new__(cls, *args, **kwargs):

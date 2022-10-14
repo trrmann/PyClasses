@@ -1,5 +1,6 @@
 # ValueExceedsMaxiumLimitError.py
-import ValueExceedsMaxiumError
+
+from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumError import ValueExceedsMaxiumError
 
 class ValueExceedsMaxiumLimitError(ValueExceedsMaxiumError):
     def __new__(cls, *args, **kwargs):

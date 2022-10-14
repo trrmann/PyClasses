@@ -1,5 +1,6 @@
 # InvalidMinimumError.py
-import NumberLineError
+
+from Classes.Math.Algebra.Coordinates.Grids.errors.NumberLineError import NumberLineError
 
 class InvalidMinimumError(NumberLineError):
     def __new__(cls, *args, **kwargs):

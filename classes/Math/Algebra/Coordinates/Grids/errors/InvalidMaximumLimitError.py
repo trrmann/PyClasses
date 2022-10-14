@@ -1,5 +1,6 @@
 # InvalidMaximumLimitError.py
-import InvalidMaximumError
+
+from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumError import InvalidMaximumError
 
 class InvalidMaximumLimitError(InvalidMaximumError):
     def __new__(cls, *args, **kwargs):
