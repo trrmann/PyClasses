@@ -1,5 +1,5 @@
 # Axis.py
-from Classes.Math.Algebra.Coordinates.Grids.NumberLine import NumberLine, NumberLineError
+from Classes.Math.Algebra.Coordinates.Grids.NumberLine import NumberLine
 
 class Axis(NumberLine):
     def __new__(cls, *args, **kwargs):
