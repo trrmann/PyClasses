@@ -1,16 +1,6 @@
 # StraightLineSegment.py
-from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment, LineSegmentError
-from Classes.Math.Algebra.Lines.StraightLine import StraightLine, StraightLineError
-
-class StraightLineSegmentError(StraightLineError, LineSegmentError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment
+from Classes.Math.Algebra.Lines.StraightLine import StraightLine
 
 class StraightLineSegment(StraightLine, LineSegment):
     def __new__(cls, *args, **kwargs):

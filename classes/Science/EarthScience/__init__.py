@@ -1,0 +1,1 @@
+from Classes.Science.EarthScience.errors.UndefinedCelestialLocationError import UndefinedCelestialLocationError

@@ -1,28 +1,10 @@
 # Triangle.py
-from Classes.Math.Geometry.Shapes.Shape import Shape, ShapeError
+from Classes.Math.Geometry.Shapes.Shape import Shape
+from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
+from Classes.Math.Geometry.Shapes.Triangles.errors.PythagorianError import PythagorianError
 import math
 
-from Classes.Math.Geometry.Geometry import MissingDimension
-
-class TriangleError(ShapeError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class PythagorianError(TriangleError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Geometry.Geometry import MissingDimensionError
 
 class Triangle(Shape):
     def __new__(cls, *args, **kwargs):
@@ -49,9 +31,9 @@ class Triangle(Shape):
         except ValueError:
             try:
                 float(Triangle.a)
-                raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def angle_B():
         try:
@@ -59,9 +41,9 @@ class Triangle(Shape):
         except ValueError:
             try:
                 float(Triangle.b)
-                raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
             except ValueError:
-                raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
 
     def angle_C():
         try:
@@ -71,11 +53,11 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def A():
         return Triangle.A_right_triangle(Triangle.base(), Triangle.height())
@@ -88,11 +70,11 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def semiperimeter():
         try:
@@ -102,11 +84,11 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def A_right_triangle(base, height):
         return 1 / 2 * base * height
@@ -115,7 +97,7 @@ class Triangle(Shape):
         try:
             return float(Triangle.a)
         except ValueError:
-            raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+            raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def height():
         try:
@@ -125,11 +107,11 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def median_a():
         try:
@@ -139,11 +121,11 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def median_b():
         try:
@@ -153,11 +135,11 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def median_c():
         try:
@@ -167,11 +149,11 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def inradius():
         try:
@@ -181,11 +163,11 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 
     def circumradius():
         try:
@@ -195,9 +177,9 @@ class Triangle(Shape):
                 float(Triangle.a)
                 try:
                     float(Triangle.b)
-                    raise MissingDimension(f"Missing the side c length dimension for the triangle!", "triangle", "c")
+                    raise MissingDimensionError(f"Missing the side c length dimension for the triangle!", "triangle", "c")
                 except ValueError:
-                    raise MissingDimension(f"Missing the side b length dimension for the triangle!", "triangle", "b")
+                    raise MissingDimensionError(f"Missing the side b length dimension for the triangle!", "triangle", "b")
             except ValueError:
-                raise MissingDimension(f"Missing the side a length dimension for the triangle!", "triangle", "a")
+                raise MissingDimensionError(f"Missing the side a length dimension for the triangle!", "triangle", "a")
 

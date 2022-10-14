@@ -1,22 +1,11 @@
 # Geometry.py
-from Classes.Math.Algebra.Algebra import Algebra, AlgebraError
+from Classes.Math.Geometry.errors.MissingDimensionError import MissingDimensionError
+from Classes.Math.Geometry.errors.UndefinedShapeError import UndefinedShapeError
+from Classes.Math.Geometry.errors.UndefinedOrientationError import UndefinedOrientationError
+from Classes.Math.Algebra.Algebra import Algebra
 from Classes.Input import *
 
 import math
-
-class GeometryError(AlgebraError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class MissingDimension(GeometryError):
-    """Raised when the item is unknown"""
-    pass
 
 class Geometry(Algebra):
     def __new__(cls, *args, **kwargs):
@@ -34,24 +23,16 @@ class Geometry(Algebra):
         except ValueError:
             try:
                 float(base)
-                raise MissingDimension(f"Missing the height dimension for the triangle!", "triangle", "height")
+                raise MissingDimensionError(f"Missing the height dimension for the triangle!", "triangle", "height")
             except ValueError:
-                raise MissingDimension(f"Missing the length of the base dimension for the triangle!", "triangle", "base")
-
-class UndefinedShape(GeometryError):
-    """Raised when the item is unknown"""
-    pass
-
-class UndefinedOrientation(GeometryError):
-    """Raised when the item is unknown"""
-    pass
+                raise MissingDimensionError(f"Missing the length of the base dimension for the triangle!", "triangle", "base")
 
 #r = radius of the circle
 def A_circle(r):
     try:
         return math.pi * float(r) ** 2
     except ValueError:
-        raise MissingDimension(f"Missing the r dimension for a circle!", "circle", "r")
+        raise MissingDimensionError(f"Missing the r dimension for a circle!", "circle", "r")
 
 #major = radius of the major axis
 #minor = radius of the minor axis
@@ -61,16 +42,16 @@ def A_ellipse(major, minor):
     except ValueError:
         try:
             float(major)
-            raise MissingDimension(f"Missing the major dimension for the ellipse!", "ellipse", "major")
+            raise MissingDimensionError(f"Missing the major dimension for the ellipse!", "ellipse", "major")
         except ValueError:
-            raise MissingDimension(f"Missing the minor dimension for the ellipse!", "ellipse", "minor")
+            raise MissingDimensionError(f"Missing the minor dimension for the ellipse!", "ellipse", "minor")
 
 #l = length of one side of a square
 def A_square(l):
     try:
         return float(l) ** 2
     except ValueError:
-        raise MissingDimension(f"Missing the l dimension for a square!", "square", "l")
+        raise MissingDimensionError(f"Missing the l dimension for a square!", "square", "l")
 
 #l = length of the rectangle
 #w = width of the rectangle
@@ -80,120 +61,120 @@ def A_rectangle(l, w):
     except ValueError:
         try:
             float(l)
-            raise MissingDimension(f"Missing the w dimension for a rectangle!", "rectangle", "w")
+            raise MissingDimensionError(f"Missing the w dimension for a rectangle!", "rectangle", "w")
         except ValueError:
-            raise MissingDimension(f"Missing the l dimension for a rectangle!", "rectangle", "l")
+            raise MissingDimensionError(f"Missing the l dimension for a rectangle!", "rectangle", "l")
 
 def xSec_A_cone(dimensions):
     required_dimensions = ["b", "h"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a cone!", "cone", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a cone!", "cone", dimension)
     return Geometry.A_triangle(dimensions["b"], dimensions["h"])
 
 def xSec_A_cylinder(dimensions):
     required_dimensions = ["l", "w"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a cylinder!", "cylinder", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a cylinder!", "cylinder", dimension)
     return A_rectangle(dimensions["l"], dimensions["w"])
 
 def xSec_A_sphere(dimensions):
     required_dimensions = ["r"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a sphere!", "sphere", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a sphere!", "sphere", dimension)
     return A_circle(dimensions["r"])
 
 def xSec_A_cube(dimensions):
     required_dimensions = ["l"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a cube!", "cube", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a cube!", "cube", dimension)
     return A_square(dimensions["l"])
 
 def xSec_A_cuboid(dimensions):
     required_dimensions = ["l", "w"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a cuboid!", "cuboid", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a cuboid!", "cuboid", dimension)
     return A_rectangle(dimensions["l"], dimensions["w"])
 
 def xSec_A_tetrahedron(dimensions):
     required_dimensions = ["b", "h"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a tetrahedron!", "tetrahedron", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a tetrahedron!", "tetrahedron", dimension)
     return Geometry.A_triangle(dimensions["b"], dimensions["h"])
 
 def xSec_A_triangular_prism(dimensions):
     required_dimensions = ["b", "h"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a triangular prism!", "triangular_prism", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a triangular prism!", "triangular_prism", dimension)
     return Geometry.A_triangle(dimensions["b"], dimensions["h"])
 
 def xSec_A_isosahedron(dimensions):
     required_dimensions = ["l"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a isosahedron!", "isosahedron", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a isosahedron!", "isosahedron", dimension)
     return A_square(dimensions["l"])
 
 def xSec_A_torus(dimensions):
     required_dimensions = ["ro", "ri"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a torus!", "torus", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a torus!", "torus", dimension)
     return A_circle(dimensions["ro"])-A_circle(dimensions["ri"])
 
 def xSec_A_hexagonal_prism(dimensions):
     required_dimensions = ["l"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a hexagonal_prism!", "hexagonal_prism", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a hexagonal_prism!", "hexagonal_prism", dimension)
     return A_square(dimensions["1"])
 
 def xSec_A_octahedron(dimensions):
     required_dimensions = ["l"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a octahedron!", "octahedron", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a octahedron!", "octahedron", dimension)
     return A_square(dimensions["1"])
 
 def xSec_A_ellipsoid(dimensions):
     required_dimensions = ["major", "minor"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a ellipsoid!", "ellipsoid", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a ellipsoid!", "ellipsoid", dimension)
     return A_ellipse(dimensions["major"], dimensions["minor"])
 
 def xSec_A_pentagonal_prism(dimensions):
     required_dimensions = ["l"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a pentagonal_prism!", "pentagonal_prism", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a pentagonal_prism!", "pentagonal_prism", dimension)
     return A_square(dimensions["1"])
 
 def xSec_A_pentagonal_pyramid(dimensions):
     required_dimensions = ["l"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a pentagonal_pyramid!", "pentagonal_pyramid", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a pentagonal_pyramid!", "pentagonal_pyramid", dimension)
     return A_square(dimensions["1"])
 
 def xSec_A_hexagonal_pyramid(dimensions):
     required_dimensions = ["l"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a hexagonal_pyramid!", "hexagonal_pyramid", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a hexagonal_pyramid!", "hexagonal_pyramid", dimension)
     return A_square(dimensions["1"])
 
 def xSec_A_octagonal_prism(dimensions):
     required_dimensions = ["l"]
     for dimension in required_dimensions:
         if dimension not in dimensions:
-            raise MissingDimension(f"Missing the {dimension} dimension for a octagonal_prism!", "octagonal_prism", dimension)
+            raise MissingDimensionError(f"Missing the {dimension} dimension for a octagonal_prism!", "octagonal_prism", dimension)
     return A_square(dimensions["1"])
 
 geometry_constants = {
@@ -492,4 +473,4 @@ def A(shape, dimensions = {}):
     if shape.lower() in geometry_constants["shape"].keys():
         return geometry_constants["shape"][shape.lower()]["crossSectionalArea"](dimensions)
     else:
-        raise UndefinedShape(f"Shape type {shape} is undefined in the constants dictionary!")
+        raise UndefinedShapeError(f"Shape type {shape} is undefined in the constants dictionary!")

@@ -1,15 +1,5 @@
 # Equalateral.py
-from Classes.Math.Geometry.Shapes.Triangles.Isosceles import IsoscelesTriangle, IsoscelesTriangleError
-
-class EqualateralTriangleError(IsoscelesTriangleError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Geometry.Shapes.Triangles.Isosceles import IsoscelesTriangle
 
 class EqualateralTriangle(IsoscelesTriangle):
     def __new__(cls, *args, **kwargs):

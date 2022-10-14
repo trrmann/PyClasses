@@ -1,16 +1,6 @@
 # Line.py
-from Classes.Math.Algebra.Lines.Line import Line as AlgebraLine, LineError as AlgebraLineError
-from Classes.Math.Geometry.Shapes.Shape import Shape, ShapeError
-
-class LineError(ShapeError, AlgebraLineError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Algebra.Lines.Line import Line as AlgebraLine
+from Classes.Math.Geometry.Shapes.Shape import Shape
 
 class Line(Shape, AlgebraLine):
     def __new__(cls, *args, **kwargs):

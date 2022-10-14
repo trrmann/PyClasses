@@ -1,25 +1,9 @@
 # Physics.py
 from Classes.Math.Math import Math
-from Classes.Science.EarthScience.EarthScience import EarthScience, EarthScienceError
+from Classes.Science.EarthScience.EarthScience import EarthScience
+from Classes.Science.Chemistry.errors.UndefinedFluidTypeError import UndefinedFluidTypeError
+from Classes.Science.EarthScience.errors.UndefinedCelestialLocationError import UndefinedCelestialLocationError
 import math
-
-class PhysicsError(EarthScienceError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
-
-class UndefinedCelestialLocation(PhysicsError):
-    """Raised when the item is unknown"""
-    pass
-
-class UndefinedFluidType(PhysicsError):
-    """Raised when the item is unknown"""
-    pass
 
 class Physics(EarthScience):
     def __new__(cls, *args, **kwargs):

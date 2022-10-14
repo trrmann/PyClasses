@@ -1,16 +1,6 @@
 # Isosceles.py
-from Classes.Math.Trigonometry.Triangles.Scalene import ScaleneTriangle, ScaleneTriangleError
-from Classes.Math.Geometry.Shapes.Triangles.Isosceles import IsoscelesTriangle as GeometryIsoscelesTriangle,  IsoscelesTriangleError as GeometryIsoscelesTriangleError
-
-class IsoscelesTriangleError(ScaleneTriangleError, GeometryIsoscelesTriangleError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Trigonometry.Triangles.Scalene import ScaleneTriangle
+from Classes.Math.Geometry.Shapes.Triangles.Isosceles import IsoscelesTriangle as GeometryIsoscelesTriangle
 
 class IsoscelesTriangle(ScaleneTriangle, GeometryIsoscelesTriangle):
     def __new__(cls, *args, **kwargs):

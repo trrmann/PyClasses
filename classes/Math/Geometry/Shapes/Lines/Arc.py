@@ -1,16 +1,6 @@
 # Arc.py
-from Classes.Math.Geometry.Shapes.Lines.Line import Line, LineError
-from Classes.Math.Algebra.Lines.Arc import Arc as AlgebraArc, ArcError as AlgebraArcError
-
-class ArcError(LineError, AlgebraArcError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Geometry.Shapes.Lines.Line import Line
+from Classes.Math.Algebra.Lines.Arc import Arc as AlgebraArc
 
 class Arc(Line, AlgebraArc):
     def __new__(cls, *args, **kwargs):

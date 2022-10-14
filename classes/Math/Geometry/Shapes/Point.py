@@ -1,16 +1,6 @@
 # Point.py
-from Classes.Math.Geometry.Shapes.Shape import Shape, ShapeError
-from Classes.Math.Algebra.Coordinates.Point import Point as AlgebraPoint, PointError as AlgebraPointError
-
-class PointError(AlgebraPointError, ShapeError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Geometry.Shapes.Shape import Shape
+from Classes.Math.Algebra.Coordinates.Point import Point as AlgebraPoint
 
 class Point(AlgebraPoint, Shape):
     def __new__(cls, *args, **kwargs):

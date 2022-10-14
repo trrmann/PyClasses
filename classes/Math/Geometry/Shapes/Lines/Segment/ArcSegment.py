@@ -1,16 +1,6 @@
 # ArcSegment.py
-from Classes.Math.Geometry.Shapes.Lines.Segment.LineSegment import LineSegment, LineSegmentError
-from Classes.Math.Algebra.Lines.Segment.ArcSegment import ArcSegment as AlgebraArcSegment, ArcSegmentError as AlgebraArcSegmentError
-
-class ArcSegmentError(AlgebraArcSegmentError, LineSegmentError):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self):
-        pass
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}"
+from Classes.Math.Geometry.Shapes.Lines.Segment.LineSegment import LineSegment
+from Classes.Math.Algebra.Lines.Segment.ArcSegment import ArcSegment as AlgebraArcSegment
 
 class ArcSegment(AlgebraArcSegment, LineSegment):
     def __new__(cls, *args, **kwargs):
