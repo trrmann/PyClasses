@@ -1,30 +1,10 @@
 # Physics.py
 from Classes.Math.Math import Math
-from Classes.Science.EarthScience.EarthScience import EarthScience
-from Classes.Science.Chemistry.errors.UndefinedFluidTypeError import UndefinedFluidTypeError
-from Classes.Science.EarthScience.errors.UndefinedCelestialLocationError import UndefinedCelestialLocationError
+from Classes.Science.Chemistry.Chemistry import fluid_density
+from Classes.Science.EarthScience.EarthScience import EarthScience, g
 import math
 
-class Physics(EarthScience):
-    def __new__(cls, *args, **kwargs):
-        return super().__new__(cls)
-
-    def __init__(self, className = "Physics"):
-        super().__init__(self, className)
-
-    def __repr__(self) -> str:
-        return f"{type(self).__name__}(className={self.className})"
-
-
 physics_constants = {
-    "g" : {
-        "earth" : 9.8,
-        "jupiter" : 24
-    },
-    "fluidDensity" : {
-        "air" : 1.3,
-        "water" : 1000
-    },
     "shape" : {
         "cylinder" : {
             "drag_constant" : {
@@ -41,18 +21,15 @@ physics_constants = {
     }
 }
 
-#Gravitational force constant
-def g(location = "earth"):
-    if location.lower() in physics_constants["g"].keys():
-        return physics_constants["g"][location.lower()]
-    else:
-        raise UndefinedCelestialLocation(f"Gravitational force for celestial location {location} is undefined in the constants dictionary!")
+class Physics(EarthScience):
+    def __new__(cls, *args, **kwargs):
+        return super().__new__(cls)
 
-def fluid_density(type = "air"):
-    if type.lower() in physics_constants["fluidDensity"].keys():
-        return physics_constants["fluidDensity"][type.lower()]
-    else:
-        raise UndefinedFluidType(f"Density for fluid type {type} is undefined in the constants dictionary!")
+    def __init__(self, className = "Physics"):
+        super().__init__(self, className)
+
+    def __repr__(self) -> str:
+        return f"{type(self).__name__}(className={self.className})"
 
 #Drag force constant
 def C(shape, shape_orientation = "default"):
@@ -77,4 +54,3 @@ def c(type_of_fluid, shape, shape_dimensions = {}, shape_orientation = "default"
 def v(t, m, shape, shape_dimensions = {}, shape_orientation = "default", type_of_fluid = "air", location = "earth"):
     _c = c(type_of_fluid, shape, shape_dimensions, shape_orientation)
     return math.sqrt(m * g(location) / _c) * (1 - math.exp(-1 * math.sqrt(m * g(location) * _c) / m * t))
-

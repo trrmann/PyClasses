@@ -1,5 +1,13 @@
 # EarthScience.py
 from Classes.Science.Science import Science
+from Classes.Science.EarthScience.errors.UndefinedCelestialLocationError import UndefinedCelestialLocationError
+
+astro_constants = {
+    "g" : {
+        "earth" : 9.8,
+        "jupiter" : 24
+    }
+}
 
 class EarthScience(Science):
     def __new__(cls, *args, **kwargs):
@@ -10,3 +18,10 @@ class EarthScience(Science):
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}(className={self.className})"
+
+#Gravitational force constant
+def g(location = "earth"):
+    if location.lower() in astro_constants["g"].keys():
+        return astro_constants["g"][location.lower()]
+    else:
+        raise UndefinedCelestialLocationError(f"Gravitational force for celestial location {location} is undefined in the constants dictionary!")
