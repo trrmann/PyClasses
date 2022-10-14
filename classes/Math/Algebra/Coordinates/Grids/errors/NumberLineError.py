@@ -1,5 +1,5 @@
 # NumberLineError.py
-from Classes.Math.Algebra.Coordinates.Coordinates import CoordinatesError
+from Classes.Math.Algebra.Coordinates.errors.CoordinatesError import CoordinatesError
 
 class NumberLineError(CoordinatesError):
     def __new__(cls, *args, **kwargs):
