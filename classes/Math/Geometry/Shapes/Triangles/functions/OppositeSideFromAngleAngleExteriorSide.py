@@ -4,7 +4,7 @@ import math
 
 def OppositeSideFromAngleAngleExteriorSide(AngleOppositeResultSide: float, AngleOppositeGivenSide: float, ExteriorSide: float):
     try:
-        return math.degrees(math.sin(math.radians(float(AngleOppositeResultSide))) * float(ExteriorSide) / math.sin(math.radians(float(AngleOppositeGivenSide))))
+        return math.sin(math.radians(float(AngleOppositeResultSide))) * float(ExteriorSide) / math.sin(math.radians(float(AngleOppositeGivenSide)))
     except ValueError:
         try:
             float(AngleOppositeResultSide)

@@ -18,6 +18,8 @@ import Classes.Math.Geometry.Shapes.Triangles.functions.TriangleSidesSumRule as 
 import Classes.Math.Geometry.Shapes.Triangles.functions.AssertTriangle as AssertTriangle
 import Classes.Math.Geometry.Shapes.Triangles.functions.SolveTriangle as SolveTriangle
 import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeSideFromAngleAngleExteriorSide as OppositeSideFromAngleAngleExteriorSide
+import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeAngleFromSideSideExteriorAngle as OppositeAngleFromSideSideExteriorAngle
+import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeSideFromSideSideInteriorAngle as OppositeSideFromSideSideInteriorAngle
 
 import Classes.Math.Geometry.Shapes.Triangles.Acute as AcuteTriangle
 import Classes.Math.Geometry.Shapes.Triangles.errors.ObtuseTriangleError as ObtuseTriangleError
