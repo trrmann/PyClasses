@@ -1,5 +1,5 @@
 # SolveTriangle.py
-#from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
 from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
 from Classes.Math.Geometry.Shapes.Triangles.functions.AllAnglesDefined import AllAnglesDefined
 from Classes.Math.Geometry.Shapes.Triangles.functions.AllSidesDefined import AllSidesDefined
