@@ -20,11 +20,10 @@ A triangle is a closed polygon in a two-dimensional plane having three sides and
 
 The five major properties of a triangle are:
 It has three sides, three vertices and three angles.
-X Sum of all three angles equal to 180 degrees
-X Sum of the length of any two sides of a triangle is always greater than the third side
-X Perimeter of the triangle is equal to the sum of all three sides
-X Area of triangle is equal to half of the product of base and height
-
+Sum of all three angles equal to 180 degrees
+Sum of the length of any two sides of a triangle is always greater than the third side
+Perimeter of the triangle is equal to the sum of all three sides
+Area of triangle is equal to half of the product of base and height
 """
 __className = "Triangle"
 __undefined = "undefined"

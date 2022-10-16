@@ -20,6 +20,24 @@ import Classes.Math.Geometry.Shapes.Triangles.functions.SolveTriangle as SolveTr
 import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeSideFromAngleAngleExteriorSide as OppositeSideFromAngleAngleExteriorSide
 import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeAngleFromSideSideExteriorAngle as OppositeAngleFromSideSideExteriorAngle
 import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeSideFromSideSideInteriorAngle as OppositeSideFromSideSideInteriorAngle
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_NotDefined as AngleA_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_NotDefined as AngleB_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_NotDefined as AngleC_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_Defined as AngleA_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_Defined as AngleB_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_Defined as AngleC_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_a_NotDefined as Side_a_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_b_NotDefined as Side_b_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_NotDefined as Side_c_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_a_Defined as Side_a_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_b_Defined as Side_b_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_Defined as Side_c_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.NoSideDefined as NoSideDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.HasSideDefined as HasSideDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AllSidesDefined as AllSidesDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.NoAngleDefined as NoAngleDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.HasAngleDefined as HasAngleDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AllAnglesDefined as AllAnglesDefined
 
 import Classes.Math.Geometry.Shapes.Triangles.Acute as AcuteTriangle
 import Classes.Math.Geometry.Shapes.Triangles.errors.ObtuseTriangleError as ObtuseTriangleError
