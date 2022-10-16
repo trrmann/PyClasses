@@ -1,7 +1,7 @@
 # ScienceError.py
-import Classes.errors.ClassesError as ClassesError
+from ClassesPackage.ClassesErrorModule import ClassesError
 
-class ScienceError(ClassesError.ClassesError):
+class ScienceError(ClassesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
