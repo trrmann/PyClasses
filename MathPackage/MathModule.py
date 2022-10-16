@@ -1,7 +1,7 @@
 # Math.py
-import Classes.Classes as Classes
+from ClassesPackage.ClassesModule import Classes
 
-class Math(Classes.Classes):
+class Math(Classes):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
