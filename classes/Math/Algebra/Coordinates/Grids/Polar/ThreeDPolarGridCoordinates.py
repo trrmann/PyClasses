@@ -1,16 +1,16 @@
 # ThreeDPolorGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Polar.TwoDPolarGridCoordinates import TwoDPolorGridCoordinates
-from Classes.Math.Algebra.Coordinates.Grids.Axes.ρAxis import ρAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis import θAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.φAxis import φAxis
-from Classes.Math.Algebra.Coordinates.ThreeDCoordinates import ThreeDCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Polar.TwoDPolarGridCoordinates as TwoDPolorGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Axes.ρAxis as ρAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis as θAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.φAxis as φAxis
+import Classes.Math.Algebra.Coordinates.ThreeDCoordinates as ThreeDCoordinates
 
-class ThreeDPolarGridCoordinates(TwoDPolorGridCoordinates, ThreeDCoordinates):
+class ThreeDPolarGridCoordinates(TwoDPolorGridCoordinates.TwoDPolorGridCoordinates, ThreeDCoordinates.ThreeDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
-            axes_list = [ρAxis, θAxis, φAxis],
+            axes_list = [ρAxis.ρAxis, θAxis.θAxis, φAxis.φAxis],
             className = "ThreeDPolorGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)

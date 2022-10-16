@@ -1,8 +1,8 @@
 # ThreeDPolarGridCoordinatesError.py
-from Classes.Math.Algebra.Coordinates.Grids.Polar.TwoDPolarGridCoordinates import TwoDPolorGridCoordinates
-from Classes.Math.Algebra.Coordinates.errors.ThreeDCoordinatesError import ThreeDCoordinatesError
+import Classes.Math.Algebra.Coordinates.Grids.Polar.errors.TwoDPolarGridCoordinatesError as TwoDPolarGridCoordinatesError
+import Classes.Math.Algebra.Coordinates.errors.ThreeDCoordinatesError as ThreeDCoordinatesError
 
-class ThreeDPolarGridCoordinatesError(TwoDPolorGridCoordinates, ThreeDCoordinatesError):
+class ThreeDPolarGridCoordinatesError(TwoDPolarGridCoordinatesError.TwoDPolarGridCoordinatesError, ThreeDCoordinatesError.ThreeDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

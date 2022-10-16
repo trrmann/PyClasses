@@ -1,8 +1,8 @@
 # ArcSegment.py
-from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment
-from Classes.Math.Algebra.Lines.Arc import Arc
+import Classes.Math.Algebra.Lines.Segment.LineSegment as LineSegment
+import Classes.Math.Algebra.Lines.Arc as Arc
 
-class ArcSegment(Arc, LineSegment):
+class ArcSegment(Arc.Arc, LineSegment.LineSegment):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

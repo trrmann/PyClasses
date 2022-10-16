@@ -1,7 +1,7 @@
 # LineSegment.py
-from Classes.Math.Algebra.Lines.Line import Line
+import Classes.Math.Algebra.Lines.Line as Line
 
-class LineSegment(Line):
+class LineSegment(Line.Line):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

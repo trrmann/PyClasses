@@ -1,8 +1,8 @@
 # Straight.py
-from Classes.Math.Geometry.Shapes.Lines.Line import Line
-from Classes.Math.Algebra.Lines.StraightLine import StraightLine as AlgebraStraightLine
+import Classes.Math.Geometry.Shapes.Lines.Line as Line
+import Classes.Math.Algebra.Lines.StraightLine as AlgebraStraightLine
 
-class StraightLine(Line, AlgebraStraightLine):
+class StraightLine(Line.Line, AlgebraStraightLine.StraightLine):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

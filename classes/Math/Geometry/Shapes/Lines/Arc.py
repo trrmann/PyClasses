@@ -1,8 +1,8 @@
 # Arc.py
-from Classes.Math.Geometry.Shapes.Lines.Line import Line
-from Classes.Math.Algebra.Lines.Arc import Arc as AlgebraArc
+import Classes.Math.Geometry.Shapes.Lines.Line as Line
+import Classes.Math.Algebra.Lines.Arc as AlgebraArc
 
-class Arc(Line, AlgebraArc):
+class Arc(Line.Line, AlgebraArc.Arc):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

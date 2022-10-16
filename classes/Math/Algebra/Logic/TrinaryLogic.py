@@ -1,7 +1,7 @@
 # TrinaryLogic.py
-from Classes.Math.Algebra.Logic.Logic import Logic
+import Classes.Math.Algebra.Logic.Logic as Logic
 
-class TrinaryLogic(Logic):
+class TrinaryLogic(Logic.Logic):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

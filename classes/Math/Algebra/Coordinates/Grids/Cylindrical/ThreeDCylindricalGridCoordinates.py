@@ -1,16 +1,16 @@
 # ThreeDCylindricalGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.TwoDCylindricalGridCoordinates import TwoDCylindricalGridCoordinates
-from Classes.Math.Algebra.Coordinates.Grids.Axes.rAxis import rAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis import θAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis import ZAxis
-from Classes.Math.Algebra.Coordinates.ThreeDCoordinates import ThreeDCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.TwoDCylindricalGridCoordinates as TwoDCylindricalGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Axes.rAxis as rAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis as θAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis as ZAxis
+import Classes.Math.Algebra.Coordinates.ThreeDCoordinates as ThreeDCoordinates
 
-class ThreeDCylindricalGridCoordinates(TwoDCylindricalGridCoordinates, ThreeDCoordinates):
+class ThreeDCylindricalGridCoordinates(TwoDCylindricalGridCoordinates.TwoDCylindricalGridCoordinates, ThreeDCoordinates.ThreeDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
-            axes_list = [rAxis, θAxis, ZAxis],
+            axes_list = [rAxis.rAxis, θAxis.θAxis, ZAxis.ZAxis],
             className = "ThreeDCylindricalGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)

@@ -1,8 +1,8 @@
 # Curve.py
-from Classes.Math.Geometry.Shapes.Lines.errors.LineError import LineError
-from Classes.Math.Algebra.Lines.errors.CurveError import CurveError as AlgebraCurveError
+import Classes.Math.Geometry.Shapes.Lines.errors.LineError as LineError
+import Classes.Math.Algebra.Lines.errors.CurveError as AlgebraCurveError
 
-class CurveError(LineError, AlgebraCurveError):
+class CurveError(LineError.LineError, AlgebraCurveError.CurveError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

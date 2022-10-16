@@ -1,8 +1,8 @@
 # TriangleError.py
-from Classes.Math.Trigonometry.errors.TrigonometryError import TrigonometryError
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError as GeometryTriangleError
+import Classes.Math.Trigonometry.errors.TrigonometryError as TrigonometryError
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as GeometryTriangleError
 
-class TriangleError(TrigonometryError, GeometryTriangleError):
+class TriangleError(TrigonometryError.TrigonometryError, GeometryTriangleError.TriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

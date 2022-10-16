@@ -1,7 +1,7 @@
 # Science.py
-from Classes.Classes import Classes
+import Classes.Classes as Classes
 
-class Science(Classes):
+class Science(Classes.Classes):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

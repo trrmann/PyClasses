@@ -1,8 +1,8 @@
 # Point.py
-from Classes.Math.Geometry.Shapes.Shape import Shape
-from Classes.Math.Algebra.Coordinates.Point import Point as AlgebraPoint
+import Classes.Math.Geometry.Shapes.Shape as Shape
+import Classes.Math.Algebra.Coordinates.Point as AlgebraPoint
 
-class Point(AlgebraPoint, Shape):
+class Point(AlgebraPoint.Point, Shape.Shape):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

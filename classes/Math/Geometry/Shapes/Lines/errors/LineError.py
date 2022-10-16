@@ -1,8 +1,8 @@
 # LineError.py
-from Classes.Math.Algebra.Lines.errors.LineError import LineError as AlgebraLineError
-from Classes.Math.Geometry.Shapes.errors.ShapeError import ShapeError
+import Classes.Math.Algebra.Lines.errors.LineError as AlgebraLineError
+import Classes.Math.Geometry.Shapes.errors.ShapeError as ShapeError
 
-class LineError(ShapeError, AlgebraLineError):
+class LineError(ShapeError.ShapeError, AlgebraLineError.LineError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

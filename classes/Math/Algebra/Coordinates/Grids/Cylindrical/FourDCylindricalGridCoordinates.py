@@ -1,17 +1,17 @@
 # FourDCylindricalGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.ThreeDCylindricalGridCoordinates import ThreeDCylindricalGridCoordinates
-from Classes.Math.Algebra.Coordinates.Grids.Axes.rAxis import rAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis import θAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis import ZAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.TimeLine import TimeLine
-from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.ThreeDCylindricalGridCoordinates as ThreeDCylindricalGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Axes.rAxis as rAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis as θAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis as ZAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.TimeLine as TimeLine
+import Classes.Math.Algebra.Coordinates.FourDCoordinates as FourDCoordinates
 
-class FourDCylindricalGridCoordinates(ThreeDCylindricalGridCoordinates, FourDCoordinates):
+class FourDCylindricalGridCoordinates(ThreeDCylindricalGridCoordinates.ThreeDCylindricalGridCoordinates, FourDCoordinates.FourDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
-            axes_list = [rAxis, θAxis, ZAxis, TimeLine],
+            axes_list = [rAxis.rAxis, θAxis.θAxis, ZAxis.ZAxis, TimeLine.TimeLine],
             className = "FourDCylindricalGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)

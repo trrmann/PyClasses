@@ -1,7 +1,7 @@
 # CartesianGridCoordinatesError.py
-from Classes.Math.Algebra.Coordinates.Grids.errors.GridError import GridError
+import Classes.Math.Algebra.Coordinates.Grids.errors.GridError as GridError
 
-class CartesianGridCoordinatesError(GridError):
+class CartesianGridCoordinatesError(GridError.GridError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

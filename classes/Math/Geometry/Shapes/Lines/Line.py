@@ -1,8 +1,8 @@
 # Line.py
-from Classes.Math.Algebra.Lines.Line import Line as AlgebraLine
-from Classes.Math.Geometry.Shapes.Shape import Shape
+import Classes.Math.Algebra.Lines.Line as AlgebraLine
+import Classes.Math.Geometry.Shapes.Shape as Shape
 
-class Line(Shape, AlgebraLine):
+class Line(Shape.Shape, AlgebraLine.Line):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

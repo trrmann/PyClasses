@@ -1,7 +1,7 @@
 # AngleA_Defined.py
-from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_NotDefined import AngleA_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_NotDefined as AngleA_NotDefined
 
 def AngleA_Defined(triangle, undefined):
     if isinstance(triangle, Triangle):

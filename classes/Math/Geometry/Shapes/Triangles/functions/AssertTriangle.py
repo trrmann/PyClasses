@@ -1,8 +1,8 @@
 # AssertTriangle.py
 import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.AssertAnglesFormTriangle import AssertAnglesFormTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.AssertTriangleSidesSumRule import AssertTriangleSidesSumRule
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.AssertAnglesFormTriangle as AssertAnglesFormTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.AssertTriangleSidesSumRule as AssertTriangleSidesSumRule
 
 def AssertTriangle(triangle):
     if isinstance(triangle, Triangle):

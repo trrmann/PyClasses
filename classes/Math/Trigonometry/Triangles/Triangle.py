@@ -1,11 +1,11 @@
 # Triangle.py
-from Classes.Math.Trigonometry.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Trigonometry.Trigonometry import Trigonometry
-from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle as GeometryTriangle
-from Classes.Math.Geometry.Geometry import MissingDimensionError
+import Classes.Math.Trigonometry.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Trigonometry.Trigonometry as Trigonometry
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as GeometryTriangle
+import Classes.Math.Geometry.Geometry as MissingDimensionError
 import math
 
-class Triangle(Trigonometry, GeometryTriangle):
+class Triangle(Trigonometry.Trigonometry, GeometryTriangle.Triangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

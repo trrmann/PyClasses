@@ -1,7 +1,7 @@
 # Side_c_Defined.py
-from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_NotDefined import Side_c_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_NotDefined as Side_c_NotDefined
 
 def Side_c_Defined(triangle, undefined):
     if isinstance(triangle, Triangle):

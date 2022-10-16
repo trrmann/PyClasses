@@ -1,6 +1,6 @@
 # AngleB_NotDefined.py
-from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
 
 def AngleB_NotDefined(triangle, undefined):
     if isinstance(triangle, Triangle):

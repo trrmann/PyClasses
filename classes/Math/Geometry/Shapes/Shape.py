@@ -1,7 +1,7 @@
 # Shape.py
-from Classes.Math.Geometry.Geometry import Geometry
+import Classes.Math.Geometry.Geometry as Geometry
 
-class Shape(Geometry):
+class Shape(Geometry.Geometry):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

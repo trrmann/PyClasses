@@ -1,8 +1,8 @@
 # LineSegment.py
-from Classes.Math.Geometry.Shapes.Lines.Line import Line
-from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment as AlgebraLineSegment
+import Classes.Math.Geometry.Shapes.Lines.Line as Line
+import Classes.Math.Algebra.Lines.Segment.LineSegment as AlgebraLineSegment
 
-class LineSegment(Line, AlgebraLineSegment):
+class LineSegment(Line.Line, AlgebraLineSegment.LineSegment):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

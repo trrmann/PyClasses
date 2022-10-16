@@ -1,7 +1,7 @@
 # Hexadecimal.py
-from Classes.Math.Algebra.NumberSystems.NumberSystem import NumberSystem
+import Classes.Math.Algebra.NumberSystems.NumberSystem as NumberSystem
 
-class Hexadecimal(NumberSystem):
+class Hexadecimal(NumberSystem.NumberSystem):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

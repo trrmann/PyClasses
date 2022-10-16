@@ -1,7 +1,7 @@
 # CalculusError.py
-from Classes.Math.Trigonometry.errors.TrigonometryError import TrigonometryError
+import Classes.Math.Trigonometry.errors.TrigonometryError as TrigonometryError
 
-class CalculusError(TrigonometryError):
+class CalculusError(TrigonometryError.TrigonometryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

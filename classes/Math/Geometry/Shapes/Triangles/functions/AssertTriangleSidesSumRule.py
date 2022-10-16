@@ -1,7 +1,7 @@
 # AssertTriangleSidesSumRule.py
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.TriangleSidesSumRule import TriangleSidesSumRule
-from Classes.Math.Geometry.errors.MissingDimensionError import MissingDimensionError
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.TriangleSidesSumRule as TriangleSidesSumRule
+import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
 
 """
 Sum of the length of any two sides of a triangle is always greater than the third side

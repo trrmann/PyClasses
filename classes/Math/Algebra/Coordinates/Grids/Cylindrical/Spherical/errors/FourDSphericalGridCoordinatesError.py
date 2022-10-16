@@ -1,8 +1,8 @@
 # FourDSphericalGridCoordinatesError.py
-from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.errors.ThreeDSphericalGridCoordinatesError import ThreeDSphericalGridCoordinatesError
-from Classes.Math.Algebra.Coordinates.errors.FourDCoordinatesError import FourDCoordinatesError
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.Spherical.errors.ThreeDSphericalGridCoordinatesError as ThreeDSphericalGridCoordinatesError
+import Classes.Math.Algebra.Coordinates.errors.FourDCoordinatesError as FourDCoordinatesError
 
-class FourDSphericalGridCoordinatesError(ThreeDSphericalGridCoordinatesError, FourDCoordinatesError):
+class FourDSphericalGridCoordinatesError(ThreeDSphericalGridCoordinatesError.ThreeDSphericalGridCoordinatesError, FourDCoordinatesError.FourDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

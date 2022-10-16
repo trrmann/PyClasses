@@ -1,7 +1,7 @@
 # Coordinates.py
-from Classes.Math.Algebra.Algebra import Algebra
+import Classes.Math.Algebra.Algebra as Algebra
 
-class Coordinates(Algebra):
+class Coordinates(Algebra.Algebra):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

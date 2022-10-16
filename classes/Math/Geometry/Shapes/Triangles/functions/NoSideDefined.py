@@ -1,9 +1,9 @@
 # NoSideDefined.py
-from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.Side_a_NotDefined import Side_a_NotDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.Side_b_NotDefined import Side_b_NotDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_NotDefined import Side_c_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_a_NotDefined as Side_a_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_b_NotDefined as Side_b_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_NotDefined as Side_c_NotDefined
 
 def NoSideDefined(triangle, undefined):
     if isinstance(triangle, Triangle):

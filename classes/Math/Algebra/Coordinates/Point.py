@@ -1,7 +1,7 @@
 # Point.py
-from Classes.Math.Algebra.Coordinates.Coordinates import Coordinates
+import Classes.Math.Algebra.Coordinates.Coordinates as Coordinates
 
-class Point(Coordinates):
+class Point(Coordinates.Coordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

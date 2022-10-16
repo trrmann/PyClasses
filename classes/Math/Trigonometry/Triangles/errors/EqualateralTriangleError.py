@@ -1,8 +1,8 @@
 # Equalateral.py
-from Classes.Math.Trigonometry.Triangles.errors.IsoscelesTriangleError import IsoscelesTriangleError
-from Classes.Math.Geometry.Shapes.Triangles.errors.EqualateralTriangleError import EqualateralTriangleError as GeometryEqualateralTriangleError
+import Classes.Math.Trigonometry.Triangles.errors.IsoscelesTriangleError as IsoscelesTriangleError
+import Classes.Math.Geometry.Shapes.Triangles.errors.EqualateralTriangleError as GeometryEqualateralTriangleError
 
-class EqualateralTriangleError(IsoscelesTriangleError, GeometryEqualateralTriangleError):
+class EqualateralTriangleError(IsoscelesTriangleError.IsoscelesTriangleError, GeometryEqualateralTriangleError.EqualateralTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

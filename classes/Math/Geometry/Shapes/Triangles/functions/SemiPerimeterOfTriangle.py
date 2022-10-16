@@ -1,6 +1,6 @@
 # SemiperimeterOfTriangle.py
-from Classes.Math.Geometry.Shapes.Triangles.functions.PerimeterOfTriangle import PerimeterOfTriangle
-from Classes.Math.Geometry.errors.MissingDimensionError import MissingDimensionError
+import Classes.Math.Geometry.Shapes.Triangles.functions.PerimeterOfTriangle as PerimeterOfTriangle
+import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
 
 def SemiPerimeterOfTriangle(a: float, b: float, c: float):
     try:

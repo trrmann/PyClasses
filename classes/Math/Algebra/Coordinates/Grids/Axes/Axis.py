@@ -1,7 +1,7 @@
 # Axis.py
-from Classes.Math.Algebra.Coordinates.Grids.NumberLine import NumberLine
+import Classes.Math.Algebra.Coordinates.Grids.NumberLine as NumberLine
 
-class Axis(NumberLine):
+class Axis(NumberLine.NumberLine):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

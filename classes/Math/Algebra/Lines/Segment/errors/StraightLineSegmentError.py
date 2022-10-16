@@ -1,8 +1,8 @@
 # StraightLineSegmentError.py
-from Classes.Math.Algebra.Lines.Segment.errors.LineSegmentError import LineSegmentError
-from Classes.Math.Algebra.Lines.errors.StraightLineError import StraightLineError
+import Classes.Math.Algebra.Lines.Segment.errors.LineSegmentError as LineSegmentError
+import Classes.Math.Algebra.Lines.errors.StraightLineError as StraightLineError
 
-class StraightLineSegmentError(StraightLineError, LineSegmentError):
+class StraightLineSegmentError(StraightLineError.StraightLineError, LineSegmentError.LineSegmentError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

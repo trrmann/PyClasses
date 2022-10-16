@@ -1,6 +1,6 @@
 # AssertAnglesFormTriangle.py
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.DoAnglesFormTriangle import DoAnglesFormTriangle
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.DoAnglesFormTriangle as DoAnglesFormTriangle
 
 def AssertAnglesFormTriangle(A: float, B: float, C: float):
     if not DoAnglesFormTriangle(A, B, C):

@@ -1,7 +1,7 @@
 # SphericalGridCoordinatesError.py
-from Classes.Math.Algebra.Coordinates.Grids.Cylindrical.errors.CylindricalGridCoordinatesError import CylindricalGridCoordinatesError
+import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.errors.CylindricalGridCoordinatesError as CylindricalGridCoordinatesError
 
-class SphericalGridCoordinatesError(CylindricalGridCoordinatesError):
+class SphericalGridCoordinatesError(CylindricalGridCoordinatesError.CylindricalGridCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

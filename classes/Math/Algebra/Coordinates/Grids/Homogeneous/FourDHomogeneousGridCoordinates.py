@@ -1,17 +1,17 @@
 # FourDHomogeneousGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Homogeneous.ThreeDHomogeneousGridCoordinates import ThreeDHomogeneousGridCoordinates
-from Classes.Math.Algebra.Coordinates.Grids.Axes.XAxis import XAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.YAxis import YAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis import ZAxis
-from Classes.Math.Algebra.Coordinates.Grids.Axes.TimeLine import TimeLine
-from Classes.Math.Algebra.Coordinates.FourDCoordinates import FourDCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Homogeneous.ThreeDHomogeneousGridCoordinates as ThreeDHomogeneousGridCoordinates
+import Classes.Math.Algebra.Coordinates.Grids.Axes.XAxis as XAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.YAxis as YAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis as ZAxis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.TimeLine as TimeLine
+import Classes.Math.Algebra.Coordinates.FourDCoordinates as FourDCoordinates
 
-class FourDHomogeneousGridCoordinates(ThreeDHomogeneousGridCoordinates, FourDCoordinates):
+class FourDHomogeneousGridCoordinates(ThreeDHomogeneousGridCoordinates.ThreeDHomogeneousGridCoordinates, FourDCoordinates.FourDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
-            axes_list = [XAxis, YAxis, ZAxis, TimeLine],
+            axes_list = [XAxis.XAxis, YAxis.YAxis, ZAxis.ZAxis, TimeLine.TimeLine],
             className = "FourDHomogeneousGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)

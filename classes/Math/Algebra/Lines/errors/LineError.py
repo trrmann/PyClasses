@@ -1,7 +1,7 @@
 # LineError.py
-from Classes.Math.Algebra.errors.AlgebraError import AlgebraError
+import Classes.Math.Algebra.errors.AlgebraError as AlgebraError
 
-class LineError(AlgebraError):
+class LineError(AlgebraError.AlgebraError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

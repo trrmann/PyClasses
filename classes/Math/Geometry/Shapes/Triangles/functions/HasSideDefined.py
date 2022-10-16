@@ -1,7 +1,7 @@
 # HasSideDefined.py
-from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.NoSideDefined import NoSideDefined
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.NoSideDefined as NoSideDefined
 
 def HasSideDefined(triangle, undefined):
     if isinstance(triangle, Triangle):

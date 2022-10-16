@@ -1,8 +1,8 @@
 # ZAxis.py
-from Classes.Math.Algebra.Coordinates.Grids.Axes.Axis import Axis
+import Classes.Math.Algebra.Coordinates.Grids.Axes.Axis as Axis
 
 #linear axis
-class ZAxis(Axis):
+class ZAxis(Axis.Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

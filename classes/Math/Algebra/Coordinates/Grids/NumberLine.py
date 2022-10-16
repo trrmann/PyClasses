@@ -1,17 +1,17 @@
 # NumberLine.py
-from Classes.Math.Algebra.Coordinates.Coordinates import Coordinates
-from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumError import InvalidMaximumError
-from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumLimitError import InvalidMaximumLimitError
-from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumError import InvalidMinimumError
-from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumLimitError import InvalidMinimumLimitError
-from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidOriginError import InvalidOriginError
-from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidValueError import InvalidValueError
-from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumError import ValueExceedsMaxiumError
-from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumLimitError import ValueExceedsMaxiumLimitError
-from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumError import ValueExceedsMinimumError
-from Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumLimitError import ValueExceedsMinimumLimitError
+import Classes.Math.Algebra.Coordinates.Coordinates as Coordinates
+import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumError as InvalidMaximumError
+import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumLimitError as InvalidMaximumLimitError
+import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumError as InvalidMinimumError
+import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumLimitError as InvalidMinimumLimitError
+import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidOriginError as InvalidOriginError
+import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidValueError as InvalidValueError
+import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumError as ValueExceedsMaxiumError
+import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumLimitError as ValueExceedsMaxiumLimitError
+import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumError as ValueExceedsMinimumError
+import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumLimitError as ValueExceedsMinimumLimitError
 
-class NumberLine(Coordinates):
+class NumberLine(Coordinates.Coordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

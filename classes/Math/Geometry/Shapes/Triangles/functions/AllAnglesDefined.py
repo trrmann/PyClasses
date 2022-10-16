@@ -1,9 +1,9 @@
 # AllAnglesDefined.py
-from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_Defined import AngleA_Defined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_Defined import AngleB_Defined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_Defined import AngleC_Defined
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_Defined as AngleA_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_Defined as AngleB_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_Defined as AngleC_Defined
 
 def AllAnglesDefined(triangle, undefined):
     if isinstance(triangle, Triangle):

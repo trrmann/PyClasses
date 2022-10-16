@@ -1,7 +1,7 @@
 # ArithmaticError.py
-from Classes.Math.errors.MathError import MathError
+import Classes.Math.errors.MathError as MathError
 
-class ArithmaticError(MathError):
+class ArithmaticError(MathError.MathError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

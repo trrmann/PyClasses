@@ -1,8 +1,8 @@
 # Acute.py
-from Classes.Math.Trigonometry.Triangles.Scalene import ScaleneTriangle
-from Classes.Math.Geometry.Shapes.Triangles.Acute import AcuteTriangle as GeometryAcuteTriangle
+import Classes.Math.Trigonometry.Triangles.Scalene as ScaleneTriangle
+import Classes.Math.Geometry.Shapes.Triangles.Acute as GeometryAcuteTriangle
 
-class AcuteTriangle(ScaleneTriangle, GeometryAcuteTriangle):
+class AcuteTriangle(ScaleneTriangle.ScaleneTriangle, GeometryAcuteTriangle.AcuteTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,7 +1,7 @@
 # Arc.py
-from Classes.Math.Algebra.Lines.Line import Line
+import Classes.Math.Algebra.Lines.Line as Line
 
-class Arc(Line):
+class Arc(Line.Line):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

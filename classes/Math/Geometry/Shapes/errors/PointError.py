@@ -1,8 +1,8 @@
 # PointError.py
-from Classes.Math.Geometry.Shapes.errors.ShapeError import ShapeError
-from Classes.Math.Algebra.Coordinates.errors.PointError import PointError as AlgebraPointError
+import Classes.Math.Geometry.Shapes.errors.ShapeError as ShapeError
+import Classes.Math.Algebra.Coordinates.errors.PointError as AlgebraPointError
 
-class PointError(AlgebraPointError, ShapeError):
+class PointError(AlgebraPointError.PointError, ShapeError.ShapeError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

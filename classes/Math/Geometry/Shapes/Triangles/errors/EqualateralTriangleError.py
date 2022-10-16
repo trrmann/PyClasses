@@ -1,7 +1,7 @@
 # EqualateralTriangleError.py
-from Classes.Math.Geometry.Shapes.Triangles.errors.IsoscelesTriangleError import IsoscelesTriangleError
+import Classes.Math.Geometry.Shapes.Triangles.errors.IsoscelesTriangleError as IsoscelesTriangleError
 
-class EqualateralTriangleError(IsoscelesTriangleError):
+class EqualateralTriangleError(IsoscelesTriangleError.IsoscelesTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

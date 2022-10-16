@@ -1,8 +1,8 @@
 # ObtuseTriangleError.py
-from Classes.Math.Trigonometry.Triangles.errors.ScaleneTriangleError import ScaleneTriangleError
-from Classes.Math.Geometry.Shapes.Triangles.errors.ObtuseTriangleError import ObtuseTriangleError as GeometryObtuseTriangleError
+import Classes.Math.Trigonometry.Triangles.errors.ScaleneTriangleError as ScaleneTriangleError
+import Classes.Math.Geometry.Shapes.Triangles.errors.ObtuseTriangleError as GeometryObtuseTriangleError
 
-class ObtuseTriangleError(ScaleneTriangleError, GeometryObtuseTriangleError):
+class ObtuseTriangleError(ScaleneTriangleError.ScaleneTriangleError, GeometryObtuseTriangleError.ObtuseTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

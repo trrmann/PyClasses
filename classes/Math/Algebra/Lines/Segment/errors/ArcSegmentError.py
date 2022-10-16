@@ -1,8 +1,8 @@
 # ArcSegmentError.py
-from Classes.Math.Algebra.Lines.Segment.errors.LineSegmentError import LineSegmentError
-from Classes.Math.Algebra.Lines.errors.ArcError import ArcError
+import Classes.Math.Algebra.Lines.Segment.errors.LineSegmentError as LineSegmentError
+import Classes.Math.Algebra.Lines.errors.ArcError as ArcError
 
-class ArcSegmentError(ArcError, LineSegmentError):
+class ArcSegmentError(ArcError.ArcError, LineSegmentError.LineSegmentError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

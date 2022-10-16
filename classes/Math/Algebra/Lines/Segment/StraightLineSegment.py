@@ -1,8 +1,8 @@
 # StraightLineSegment.py
-from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment
-from Classes.Math.Algebra.Lines.StraightLine import StraightLine
+import Classes.Math.Algebra.Lines.Segment.LineSegment as LineSegment
+import Classes.Math.Algebra.Lines.StraightLine as StraightLine
 
-class StraightLineSegment(StraightLine, LineSegment):
+class StraightLineSegment(StraightLine.StraightLine, LineSegment.LineSegment):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

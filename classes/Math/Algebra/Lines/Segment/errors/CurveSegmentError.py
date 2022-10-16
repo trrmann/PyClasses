@@ -1,8 +1,8 @@
 # CurveSegmentError.py
-from Classes.Math.Algebra.Lines.Segment.errors.LineSegmentError import LineSegmentError
-from Classes.Math.Algebra.Lines.errors.CurveError import CurveError
+import Classes.Math.Algebra.Lines.Segment.errors.LineSegmentError as LineSegmentError
+import Classes.Math.Algebra.Lines.errors.CurveError as CurveError
 
-class CurveSegmentError(CurveError, LineSegmentError):
+class CurveSegmentError(CurveError.CurveError, LineSegmentError.LineSegmentError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

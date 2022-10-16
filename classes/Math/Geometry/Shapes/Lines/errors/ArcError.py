@@ -1,8 +1,8 @@
 # ArcError.py
-from Classes.Math.Geometry.Shapes.Lines.errors.LineError import LineError
-from Classes.Math.Algebra.Lines.errors.ArcError import ArcError as AlgebraArcError
+import Classes.Math.Geometry.Shapes.Lines.errors.LineError as LineError
+import Classes.Math.Algebra.Lines.errors.ArcError as AlgebraArcError
 
-class ArcError(LineError, AlgebraArcError):
+class ArcError(LineError.LineError, AlgebraArcError.ArcError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

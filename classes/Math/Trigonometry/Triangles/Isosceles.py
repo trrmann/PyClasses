@@ -1,8 +1,8 @@
 # Isosceles.py
-from Classes.Math.Trigonometry.Triangles.Scalene import ScaleneTriangle
-from Classes.Math.Geometry.Shapes.Triangles.Isosceles import IsoscelesTriangle as GeometryIsoscelesTriangle
+import Classes.Math.Trigonometry.Triangles.Scalene as ScaleneTriangle
+import Classes.Math.Geometry.Shapes.Triangles.Isosceles as GeometryIsoscelesTriangle
 
-class IsoscelesTriangle(ScaleneTriangle, GeometryIsoscelesTriangle):
+class IsoscelesTriangle(ScaleneTriangle.ScaleneTriangle, GeometryIsoscelesTriangle.IsoscelesTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

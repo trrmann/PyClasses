@@ -1,8 +1,8 @@
 # Straight.py
-from Classes.Math.Geometry.Shapes.Lines.errors.LineError import LineError
-from Classes.Math.Algebra.Lines.errors.StraightLineError import StraightLineError as AlgebraStraightLineError
+import Classes.Math.Geometry.Shapes.Lines.errors.LineError as LineError
+import Classes.Math.Algebra.Lines.errors.StraightLineError as AlgebraStraightLineError
 
-class StraightLineError(LineError, AlgebraStraightLineError):
+class StraightLineError(LineError.LineError, AlgebraStraightLineError.StraightLineError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

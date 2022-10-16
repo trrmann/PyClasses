@@ -1,7 +1,7 @@
 # DecimalError.py
-from Classes.Math.Algebra.NumberSystems.errors.NumberSystemError import NumberSystemError
+import Classes.Math.Algebra.NumberSystems.errors.NumberSystemError as NumberSystemError
 
-class DecimalError(NumberSystemError):
+class DecimalError(NumberSystemError.NumberSystemError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

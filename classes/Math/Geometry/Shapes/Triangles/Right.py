@@ -1,9 +1,9 @@
 # Right.py
-from Classes.Math.Geometry.Shapes.Triangles.Scalene import ScaleneTriangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.PythagorianError import PythagorianError
-from Classes.Math.Geometry.Shapes.Triangles.functions.AreaOfRightTriangle import AreaOfRightTriangle
+import Classes.Math.Geometry.Shapes.Triangles.Scalene as ScaleneTriangle
+import Classes.Math.Geometry.Shapes.Triangles.errors.PythagorianError as PythagorianError
+import Classes.Math.Geometry.Shapes.Triangles.functions.AreaOfRightTriangle as AreaOfRightTriangle
 
-class RightTriangle(ScaleneTriangle):
+class RightTriangle(ScaleneTriangle.ScaleneTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

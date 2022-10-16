@@ -1,6 +1,6 @@
 # Chemestry.py
-from Classes.Science.Chemistry.errors.UndefinedFluidTypeError import UndefinedFluidTypeError
-from Classes.Science.EarthScience.EarthScience import EarthScience
+import Classes.Science.Chemistry.errors.UndefinedFluidTypeError as UndefinedFluidTypeError
+import Classes.Science.EarthScience.EarthScience as EarthScience
 
 chemestry_constants = {
     "fluidDensity" : {
@@ -9,7 +9,7 @@ chemestry_constants = {
     }
 }
 
-class Chemestry(EarthScience):
+class Chemestry(EarthScience.EarthScience):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

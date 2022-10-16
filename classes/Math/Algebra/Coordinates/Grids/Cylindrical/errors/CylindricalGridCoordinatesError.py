@@ -1,7 +1,7 @@
 # CylindricalGridCoordinatesError.py
-from Classes.Math.Algebra.Coordinates.Grids.errors.GridError import GridError
+import Classes.Math.Algebra.Coordinates.Grids.errors.GridError as GridError
 
-class CylindricalGridCoordinatesError(GridError):
+class CylindricalGridCoordinatesError(GridError.GridError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

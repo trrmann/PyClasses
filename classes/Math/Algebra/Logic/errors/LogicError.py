@@ -1,7 +1,7 @@
 # LogicError.py
-from Classes.Math.Algebra.errors.AlgebraError import AlgebraError
+import Classes.Math.Algebra.errors.AlgebraError as AlgebraError
 
-class LogicError(AlgebraError):
+class LogicError(AlgebraError.AlgebraError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

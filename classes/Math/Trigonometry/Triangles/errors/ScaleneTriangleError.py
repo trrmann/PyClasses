@@ -1,8 +1,8 @@
 # ScaleneTriangleError.py
-from Classes.Math.Trigonometry.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.errors.ScaleneTriangleError import ScaleneTriangleError as GeometryScaleneTriangleError
+import Classes.Math.Trigonometry.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.errors.ScaleneTriangleError as GeometryScaleneTriangleError
 
-class ScaleneTriangleError(TriangleError, GeometryScaleneTriangleError):
+class ScaleneTriangleError(TriangleError.TriangleError, GeometryScaleneTriangleError.ScaleneTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

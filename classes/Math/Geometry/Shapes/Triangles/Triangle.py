@@ -1,19 +1,17 @@
 # Triangle.py
-from Classes.Math.Geometry.Shapes.Triangles.functions.AssertTriangle import AssertTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.SolveTriangle import SolveTriangle
-from Classes.errors.InvalidParameterError import InvalidParameterError
-from Classes.Math.Geometry.Shapes.Shape import Shape
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleFromSides import AngleFromSides
-from Classes.Math.Geometry.Shapes.Triangles.functions.AssertAnglesFormTriangle import AssertAnglesFormTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.AreaOfTriangle import AreaOfTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.AssertTriangleSidesSumRule import AssertTriangleSidesSumRule
-from Classes.Math.Geometry.Shapes.Triangles.functions.BaseOfTriangle import BaseOfTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.CircumradiusOfTriangle import CircumradiusOfTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.HeightOfTriangle import HeightOfTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.InradiusOfTriangle import InradiusOfTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.LengthOfMedian import LengthOfMedian
-from Classes.Math.Geometry.Shapes.Triangles.functions.PerimeterOfTriangle import PerimeterOfTriangle
-from Classes.Math.Geometry.Shapes.Triangles.functions.SemiPerimeterOfTriangle import SemiPerimeterOfTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.AssertTriangle as AssertTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.SolveTriangle as SolveTriangle
+import Classes.errors.InvalidParameterError as InvalidParameterError
+import Classes.Math.Geometry.Shapes.Shape as Shape
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleFromSides as AngleFromSides
+import Classes.Math.Geometry.Shapes.Triangles.functions.AreaOfTriangle as AreaOfTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.BaseOfTriangle as BaseOfTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.CircumradiusOfTriangle as CircumradiusOfTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.HeightOfTriangle as HeightOfTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.InradiusOfTriangle as InradiusOfTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.LengthOfMedian as LengthOfMedian
+import Classes.Math.Geometry.Shapes.Triangles.functions.PerimeterOfTriangle as PerimeterOfTriangle
+import Classes.Math.Geometry.Shapes.Triangles.functions.SemiPerimeterOfTriangle as SemiPerimeterOfTriangle
 
 """
 A triangle is a closed polygon in a two-dimensional plane having three sides and three angles. By the name itself, a triangle is made by combining two words tri means three and angle.
@@ -27,7 +25,7 @@ Area of triangle is equal to half of the product of base and height
 """
 __className = "Triangle"
 __undefined = "undefined"
-class Triangle(Shape):
+class Triangle(Shape.Shape):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

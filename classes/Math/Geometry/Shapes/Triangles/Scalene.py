@@ -1,7 +1,7 @@
 # Scalene.py
-from Classes.Math.Geometry.Shapes.Triangles.Triangle import Triangle
+import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
 
-class ScaleneTriangle(Triangle):
+class ScaleneTriangle(Triangle.Triangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

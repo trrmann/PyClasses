@@ -1,7 +1,7 @@
 # CylindricalGridCoordinates.py
-from Classes.Math.Algebra.Coordinates.Grids.Grid import Grid
+import Classes.Math.Algebra.Coordinates.Grids.Grid as Grid
 
-class CylindricalGridCoordinates(Grid):
+class CylindricalGridCoordinates(Grid.Grid):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

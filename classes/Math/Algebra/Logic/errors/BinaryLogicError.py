@@ -1,7 +1,7 @@
 # BinaryLogicError.py
-from Classes.Math.Algebra.Logic.errors.LogicError import LogicError
+import Classes.Math.Algebra.Logic.errors.LogicError as LogicError
 
-class BinaryLogicError(LogicError):
+class BinaryLogicError(LogicError.LogicError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

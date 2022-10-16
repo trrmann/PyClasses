@@ -1,5 +1,5 @@
 # AreaOfRightTriangle.py
-from Classes.Math.Geometry.errors.MissingDimensionError import MissingDimensionError
+import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
 
 def AreaOfRightTriangle(base: float, height: float):
     try:

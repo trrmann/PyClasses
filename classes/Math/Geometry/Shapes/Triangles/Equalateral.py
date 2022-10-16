@@ -1,7 +1,7 @@
 # Equalateral.py
-from Classes.Math.Geometry.Shapes.Triangles.Isosceles import IsoscelesTriangle
+import Classes.Math.Geometry.Shapes.Triangles.Isosceles as IsoscelesTriangle
 
-class EqualateralTriangle(IsoscelesTriangle):
+class EqualateralTriangle(IsoscelesTriangle.IsoscelesTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

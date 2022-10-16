@@ -1,7 +1,7 @@
 # Biology.py
-from Classes.Science.EarthScience.EarthScience import EarthScience
+import Classes.Science.EarthScience.EarthScience as EarthScience
 
-class Biology(EarthScience):
+class Biology(EarthScience.EarthScience):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

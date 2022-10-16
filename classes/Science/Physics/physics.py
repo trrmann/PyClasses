@@ -1,7 +1,8 @@
 # Physics.py
-from Classes.Math.Math import Math
-from Classes.Science.Chemistry.Chemistry import fluid_density
-from Classes.Science.EarthScience.EarthScience import EarthScience, g
+import Classes.Math.Math as Math
+import Classes.Science.Chemistry.Chemistry as fluid_density
+import Classes.Science.EarthScience.EarthScience as EarthScience
+from EarthScience import g
 import math
 
 physics_constants = {
@@ -21,7 +22,7 @@ physics_constants = {
     }
 }
 
-class Physics(EarthScience):
+class Physics(EarthScience.EarthScience):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

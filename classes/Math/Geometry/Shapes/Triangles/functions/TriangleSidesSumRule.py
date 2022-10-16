@@ -1,6 +1,6 @@
 # TriangleSidesSumRule.py
-from Classes.Math.Geometry.errors.MissingDimensionError import MissingDimensionError
-from Classes.errors.InvalidParameterError import InvalidParameterError
+import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
+import Classes.errors.InvalidParameterError as InvalidParameterError
 
 def TriangleSidesSumRule(side, a: float, b: float, c: float):
     try:

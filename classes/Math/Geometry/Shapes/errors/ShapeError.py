@@ -1,7 +1,7 @@
 # Shape.py
-from Classes.Math.Geometry.errors.GeometryError import GeometryError
+import Classes.Math.Geometry.errors.GeometryError as GeometryError
 
-class ShapeError(GeometryError):
+class ShapeError(GeometryError.GeometryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

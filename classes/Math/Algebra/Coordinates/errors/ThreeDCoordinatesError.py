@@ -1,7 +1,7 @@
 # ThreeDCoordinatesError.py
-from Classes.Math.Algebra.Coordinates.errors.CoordinatesError import CoordinatesError
+import Classes.Math.Algebra.Coordinates.errors.CoordinatesError as CoordinatesError
 
-class ThreeDCoordinatesError(CoordinatesError):
+class ThreeDCoordinatesError(CoordinatesError.CoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

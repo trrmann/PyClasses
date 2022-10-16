@@ -1,8 +1,8 @@
 # AcuteTriangleError.py
-from Classes.Math.Trigonometry.Triangles.errors.ScaleneTriangleError import ScaleneTriangleError
-from Classes.Math.Geometry.Shapes.Triangles.errors.AcuteTriangleError import AcuteTriangleError as GeometryAcuteTriangleError
+import Classes.Math.Trigonometry.Triangles.errors.ScaleneTriangleError as ScaleneTriangleError
+import Classes.Math.Geometry.Shapes.Triangles.errors.AcuteTriangleError as GeometryAcuteTriangleError
 
-class AcuteTriangleError(ScaleneTriangleError, GeometryAcuteTriangleError):
+class AcuteTriangleError(ScaleneTriangleError.ScaleneTriangleError, GeometryAcuteTriangleError.AcuteTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

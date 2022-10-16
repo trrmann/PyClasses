@@ -1,6 +1,6 @@
 # HeronsAreaOfTriangle.py
-from Classes.Math.Geometry.Shapes.Triangles.functions.SemiPerimeterOfTriangle import SemiPerimeterOfTriangle
-from Classes.Math.Geometry.errors.MissingDimensionError import MissingDimensionError
+import Classes.Math.Geometry.Shapes.Triangles.functions.SemiPerimeterOfTriangle as SemiPerimeterOfTriangle
+import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
 import math
 
 """

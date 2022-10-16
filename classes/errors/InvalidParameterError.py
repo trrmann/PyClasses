@@ -1,7 +1,7 @@
 # InvalidParameterError.py
-from Classes.errors.ClassesError import ClassesError
+import Classes.errors.ClassesError as ClassesError
 
-class InvalidParameterError(ClassesError):
+class InvalidParameterError(ClassesError.ClassesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

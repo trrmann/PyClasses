@@ -1,7 +1,7 @@
 # AlgebraError.py
-from Classes.Math.errors.ArithmaticError import ArithmaticError
+import Classes.Math.errors.ArithmaticError as ArithmaticError
 
-class AlgebraError(ArithmaticError):
+class AlgebraError(ArithmaticError.ArithmaticError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

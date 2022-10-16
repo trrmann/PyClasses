@@ -1,5 +1,5 @@
 # BaseOfTriangle.py
-from Classes.Math.Geometry.errors.MissingDimensionError import MissingDimensionError
+import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
 
 def BaseOfTriangle(a: float, b: float, c: float):
     try:

@@ -1,8 +1,7 @@
 # ValueExceedsMinimumError.py
+import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidValueError as InvalidValueError
 
-from Classes.Math.Algebra.Coordinates.Grids.errors.InvalidValueError import InvalidValueError
-
-class ValueExceedsMinimumError(InvalidValueError):
+class ValueExceedsMinimumError(InvalidValueError.InvalidValueError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

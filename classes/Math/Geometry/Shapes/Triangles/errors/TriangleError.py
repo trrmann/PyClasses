@@ -1,7 +1,7 @@
 # TriangleError.py
-from Classes.Math.Geometry.Shapes.errors.ShapeError import ShapeError
+import Classes.Math.Geometry.Shapes.errors.ShapeError as ShapeError
 
-class TriangleError(ShapeError):
+class TriangleError(ShapeError.ShapeError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

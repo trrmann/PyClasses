@@ -1,8 +1,7 @@
 # InvalidValueError.py
+import Classes.Math.Algebra.Coordinates.Grids.errors.NumberLineError as NumberLineError
 
-from Classes.Math.Algebra.Coordinates.Grids.errors.NumberLineError import NumberLineError
-
-class InvalidValueError(NumberLineError):
+class InvalidValueError(NumberLineError.NumberLineError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

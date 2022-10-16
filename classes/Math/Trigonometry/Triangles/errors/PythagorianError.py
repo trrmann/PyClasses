@@ -1,8 +1,8 @@
 # PythagorianError.py
-from Classes.Math.Geometry.Shapes.Triangles.errors.PythagorianError import PythagorianError as GeometryPythagorianError
-from Classes.Math.Trigonometry.Triangles.errors.TriangleError import TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.errors.PythagorianError as GeometryPythagorianError
+import Classes.Math.Trigonometry.Triangles.errors.TriangleError as TriangleError
 
-class PythagorianError(TriangleError, GeometryPythagorianError):
+class PythagorianError(TriangleError.TriangleError, GeometryPythagorianError.PythagorianError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

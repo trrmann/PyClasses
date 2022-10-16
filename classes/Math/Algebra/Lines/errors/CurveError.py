@@ -1,7 +1,7 @@
 # CurveError.py
-from Classes.Math.Algebra.Lines.errors.LineError import LineError
+import Classes.Math.Algebra.Lines.errors.LineError as LineError
 
-class CurveError(LineError):
+class CurveError(LineError.LineError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

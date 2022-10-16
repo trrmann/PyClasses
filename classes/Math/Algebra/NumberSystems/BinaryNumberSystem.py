@@ -1,7 +1,7 @@
 # BinaryNumberSystem.py
-from Classes.Math.Algebra.NumberSystems.NumberSystem import NumberSystem
+import Classes.Math.Algebra.NumberSystems.NumberSystem as NumberSystem
 
-class BinaryNumberSystem(NumberSystem):
+class BinaryNumberSystem(NumberSystem.NumberSystem):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

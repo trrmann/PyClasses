@@ -1,7 +1,7 @@
 # FourDCoordinates.py
-from Classes.Math.Algebra.Coordinates.Coordinates import Coordinates
+import Classes.Math.Algebra.Coordinates.Coordinates as Coordinates
 
-class FourDCoordinates(Coordinates):
+class FourDCoordinates(Coordinates.Coordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

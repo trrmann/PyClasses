@@ -1,5 +1,5 @@
 # doAnglesFormTriangle.py
-from Classes.Math.Geometry.Geometry import MissingDimensionError
+import Classes.Math.Geometry.Geometry as MissingDimensionError
 
 def DoAnglesFormTriangle(A: float, B: float, C: float):
     try:

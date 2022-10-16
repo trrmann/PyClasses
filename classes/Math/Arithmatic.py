@@ -1,7 +1,7 @@
 # Arithmatic.py
-from Classes.Math.Math import Math
+import Classes.Math.Math as Math
 
-class Arithmatic(Math):
+class Arithmatic(Math.Math):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

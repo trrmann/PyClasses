@@ -1,7 +1,7 @@
 # HexadecimalError.py
-from Classes.Math.Algebra.NumberSystems.errors.NumberSystemError import NumberSystemError
+import Classes.Math.Algebra.NumberSystems.errors.NumberSystemError as NumberSystemError
 
-class HexadecimalError(NumberSystemError):
+class HexadecimalError(NumberSystemError.NumberSystemError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

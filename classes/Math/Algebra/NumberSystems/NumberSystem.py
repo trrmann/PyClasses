@@ -1,7 +1,7 @@
 # NumberSystem.py
-from Classes.Math.Algebra.Algebra import Algebra
+import Classes.Math.Algebra.Algebra as Algebra
 
-class NumberSystem(Algebra):
+class NumberSystem(Algebra.Algebra):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

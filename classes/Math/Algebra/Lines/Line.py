@@ -1,7 +1,7 @@
 # Line.py
-from Classes.Math.Algebra.Algebra import Algebra
+import Classes.Math.Algebra.Algebra as Algebra
 
-class Line(Algebra):
+class Line(Algebra.Algebra):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

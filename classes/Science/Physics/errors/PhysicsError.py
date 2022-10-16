@@ -1,7 +1,7 @@
 # PhysicsError.py
-from Classes.Science.EarthScience.errors.EarthScienceError import EarthScienceError
+import Classes.Science.EarthScience.errors.EarthScienceError as EarthScienceError
 
-class PhysicsError(EarthScienceError):
+class PhysicsError(EarthScienceError.EarthScienceError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

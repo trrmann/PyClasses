@@ -1,6 +1,6 @@
 # EarthScience.py
-from Classes.Science.Science import Science
-from Classes.Science.EarthScience.errors.UndefinedCelestialLocationError import UndefinedCelestialLocationError
+import Classes.Science.Science as Science
+import Classes.Science.EarthScience.errors.UndefinedCelestialLocationError as UndefinedCelestialLocationError
 
 astro_constants = {
     "g" : {
@@ -9,7 +9,7 @@ astro_constants = {
     }
 }
 
-class EarthScience(Science):
+class EarthScience(Science.Science):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

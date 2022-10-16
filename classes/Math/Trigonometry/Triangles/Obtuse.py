@@ -1,8 +1,8 @@
 # Obtuse.py
-from Classes.Math.Trigonometry.Triangles.Scalene import ScaleneTriangle
-from Classes.Math.Geometry.Shapes.Triangles.Obtuse import ObtuseTriangle as GeometryObtuseTriangle
+import Classes.Math.Trigonometry.Triangles.Scalene as ScaleneTriangle
+import Classes.Math.Geometry.Shapes.Triangles.Obtuse as GeometryObtuseTriangle
 
-class ObtuseTriangle(ScaleneTriangle, GeometryObtuseTriangle):
+class ObtuseTriangle(ScaleneTriangle.ScaleneTriangle, GeometryObtuseTriangle.ObtuseTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,6 +1,6 @@
 # UndefinedFluidTypeError.py
-from Classes.Science.Chemistry.errors.ChemistryError import ChemistryError
+import Classes.Science.Chemistry.errors.ChemistryError as ChemistryError
 
-class UndefinedFluidTypeError(ChemistryError):
+class UndefinedFluidTypeError(ChemistryError.ChemistryError):
     """Raised when the item is unknown"""
     pass

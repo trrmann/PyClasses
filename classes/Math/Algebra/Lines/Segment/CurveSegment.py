@@ -1,8 +1,8 @@
 # CurveSegment.py
-from Classes.Math.Algebra.Lines.Segment.LineSegment import LineSegment
-from Classes.Math.Algebra.Lines.Curve import Curve
+import Classes.Math.Algebra.Lines.Segment.LineSegment as LineSegment
+import Classes.Math.Algebra.Lines.Curve as Curve
 
-class CurveSegment(Curve, LineSegment):
+class CurveSegment(Curve.Curve, LineSegment.LineSegment):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

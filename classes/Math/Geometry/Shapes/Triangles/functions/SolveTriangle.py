@@ -1,26 +1,26 @@
 # SolveTriangle.py
 import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
-from Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError import TriangleError
-from Classes.Math.Geometry.Shapes.Triangles.functions.AllAnglesDefined import AllAnglesDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AllSidesDefined import AllSidesDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_Defined import AngleA_Defined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_NotDefined import AngleA_NotDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_Defined import AngleB_Defined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_NotDefined import AngleB_NotDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_Defined import AngleC_Defined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_NotDefined import AngleC_NotDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.AngleFromSides import AngleFromSides
-from Classes.Math.Geometry.Shapes.Triangles.functions.HasAngleDefined import HasAngleDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.HasSideDefined import HasSideDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.NoAngleDefined import NoAngleDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.NoSideDefined import NoSideDefined
-from Classes.Math.Geometry.Shapes.Triangles.functions.OppositeAngleFromSideSideExteriorAngle import OppositeAngleFromSideSideExteriorAngle
-from Classes.Math.Geometry.Shapes.Triangles.functions.OppositeSideFromAngleAngleExteriorSide import OppositeSideFromAngleAngleExteriorSide
-from Classes.Math.Geometry.Shapes.Triangles.functions.OppositeSideFromSideSideInteriorAngle import OppositeSideFromSideSideInteriorAngle
-from Classes.Math.Geometry.Shapes.Triangles.functions.Side_a_Defined import Side_a_Defined
-from Classes.Math.Geometry.Shapes.Triangles.functions.Side_b_Defined import Side_b_Defined
-from Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_Defined import Side_c_Defined
-from Classes.Math.Geometry.errors.MissingDimensionError import MissingDimensionError
+import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+import Classes.Math.Geometry.Shapes.Triangles.functions.AllAnglesDefined as AllAnglesDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AllSidesDefined as AllSidesDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_Defined as AngleA_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_NotDefined as AngleA_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_Defined as AngleB_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_NotDefined as AngleB_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_Defined as AngleC_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_NotDefined as AngleC_NotDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.AngleFromSides as AngleFromSides
+import Classes.Math.Geometry.Shapes.Triangles.functions.HasAngleDefined as HasAngleDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.HasSideDefined as HasSideDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.NoAngleDefined as NoAngleDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.NoSideDefined as NoSideDefined
+import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeAngleFromSideSideExteriorAngle as OppositeAngleFromSideSideExteriorAngle
+import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeSideFromAngleAngleExteriorSide as OppositeSideFromAngleAngleExteriorSide
+import Classes.Math.Geometry.Shapes.Triangles.functions.OppositeSideFromSideSideInteriorAngle as OppositeSideFromSideSideInteriorAngle
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_a_Defined as Side_a_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_b_Defined as Side_b_Defined
+import Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_Defined as Side_c_Defined
+import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
 
 def SolveTriangle(triangle, undefined):
     if isinstance(triangle, Triangle):

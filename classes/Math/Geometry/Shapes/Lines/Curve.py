@@ -1,8 +1,8 @@
 # Curve.py
-from Classes.Math.Geometry.Shapes.Lines.Line import Line
-from Classes.Math.Algebra.Lines.Curve import Curve as AlgebraCurve
+import Classes.Math.Geometry.Shapes.Lines.Line as Line
+import Classes.Math.Algebra.Lines.Curve as AlgebraCurve
 
-class Curve(Line, AlgebraCurve):
+class Curve(Line.Line, AlgebraCurve.Curve):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,8 +1,8 @@
 # Right.py
-from Classes.Math.Trigonometry.Triangles.Scalene import ScaleneTriangle
-from Classes.Math.Geometry.Shapes.Triangles.Right import RightTriangle as GeometryRightTriangle
+import Classes.Math.Trigonometry.Triangles.Scalene as ScaleneTriangle
+import Classes.Math.Geometry.Shapes.Triangles.Right as GeometryRightTriangle
 
-class RightTriangle(ScaleneTriangle, GeometryRightTriangle):
+class RightTriangle(ScaleneTriangle.ScaleneTriangle, GeometryRightTriangle.RightTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
