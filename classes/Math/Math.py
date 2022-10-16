@@ -1,5 +1,5 @@
 # Math.py
-from Classes.Classes import Classes
+import Classes.Classes as Classes
 
 class Math(Classes):
     def __new__(cls, *args, **kwargs):
