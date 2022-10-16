@@ -1,0 +1,3 @@
+import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
+import Classes.Math.Geometry.errors.UndefinedShapeError as UndefinedShapeError
+import Classes.Math.Geometry.errors.UndefinedOrientationError as UndefinedOrientationError
