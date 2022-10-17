@@ -1,8 +1,8 @@
 # Trigonometry.py
-import Classes.Math.Geometry.Geometry as Geometry
 import math
+from GeometryPackage.GeometryModule import Geometry
 
-class Trigonometry(Geometry.Geometry):
+class Trigonometry(Geometry):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

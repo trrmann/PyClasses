@@ -1,5 +1,2 @@
-import ClassesPackage.ClassesErrorModule as ClassesErrorModule
-import ClassesPackage.ClassesModule as ClassesModule
-import ClassesPackage.ErrorModule as ErrorModule
-import ClassesPackage.InputModule as InputModule
-import ClassesPackage.InvalidParameterErrorModule as InvalidParameterErrorModule
+import MathPackage
+import SciencePackage

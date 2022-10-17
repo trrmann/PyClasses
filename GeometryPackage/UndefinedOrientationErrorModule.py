@@ -1,7 +1,7 @@
-# ArithmaticError.py
-import Classes.Math.errors.MathError as MathError
+# UndefinedOrientationError.py
+from GeometryPackage.GeometryErrorModule import GeometryError
 
-class ArithmaticError(MathError.MathError):
+class UndefinedOrientationError(GeometryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -10,4 +10,3 @@ class ArithmaticError(MathError.MathError):
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
-

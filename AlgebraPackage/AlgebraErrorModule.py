@@ -1,7 +1,7 @@
-# MathError.py
-import Classes.errors.ClassesError as ClassesError
+# AlgebraError.py
+from ArithmaticPackage.ArithmaticErrorModule import ArithmaticError
 
-class MathError(ClassesError.ClassesError):
+class AlgebraError(ArithmaticError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -10,4 +10,3 @@ class MathError(ClassesError.ClassesError):
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
-

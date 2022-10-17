@@ -1,7 +1,7 @@
 # Algebra.py
-import Classes.Math.Arithmatic as Arithmatic
+from ArithmaticPackage.ArithmaticModule import Arithmatic
 
-class Algebra(Arithmatic.Arithmatic):
+class Algebra(Arithmatic):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

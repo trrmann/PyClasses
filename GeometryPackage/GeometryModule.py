@@ -1,14 +1,13 @@
 # Geometry.py
-import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
-import Classes.Math.Geometry.errors.UndefinedShapeError as UndefinedShapeError
-import Classes.Math.Geometry.errors.UndefinedOrientationError as UndefinedOrientationError
-import Classes.Math.Algebra.Algebra as Algebra
-import Classes.Input as Input
-from Input import *
+from AlgebraPackage.AlgebraModule import Algebra
+from MissingDimensionErrorModule import MissingDimensionError
+from UndefinedShapeErrorModule import UndefinedShapeError
+from UndefinedOrientationErrorModule import UndefinedOrientationError
+from ClassesPackage.InputModule import *
 
 import math
 
-class Geometry(Algebra.Algebra):
+class Geometry(Algebra):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,7 +1,7 @@
-# AlgebraError.py
-import Classes.Math.errors.ArithmaticError as ArithmaticError
+# UndefinedShapeError.py
+from GeometryPackage.GeometryErrorModule import GeometryError
 
-class AlgebraError(ArithmaticError.ArithmaticError):
+class UndefinedShapeError(GeometryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

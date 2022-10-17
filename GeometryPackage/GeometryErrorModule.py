@@ -1,7 +1,7 @@
 # GeometryError.py
-import Classes.Math.Algebra.errors.AlgebraError as AlgebraError
+from AlgebraPackage.AlgebraErrorModule import AlgebraError
 
-class GeometryError(AlgebraError.AlgebraError):
+class GeometryError(AlgebraError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,7 +1,7 @@
-# TrigonometryError.py
-import Classes.Math.Geometry.errors.GeometryError as GeometryError
+# ArithmaticError.py
+from MathPackage.MathErrorModule import MathError
 
-class TrigonometryError(GeometryError.GeometryError):
+class ArithmaticError(MathError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
@@ -10,3 +10,4 @@ class TrigonometryError(GeometryError.GeometryError):
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}"
+
