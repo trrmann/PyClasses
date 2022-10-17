@@ -1,2 +1,6 @@
-import LinesPackage
-import TrianglesPackage
+import ShapesPackage.ShapeErrorModule
+import ShapesPackage.ShapeModule
+import ShapesPackage.PointErrorModule
+import ShapesPackage.PointModule
+#import LinesPackage.LineModule
+#import TrianglesPackage.TriangleModule

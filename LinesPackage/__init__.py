@@ -1,1 +1,1 @@
-import LineSegmentsPackage
+#import LineSegmentsPackage.LineSegmentModule

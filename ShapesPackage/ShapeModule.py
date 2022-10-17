@@ -6,7 +6,7 @@ class Shape(Geometry):
         return super().__new__(cls)
 
     def __init__(self, classification, type, dimensions, className = "Shape"):
-        super().__init__(self, className)
+        super().__init__(className)
         self.classification = classification
         self.type = type
         self.dimensions = dimensions
