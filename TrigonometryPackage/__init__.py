@@ -1,1 +1,3 @@
-import TrianglesPackage
+import TrigonometryPackage.TrigonometryErrorModule
+import TrigonometryPackage.TrigonometryModule
+#import TrianglesPackage.TriangleModule

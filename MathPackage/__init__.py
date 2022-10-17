@@ -1,5 +1,6 @@
 import MathPackage.MathErrorModule
 import MathPackage.MathModule
+#import ArithmaticPackage.ArithmaticModule
 #import AlgebraPackage.AlgebraModule
 #import GeometryPackage.GeometryModule
 #import TrigonometryPackage.TrigonometryModule

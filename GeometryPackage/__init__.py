@@ -1,1 +1,6 @@
-import ShapesPackage
+import GeometryPackage.GeometryErrorModule
+import GeometryPackage.MissingDimensionErrorModule
+import GeometryPackage.UndefinedOrientationErrorModule
+import GeometryPackage.UndefinedShapeErrorModule
+import GeometryPackage.GeometryModule
+#import ShapesPackage.ShapeModule
