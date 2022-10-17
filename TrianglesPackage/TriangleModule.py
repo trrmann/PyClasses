@@ -26,7 +26,7 @@ Area of triangle is equal to half of the product of base and height
 """
 __className = "Triangle"
 __undefined = "undefined"
-class Triangle(Shape, Trigonometry):
+class Triangle(ClosedPolygon, Trigonometry):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

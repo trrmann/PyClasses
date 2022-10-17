@@ -1,0 +1,7 @@
+import PolygonsPackage.PolygonErrorModule
+import PolygonsPackage.PolygonModule
+import PolygonsPackage.OpenPolygonErrorModule
+import PolygonsPackage.OpenPolygonModule
+import PolygonsPackage.ClosedPolygonErrorModule
+import PolygonsPackage.ClosedPolygonModule
+#import TrianglesPackage.TriangleModule

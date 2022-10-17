@@ -2,7 +2,7 @@
 from ShapesPackage.ShapeErrorModule import ShapeError
 from TrigonometryPackage.TrigonometryErrorModule import TrigonometryError
 
-class TriangleError(ShapeError, TrigonometryError):
+class TriangleError(ClosedPolygonError, TrigonometryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
