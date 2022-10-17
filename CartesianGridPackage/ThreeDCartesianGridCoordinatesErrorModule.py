@@ -1,8 +1,8 @@
 # ThreeDCartesianGridCoordinatesError.py
-import Classes.Math.Algebra.Coordinates.Grids.Cartesian.errors.TwoDCartesianGridCoordinatesError as TwoDCartesianGridCoordinatesError
-import Classes.Math.Algebra.Coordinates.errors.ThreeDCoordinatesError as ThreeDCoordinatesError
+from CartesianGridPackage.TwoDCartesianGridCoordinatesErrorModule import TwoDCartesianGridCoordinatesError
+from CoordinatesPackage.ThreeDCoordinatesErrorModule import ThreeDCoordinatesError
 
-class ThreeDCartesianGridCoordinatesError(TwoDCartesianGridCoordinatesError.TwoDCartesianGridCoordinatesError, ThreeDCoordinatesError.ThreeDCoordinatesError):
+class ThreeDCartesianGridCoordinatesError(TwoDCartesianGridCoordinatesError, ThreeDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

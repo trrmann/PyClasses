@@ -1,8 +1,7 @@
 # InvalidMaximumError.py
+from GridsPackage.NumberLineErrorModule import NumberLineError
 
-import Classes.Math.Algebra.Coordinates.Grids.errors.NumberLineError as NumberLineError
-
-class InvalidMaximumError(NumberLineError.NumberLineError):
+class InvalidMaximumError(NumberLineError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

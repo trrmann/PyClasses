@@ -1,7 +1,7 @@
 # ValueExceedsMinimumLimitError.py
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumError as ValueExceedsMinimumError
+from GridsPackage.ValueExceedsMinimumErrorModule import ValueExceedsMinimumError
 
-class ValueExceedsMinimumLimitError(ValueExceedsMinimumError.ValueExceedsMinimumError):
+class ValueExceedsMinimumLimitError(ValueExceedsMinimumError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

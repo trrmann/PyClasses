@@ -1,16 +1,16 @@
 # ThreeDHomogeneousGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.Homogeneous.HomogeneousGridCoordinates as HomogeneousGridCoordinates
-import Classes.Math.Algebra.Coordinates.Grids.Axes.XAxis as XAxis
-import Classes.Math.Algebra.Coordinates.Grids.Axes.YAxis as YAxis
-import Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis as ZAxis
-import Classes.Math.Algebra.Coordinates.ThreeDCoordinates as ThreeDCoordinates
+from AxesPackage.XAxisModule import XAxis
+from AxesPackage.YAxisModule import YAxis
+from AxesPackage.ZAxisModule import ZAxis
+from CoordinatesPackage.ThreeDCoordinatesModule import ThreeDCoordinates
+from HomogeneousGridPackage.HomogeneousGridCoordinatesModule import HomogeneousGridCoordinates
 
-class ThreeDHomogeneousGridCoordinates(HomogeneousGridCoordinates.HomogeneousGridCoordinates, ThreeDCoordinates.ThreeDCoordinates):
+class ThreeDHomogeneousGridCoordinates(HomogeneousGridCoordinates, ThreeDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
-            axes_list = [XAxis.XAxis, YAxis.YAxis, ZAxis.ZAxis],
+            axes_list = [XAxis, YAxis, ZAxis],
             className = "ThreeDHomogeneousGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)

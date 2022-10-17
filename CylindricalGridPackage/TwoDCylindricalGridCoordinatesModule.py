@@ -1,15 +1,15 @@
 # TwoDCylindricalGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.CylindricalGridCoordinates as CylindricalGridCoordinates
-import Classes.Math.Algebra.Coordinates.TwoDCoordinates as TwoDCoordinates
-import Classes.Math.Algebra.Coordinates.Grids.Axes.rAxis as rAxis
-import Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis as θAxis
+from AxesPackage.rAxisModule import rAxis
+from AxesPackage.θAxisModule import θAxis
+from CoordinatesPackage.TwoDCoordinatesModule import TwoDCoordinates
+from CylindricalGridPackage.CylindricalGridCoordinatesModule import CylindricalGridCoordinates
 
-class TwoDCylindricalGridCoordinates(CylindricalGridCoordinates.CylindricalGridCoordinates, TwoDCoordinates.TwoDCoordinates):
+class TwoDCylindricalGridCoordinates(CylindricalGridCoordinates, TwoDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
-            axes_list = [rAxis.rAxis, θAxis.θAxis],
+            axes_list = [rAxis, θAxis],
             className = "TwoDCylindricalGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)

@@ -1,7 +1,7 @@
 # InvalidMaximumLimitError.py
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumError as InvalidMaximumError
+from GridsPackage.InvalidMaximumErrorModule import InvalidMaximumError
 
-class InvalidMaximumLimitError(InvalidMaximumError.InvalidMaximumError):
+class InvalidMaximumLimitError(InvalidMaximumError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

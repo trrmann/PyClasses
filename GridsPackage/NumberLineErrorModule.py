@@ -1,7 +1,7 @@
 # NumberLineError.py
-import Classes.Math.Algebra.Coordinates.errors.CoordinatesError as CoordinatesError
+from CoordinatesPackage.CoordinatesErrorModule import CoordinatesError
 
-class NumberLineError(CoordinatesError.CoordinatesError):
+class NumberLineError(CoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,15 +1,15 @@
 # TwoDPolorGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.Polar.PolarGridCoordinates as PolorGridCoordinates
-import Classes.Math.Algebra.Coordinates.Grids.Axes.ρAxis as ρAxis
-import Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis as θAxis
-import Classes.Math.Algebra.Coordinates.TwoDCoordinates as TwoDCoordinates
+from AxesPackage.θAxisModule import θAxis
+from AxesPackage.ρAxisModule import ρAxis
+from CoordinatesPackage.TwoDCoordinatesModule import TwoDCoordinates
+from PolarGridPackage.PolarGridCoordinatesModule import PolorGridCoordinates
 
-class TwoDPolorGridCoordinates(PolorGridCoordinates.PolorGridCoordinates, TwoDCoordinates.TwoDCoordinates):
+class TwoDPolorGridCoordinates(PolorGridCoordinates, TwoDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
-            axes_list = [ρAxis.ρAxis, θAxis.θAxis],
+            axes_list = [ρAxis, θAxis],
             className = "TwoDPolorGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)

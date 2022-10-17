@@ -1,16 +1,16 @@
 # ThreeDCylindricalGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.TwoDCylindricalGridCoordinates as TwoDCylindricalGridCoordinates
-import Classes.Math.Algebra.Coordinates.Grids.Axes.rAxis as rAxis
-import Classes.Math.Algebra.Coordinates.Grids.Axes.θAxis as θAxis
-import Classes.Math.Algebra.Coordinates.Grids.Axes.ZAxis as ZAxis
-import Classes.Math.Algebra.Coordinates.ThreeDCoordinates as ThreeDCoordinates
+from AxesPackage.ZAxisModule import ZAxis
+from AxesPackage.rAxisModule import rAxis
+from AxesPackage.θAxisModule import θAxis
+from CoordinatesPackage.ThreeDCoordinatesModule import ThreeDCoordinates
+from CylindricalGridPackage.TwoDCylindricalGridCoordinatesModule import TwoDCylindricalGridCoordinates
 
-class ThreeDCylindricalGridCoordinates(TwoDCylindricalGridCoordinates.TwoDCylindricalGridCoordinates, ThreeDCoordinates.ThreeDCoordinates):
+class ThreeDCylindricalGridCoordinates(TwoDCylindricalGridCoordinates, ThreeDCoordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
     def __init__(self,
-            axes_list = [rAxis.rAxis, θAxis.θAxis, ZAxis.ZAxis],
+            axes_list = [rAxis, θAxis, ZAxis],
             className = "ThreeDCylindricalGridCoordinates"
         ):
         super().__init__(self, axes_list = axes_list, className = className)

@@ -1,8 +1,8 @@
 # FourDHomogeneousGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.Homogeneous.errors.ThreeDHomogeneousGridCoordinatesError as ThreeDHomogeneousGridCoordinatesError
-import Classes.Math.Algebra.Coordinates.errors.FourDCoordinatesError as FourDCoordinatesError
+from CoordinatesPackage.FourDCoordinatesErrorModule import FourDCoordinatesError
+from HomogeneousGridPackage.ThreeDHomogeneousGridCoordinatesErrorModule import ThreeDHomogeneousGridCoordinatesError
 
-class FourDHomogeneousGridCoordinatesError(ThreeDHomogeneousGridCoordinatesError.ThreeDHomogeneousGridCoordinatesError, FourDCoordinatesError.FourDCoordinatesError):
+class FourDHomogeneousGridCoordinatesError(ThreeDHomogeneousGridCoordinatesError, FourDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

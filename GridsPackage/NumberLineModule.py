@@ -1,17 +1,17 @@
 # NumberLine.py
-import Classes.Math.Algebra.Coordinates.Coordinates as Coordinates
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumError as InvalidMaximumError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumLimitError as InvalidMaximumLimitError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumError as InvalidMinimumError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumLimitError as InvalidMinimumLimitError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidOriginError as InvalidOriginError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidValueError as InvalidValueError
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumError as ValueExceedsMaxiumError
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumLimitError as ValueExceedsMaxiumLimitError
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumError as ValueExceedsMinimumError
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumLimitError as ValueExceedsMinimumLimitError
+from CoordinatesPackage.CoordinatesModule import Coordinates
+from GridsPackage.InvalidMaximumErrorModule import InvalidMaximumError
+from GridsPackage.InvalidMaximumLimitErrorModule import InvalidMaximumLimitError
+from GridsPackage.InvalidMinimumErrorModule import InvalidMinimumError
+from GridsPackage.InvalidMinimumLimitErrorModule import InvalidMinimumLimitError
+from GridsPackage.InvalidOriginErrorModule import InvalidOriginError
+from GridsPackage.InvalidValueErrorModule import InvalidValueError
+from GridsPackage.ValueExceedsMaxiumErrorModule import ValueExceedsMaxiumError
+from GridsPackage.ValueExceedsMaxiumLimitErrorModule import ValueExceedsMaxiumLimitError
+from GridsPackage.ValueExceedsMinimumErrorModule import ValueExceedsMinimumError
+from GridsPackage.ValueExceedsMinimumLimitErrorModule import ValueExceedsMinimumLimitError
 
-class NumberLine(Coordinates.Coordinates):
+class NumberLine(Coordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

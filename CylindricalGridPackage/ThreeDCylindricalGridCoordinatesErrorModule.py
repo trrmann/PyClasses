@@ -1,8 +1,8 @@
 # ThreeDCylindricalGridCoordinatesError.py
-import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.errors.TwoDCylindricalGridCoordinatesError as TwoDCylindricalGridCoordinatesError
-import Classes.Math.Algebra.Coordinates.errors.ThreeDCoordinatesError as ThreeDCoordinatesError
+from CoordinatesPackage.ThreeDCoordinatesErrorModule import ThreeDCoordinatesError
+from CylindricalGridPackage.TwoDCylindricalGridCoordinatesErrorModule import TwoDCylindricalGridCoordinatesError
 
-class ThreeDCylindricalGridCoordinatesError(TwoDCylindricalGridCoordinatesError.TwoDCylindricalGridCoordinatesError, ThreeDCoordinatesError.ThreeDCoordinatesError):
+class ThreeDCylindricalGridCoordinatesError(TwoDCylindricalGridCoordinatesError, ThreeDCoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
