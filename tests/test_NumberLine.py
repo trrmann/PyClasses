@@ -1,5 +1,5 @@
 # NumberLine.py
-import NumberLine
+from GridsPackage.NumberLineModule import NumberLine
 
 tests = []
 tests[0] = NumberLine()
