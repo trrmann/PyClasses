@@ -1,7 +1,7 @@
-# BiologyError.py
-from EarthSciencePackage.EarthScienceErrorModule import EarthScienceError
+# DecimalError.py
+from NumberSystemsPackage.NumberSystemErrorModule import NumberSystemError
 
-class BiologyError(EarthScienceError):
+class DecimalError(NumberSystemError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

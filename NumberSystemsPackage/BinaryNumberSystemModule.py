@@ -1,11 +1,11 @@
-# Biology.py
-from EarthSciencePackage.EarthScienceModule import EarthScience
+# BinaryNumberSystem.py
+from NumberSystemsPackage.NumberSystemModule import NumberSystem
 
-class Biology(EarthScience):
+class BinaryNumberSystem(NumberSystem):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, className = "Biology"):
+    def __init__(self, className = "BinaryNumberSystem"):
         super().__init__(self, className)
 
     def __repr__(self) -> str:

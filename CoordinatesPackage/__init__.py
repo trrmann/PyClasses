@@ -1,10 +1,1 @@
-import Classes.Math.Algebra.Coordinates.errors.TwoDCoordinatesError as TwoDCoordinatesError
-import Classes.Math.Algebra.Coordinates.TwoDCoordinates as TwoDCoordinates
-import Classes.Math.Algebra.Coordinates.errors.ThreeDCoordinatesError as ThreeDCoordinatesError
-import Classes.Math.Algebra.Coordinates.ThreeDCoordinates as ThreeDCoordinates
-import Classes.Math.Algebra.Coordinates.errors.FourDCoordinatesError as FourDCoordinatesError
-import Classes.Math.Algebra.Coordinates.FourDCoordinates as FourDCoordinates
-import Classes.Math.Algebra.Coordinates.errors.PointError as PointError
-import Classes.Math.Algebra.Coordinates.Point as Point
-import Classes.Math.Algebra.Coordinates.Grids.errors.GridError as GridError
-import Classes.Math.Algebra.Coordinates.Grids.Grid as Grid
+import GridsPackage

@@ -1,7 +1,7 @@
-# BiologyError.py
-from EarthSciencePackage.EarthScienceErrorModule import EarthScienceError
+# TrinaryLogicError.py
+from LogicPackage.LogicErrorModule import LogicError
 
-class BiologyError(EarthScienceError):
+class TrinaryLogicError(LogicError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

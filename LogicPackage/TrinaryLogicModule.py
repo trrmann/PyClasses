@@ -1,11 +1,11 @@
-# Biology.py
-from EarthSciencePackage.EarthScienceModule import EarthScience
+# TrinaryLogic.py
+from LogicPackage.LogicModule import Logic
 
-class Biology(EarthScience):
+class TrinaryLogic(Logic):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, className = "Biology"):
+    def __init__(self, className = "TrinaryLogic"):
         super().__init__(self, className)
 
     def __repr__(self) -> str:

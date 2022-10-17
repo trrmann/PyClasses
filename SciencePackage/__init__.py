@@ -1,2 +1,4 @@
-import SciencePackage.ScienceErrorModule as ScienceErrorModule
-import SciencePackage.ScienceModule as ScienceModule
+import EarthSciencePackage
+import BiologyPackage
+import ChemistryPackage
+import PhysicsPackage

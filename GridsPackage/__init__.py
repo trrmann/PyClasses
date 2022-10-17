@@ -1,23 +1,5 @@
-import Classes.Math.Algebra.Coordinates.Grids.errors.NumberLineError as NumberLineError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidOriginError as InvalidOriginError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumError as InvalidMinimumError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMinimumLimitError as InvalidMinimumLimitError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumError as InvalidMaximumError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidMaximumLimitError as InvalidMaximumLimitError
-import Classes.Math.Algebra.Coordinates.Grids.errors.InvalidValueError as InvalidValueError
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumError as ValueExceedsMinimumError
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMinimumLimitError as ValueExceedsMinimumLimitError
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumError as ValueExceedsMaxiumError
-import Classes.Math.Algebra.Coordinates.Grids.errors.ValueExceedsMaxiumLimitError as ValueExceedsMaxiumLimitError
-import Classes.Math.Algebra.Coordinates.Grids.NumberLine as NumberLine
-#import Classes.Math.Algebra.Coordinates.Grids.test_NumberLine as test_NumberLine
-import Classes.Math.Algebra.Coordinates.Grids.Axes.errors.AxisError as AxisError
-import Classes.Math.Algebra.Coordinates.Grids.Axes.Axis as Axis
-import Classes.Math.Algebra.Coordinates.Grids.Cartesian.errors.CartesianGridCoordinatesError as CartesianGridCoordinatesError
-import Classes.Math.Algebra.Coordinates.Grids.Cartesian.CartesianGridCoordinates as CartesianGridCoordinates
-import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.errors.CylindricalGridCoordinatesError as CylindricalGridCoordinatesError
-import Classes.Math.Algebra.Coordinates.Grids.Cylindrical.CylindricalGridCoordinates as CylindricalGridCoordinates
-import Classes.Math.Algebra.Coordinates.Grids.Homogeneous.errors.HomogeneousGridCoordinatesError as HomogeneousGridCoordinatesError
-import Classes.Math.Algebra.Coordinates.Grids.Homogeneous.HomogeneousGridCoordinates as HomogeneousGridCoordinates
-import Classes.Math.Algebra.Coordinates.Grids.Polar.errors.PolarGridCoordinatesError as PolarGridCoordinatesError
-import Classes.Math.Algebra.Coordinates.Grids.Polar.PolarGridCoordinates as PolarGridCoordinates
+import AxesPackage
+import CartesianGridPackage
+import CylindricalGridPackage
+import HomogeneousGridPackage
+import PolarGridPackage

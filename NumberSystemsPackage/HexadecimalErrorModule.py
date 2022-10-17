@@ -1,7 +1,7 @@
-# BiologyError.py
-from EarthSciencePackage.EarthScienceErrorModule import EarthScienceError
+# HexadecimalError.py
+from NumberSystemsPackage.NumberSystemErrorModule import NumberSystemError
 
-class BiologyError(EarthScienceError):
+class HexadecimalError(NumberSystemError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

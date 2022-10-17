@@ -1,7 +1,7 @@
-# BiologyError.py
-from EarthSciencePackage.EarthScienceErrorModule import EarthScienceError
+# LogicError.py
+from AlgebraPackage.AlgebraErrorModule import AlgebraError
 
-class BiologyError(EarthScienceError):
+class LogicError(AlgebraError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

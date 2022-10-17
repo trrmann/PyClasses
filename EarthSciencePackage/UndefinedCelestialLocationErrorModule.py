@@ -1,6 +1,12 @@
 # UndefinedCelestialLocationError.py
-import ClassesPackage.Science.EarthScience.errors.EarthScienceError as EarthScienceError
+from EarthSciencePackage.EarthScienceErrorModule import EarthScienceError
 
-class UndefinedCelestialLocationError(EarthScienceError.EarthScienceError):
-    """Raised when the item is unknown"""
-    pass
+class UndefinedCelestialLocationError(EarthScienceError):
+    def __new__(cls, *args, **kwargs):
+        return super().__new__(cls)
+
+    def __init__(self):
+        pass
+
+    def __repr__(self) -> str:
+        return f"{type(self).__name__}"

@@ -1,7 +1,7 @@
-# BiologyError.py
+# PhysicsError.py
 from EarthSciencePackage.EarthScienceErrorModule import EarthScienceError
 
-class BiologyError(EarthScienceError):
+class PhysicsError(EarthScienceError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,7 +1,7 @@
-# BiologyError.py
-from EarthSciencePackage.EarthScienceErrorModule import EarthScienceError
+# UndefinedFluidTypeError.py
+from ChemistryPackage.ChemistryErrorModule import ChemistryError
 
-class BiologyError(EarthScienceError):
+class UndefinedFluidTypeError(ChemistryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
