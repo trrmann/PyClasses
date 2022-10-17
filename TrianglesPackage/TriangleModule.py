@@ -1,8 +1,9 @@
 # Triangle.py
+from ShapesPackage.ShapeModule import Shape
+from TrigonometryPackage.TrigonometryModule import Trigonometry
 import Classes.Math.Geometry.Shapes.Triangles.functions.AssertTriangle as AssertTriangle
 import Classes.Math.Geometry.Shapes.Triangles.functions.SolveTriangle as SolveTriangle
 import Classes.errors.InvalidParameterError as InvalidParameterError
-import Classes.Math.Geometry.Shapes.Shape as Shape
 import Classes.Math.Geometry.Shapes.Triangles.functions.AngleFromSides as AngleFromSides
 import Classes.Math.Geometry.Shapes.Triangles.functions.AreaOfTriangle as AreaOfTriangle
 import Classes.Math.Geometry.Shapes.Triangles.functions.BaseOfTriangle as BaseOfTriangle
@@ -25,7 +26,7 @@ Area of triangle is equal to half of the product of base and height
 """
 __className = "Triangle"
 __undefined = "undefined"
-class Triangle(Shape.Shape):
+class Triangle(Shape, Trigonometry):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
