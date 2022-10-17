@@ -1,5 +1,5 @@
 # OppositeSideFromAngleAngleExteriorSide.py
-import Classes.errors.InvalidParameterError as InvalidParameterError
+from ClassesPackage.InvalidParameterErrorModule import InvalidParameterError
 import math
 
 def OppositeSideFromAngleAngleExteriorSide(AngleOppositeResultSide: float, AngleOppositeGivenSide: float, ExteriorSide: float):

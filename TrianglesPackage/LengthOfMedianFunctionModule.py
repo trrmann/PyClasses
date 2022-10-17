@@ -1,6 +1,6 @@
 # LengthOfMedian.py
-import Classes.errors.InvalidParameterError as InvalidParameterError
-import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
+from ClassesPackage.InvalidParameterErrorModule import InvalidParameterError
+from GeometryPackage.MissingDimensionErrorModule import MissingDimensionError
 import math
 
 def LengthOfMedian(side, a: float, b: float, c: float):

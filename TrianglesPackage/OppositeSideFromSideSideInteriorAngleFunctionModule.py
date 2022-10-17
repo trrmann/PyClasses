@@ -1,6 +1,6 @@
 # OppositeSideFromSideSideInteriorAngle.py
-import Classes.errors.InvalidParameterError as InvalidParameterError
 import math
+from ClassesPackage.InvalidParameterErrorModule import InvalidParameterError
 
 def OppositeSideFromSideSideInteriorAngle(AngleOppositeResultSide: float, FirstSideAdjacentGivenAngle: float, SecondSideAdjacentGivenAngle: float):
     try:

@@ -1,7 +1,7 @@
 # RightTriangleError.py
-import Classes.Math.Geometry.Shapes.Triangles.errors.ScaleneTriangleError as ScaleneTriangleError
+from TrianglesPackage.ScaleneTriangleErrorModule import ScaleneTriangleError
 
-class RightTriangleError(ScaleneTriangleError.ScaleneTriangleError):
+class RightTriangleError(ScaleneTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

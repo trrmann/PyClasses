@@ -1,9 +1,9 @@
 # NoAngleDefined.py
-import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
-import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
-import Classes.Math.Geometry.Shapes.Triangles.functions.AngleA_NotDefined as AngleA_NotDefined
-import Classes.Math.Geometry.Shapes.Triangles.functions.AngleB_NotDefined as AngleB_NotDefined
-import Classes.Math.Geometry.Shapes.Triangles.functions.AngleC_NotDefined as AngleC_NotDefined
+from TrianglesPackage.AngleA_NotDefinedFunctionModule import AngleA_NotDefined
+from TrianglesPackage.AngleB_NotDefinedFunctionModule import AngleB_NotDefined
+from TrianglesPackage.AngleC_NotDefinedFunctionModule import AngleC_NotDefined
+from TrianglesPackage.TriangleErrorModule import TriangleError
+from TrianglesPackage.TriangleModule import Triangle
 
 def NoAngleDefined(triangle, undefined):
     if isinstance(triangle, Triangle):

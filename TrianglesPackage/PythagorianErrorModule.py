@@ -1,7 +1,7 @@
 # PythagorianError.py
-import Classes.Math.Geometry.Shapes.Triangles.errors.RightTriangleError as RightTriangleError
+from TrianglesPackage.RightTriangleErrorModule import RightTriangleError
 
-class PythagorianError(RightTriangleError.RightTriangleError):
+class PythagorianError(RightTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

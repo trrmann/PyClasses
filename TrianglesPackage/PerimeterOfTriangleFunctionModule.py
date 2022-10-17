@@ -1,5 +1,5 @@
 # PerimeterOfTriangle.py
-import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
+from GeometryPackage.MissingDimensionErrorModule import MissingDimensionError
 
 def PerimeterOfTriangle(a: float, b: float, c: float):
     try:

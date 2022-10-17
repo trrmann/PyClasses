@@ -1,7 +1,7 @@
 # IsoscelesTriangleError.py
-import Classes.Math.Geometry.Shapes.Triangles.errors.ScaleneTriangleError as ScaleneTriangleError
+from TrianglesPackage.ScaleneTriangleErrorModule import ScaleneTriangleError
 
-class IsoscelesTriangleError(ScaleneTriangleError.ScaleneTriangleError):
+class IsoscelesTriangleError(ScaleneTriangleError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

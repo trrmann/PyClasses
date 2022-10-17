@@ -1,6 +1,6 @@
 # Side_b_NotDefined.py
-import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
-import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
+from TrianglesPackage.TriangleErrorModule import TriangleError
+from TrianglesPackage.TriangleModule import Triangle
 
 def Side_b_NotDefined(triangle, undefined):
     if isinstance(triangle, Triangle):
