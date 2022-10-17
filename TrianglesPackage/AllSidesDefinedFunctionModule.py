@@ -1,9 +1,9 @@
 # AllSidesDefined.py
-import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
-import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
-import Classes.Math.Geometry.Shapes.Triangles.functions.Side_a_Defined as Side_a_Defined
-import Classes.Math.Geometry.Shapes.Triangles.functions.Side_b_Defined as Side_b_Defined
-import Classes.Math.Geometry.Shapes.Triangles.functions.Side_c_Defined as Side_c_Defined
+from TrianglesPackage.Side_a_DefinedFunctionModule import Side_a_Defined
+from TrianglesPackage.Side_b_DefinedFunctionModule import Side_b_Defined
+from TrianglesPackage.Side_c_DefinedFunctionModule import Side_c_Defined
+from TrianglesPackage.TriangleErrorModule import TriangleError
+from TrianglesPackage.TriangleModule import Triangle
 
 def AllSidesDefined(triangle, undefined):
     if isinstance(triangle, Triangle):

@@ -1,8 +1,8 @@
 # AreaOfTriangle.py
-import Classes.Math.Geometry.Shapes.Triangles.functions.AreaOfRightTriangle as AreaOfRightTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.BaseOfTriangle as BaseOfTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.HeightOfTriangle as HeightOfTriangle
-import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
+from GeometryPackage.MissingDimensionErrorModule import MissingDimensionError
+from TrianglesPackage.AreaOfRightTriangleFunctionModule import AreaOfRightTriangle
+from TrianglesPackage.BaseOfTriangleFunctionModule import BaseOfTriangle
+from TrianglesPackage.HeightOfTriangleFunctionModule import HeightOfTriangle
 
 def AreaOfTriangle(a: float, b: float, c: float):
     try:

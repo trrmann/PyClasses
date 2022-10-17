@@ -1,6 +1,6 @@
 # AngleFromSides.py
-import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
-import Classes.errors.InvalidParameterError as InvalidParameterError
+from ClassesPackage.InvalidParameterErrorModule import InvalidParameterError
+from GeometryPackage.MissingDimensionErrorModule import MissingDimensionError
 import math
 
 def AngleFromSides(angle, a: float, b: float, c: float):
