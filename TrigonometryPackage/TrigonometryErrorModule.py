@@ -7,7 +7,7 @@ class TrigonometryError(GeometryError):
         return super().__new__(cls)
 
     def __init__(self, msg: str, classes: Trigonometry=Trigonometry()):
-        super().__init__(str(msg))
+        super().__init__(str(msg), classes)
         self.classes = classes
 
     def __repr__(self) -> str:

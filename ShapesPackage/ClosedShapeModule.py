@@ -1,17 +1,19 @@
-# Point.py
-from CartesianGridPackage.CartesianGridCoordinatesModule import CartesianGridCoordinates
-from GridsPackage.GridModule import Grid
-from ShapesPackage.ClosedShapeModule import ClosedShape
+# ClosedShapeModule.py
 from CoordinatesPackage.CoordinatesModule import Coordinates
+from GridsPackage.GridModule import Grid
+from CartesianGridPackage.CartesianGridCoordinatesModule import CartesianGridCoordinates
+from ShapesPackage.OpenShapeModule import OpenShape
 
-class Point(ClosedShape, Coordinates):
+class ClosedShape(OpenShape):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
+
 
     def __init__(self,
             grid: Grid = CartesianGridCoordinates(),
             coordinates:  Coordinates = "undefined",
             dimensions = "undefined",
+            start = "undefined",
             classification: str = "0 dimensions",
             type: str = "Point",
             className: str = "Point"
@@ -21,7 +23,8 @@ class Point(ClosedShape, Coordinates):
             grid = grid,
             coordinates = coordinates,
             dimensions = dimensions,
-            start = "self",
+            start = start,
+            end = start,
             classification = classification,
             type = type,
             className= className

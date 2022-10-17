@@ -7,7 +7,7 @@ class CalculusError(TrigonometryError):
         return super().__new__(cls)
 
     def __init__(self, msg: str, classes: Calculus=Calculus()):
-        super().__init__(str(msg))
+        super().__init__(str(msg), classes)
         self.classes = classes
 
     def __repr__(self) -> str:

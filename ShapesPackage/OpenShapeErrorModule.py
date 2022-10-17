@@ -1,12 +1,13 @@
-# Shape.py
-from GeometryPackage.GeometryErrorModule import GeometryError
+# OpenShapeErrorModule.py
+from ShapesPackage.OpenShapeModule import OpenShape
+from ShapesPackage.ShapeErrorModule import ShapeError
 from ShapesPackage.ShapeModule import Shape
 
-class ShapeError(GeometryError):
+class OpenShapeError(ShapeError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, msg: str, classes: Shape=Shape()):
+    def __init__(self, msg: str, classes: OpenShape=OpenShape()):
         super().__init__(str(msg), classes)
         self.classes = classes
 
