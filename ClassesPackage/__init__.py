@@ -3,5 +3,5 @@ import ClassesPackage.ClassesErrorModule
 import ClassesPackage.InvalidParameterErrorModule
 import ClassesPackage.ClassesModule
 import ClassesPackage.InputModule
-import MathPackage.MathModule
-import SciencePackage.ScienceModule
+#import MathPackage.MathModule
+#import SciencePackage.ScienceModule

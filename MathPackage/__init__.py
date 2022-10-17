@@ -1,6 +1,6 @@
 import MathPackage.MathErrorModule
 import MathPackage.MathModule
-import AlgebraPackage.AlgebraModule
-import GeometryPackage.GeometryModule
-import TrigonometryPackage.TrigonometryModule
-import CalculusPackage.CalculusModule
+#import AlgebraPackage.AlgebraModule
+#import GeometryPackage.GeometryModule
+#import TrigonometryPackage.TrigonometryModule
+#import CalculusPackage.CalculusModule
