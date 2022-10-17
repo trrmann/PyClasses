@@ -1,5 +1,5 @@
 # ClassesError.py
-from ErrorModule import Error
+from ClassesPackage.ErrorModule import Error
 
 class ClassesError(Error):
     def __new__(cls, *args, **kwargs):

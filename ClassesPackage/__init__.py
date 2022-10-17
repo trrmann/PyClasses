@@ -1,2 +1,7 @@
-import MathPackage
-import SciencePackage
+import ClassesPackage.ErrorModule
+import ClassesPackage.ClassesErrorModule
+import ClassesPackage.InvalidParameterErrorModule
+import ClassesPackage.ClassesModule
+import ClassesPackage.InputModule
+import MathPackage.MathModule
+import SciencePackage.ScienceModule
