@@ -1,3 +1,5 @@
+# InputFunctionModule.py
+
 def request_int(question, exception_message, default_int):
     try:
         value = int(input(question))
