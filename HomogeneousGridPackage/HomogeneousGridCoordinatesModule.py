@@ -1,7 +1,7 @@
 # HomogeneousGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.Grid as Grid
+from GridsPackage.GridModule import Grid
 
-class HomogeneousGridCoordinates(Grid.Grid):
+class HomogeneousGridCoordinates(Grid):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

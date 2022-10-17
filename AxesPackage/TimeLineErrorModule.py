@@ -1,7 +1,7 @@
 # TimeLineError.py
-import Classes.Math.Algebra.Coordinates.Grids.Axes.errors.AxisError as AxisError
+from AxesPackage.AxisErrorModule import AxisError
 
-class TimeLineError(AxisError.AxisError):
+class TimeLineError(AxisError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,1 +1,1 @@
-import TrigTrianglesPackage
+import TrianglesPackage

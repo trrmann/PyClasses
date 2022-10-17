@@ -1,7 +1,7 @@
 # HomogeneousGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.errors.GridError as GridError
+from GridsPackage.GridErrorModule import GridError
 
-class HomogeneousGridCoordinatesError(GridError.GridError):
+class HomogeneousGridCoordinatesError(GridError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

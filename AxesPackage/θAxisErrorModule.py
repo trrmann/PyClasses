@@ -1,7 +1,7 @@
 # θAxisError.py
-import Classes.Math.Algebra.Coordinates.Grids.Axes.errors.AxisError as AxisError
+from AxesPackage.AxisErrorModule import AxisError
 
-class θAxisError(AxisError.AxisError):
+class θAxisError(AxisError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

@@ -1,7 +1,7 @@
 # CartesianGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.Grid as Grid
+from GridsPackage.GridModule import Grid
 
-class CartesianGridCoordinates(Grid.Grid):
+class CartesianGridCoordinates(Grid):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

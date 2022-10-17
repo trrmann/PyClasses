@@ -1,9 +1,9 @@
 # ρAxis.py
-import Classes.Math.Algebra.Coordinates.Grids.Axes.Axis as Axis
+from AxesPackage.AxisModule import Axis
 import math
 
 #radial axis to be used with an angular axis
-class ρAxis(Axis.Axis):
+class ρAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

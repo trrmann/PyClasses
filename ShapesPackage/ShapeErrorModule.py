@@ -1,7 +1,7 @@
-# ZAxisError.py
-from AxesPackage.AxisErrorModule import AxisError
+# Shape.py
+from GeometryPackage.GeometryErrorModule import GeometryError
 
-class ZAxisError(AxisError):
+class ShapeError(GeometryError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

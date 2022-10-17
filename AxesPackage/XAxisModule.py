@@ -1,9 +1,9 @@
 # XAxis.py
-import Classes.Math.Algebra.Coordinates.Grids.Axes.Axis as Axis
+from AxesPackage.AxisModule import Axis
 import math
 
 #linear axis
-class XAxis(Axis.Axis):
+class XAxis(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

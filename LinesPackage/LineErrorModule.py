@@ -1,7 +1,8 @@
-# ZAxisError.py
-from AxesPackage.AxisErrorModule import AxisError
+# LineError.py
+from AlgebraPackage.AlgebraErrorModule import AlgebraError
+from ShapesPackage.ShapeErrorModule import ShapeError
 
-class ZAxisError(AxisError):
+class LineError(AlgebraError, ShapeError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

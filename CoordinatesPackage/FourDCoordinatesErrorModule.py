@@ -1,7 +1,7 @@
-# ZAxisError.py
-from AxesPackage.AxisErrorModule import AxisError
+# FourDCoordinatesError.py
+from CoordinatesPackage.CoordinatesErrorModule import CoordinatesError
 
-class ZAxisError(AxisError):
+class FourDCoordinatesError(CoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

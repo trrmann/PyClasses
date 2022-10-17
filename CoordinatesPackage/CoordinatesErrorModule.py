@@ -1,7 +1,7 @@
-# ZAxisError.py
-from AxesPackage.AxisErrorModule import AxisError
+# CoordinatesError.py
+from AlgebraPackage.AlgebraErrorModule import AlgebraError
 
-class ZAxisError(AxisError):
+class CoordinatesError(AlgebraError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

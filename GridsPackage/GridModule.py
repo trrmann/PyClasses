@@ -1,7 +1,7 @@
 # Grid.py
-import Classes.Math.Algebra.Coordinates.Coordinates as Coordinates
+from CoordinatesPackage.CoordinatesModule import Coordinates
 
-class Grid(Coordinates.Coordinates):
+class Grid(Coordinates):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

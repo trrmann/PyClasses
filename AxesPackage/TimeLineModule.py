@@ -1,8 +1,8 @@
 # TimeLine.py
-import Classes.Math.Algebra.Coordinates.Grids.Axes.Axis as Axis
+from AxesPackage.AxisModule import Axis
 
 #time axis - linear axis
-class TimeLine(Axis.Axis):
+class TimeLine(Axis):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

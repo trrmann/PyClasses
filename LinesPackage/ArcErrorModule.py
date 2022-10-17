@@ -1,7 +1,7 @@
-# ZAxisError.py
-from AxesPackage.AxisErrorModule import AxisError
+# ArcError.py
+from LinesPackage.LineErrorModule import LineError
 
-class ZAxisError(AxisError):
+class ArcError(LineError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

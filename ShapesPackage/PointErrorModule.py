@@ -1,7 +1,8 @@
-# GridError.py
+# PointError.py
+from ShapesPackage.ShapeErrorModule import ShapeError
 from CoordinatesPackage.CoordinatesErrorModule import CoordinatesError
 
-class GridError(CoordinatesError):
+class PointError(ShapeError, CoordinatesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

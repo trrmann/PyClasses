@@ -1,7 +1,7 @@
 # PolorGridCoordinates.py
-import Classes.Math.Algebra.Coordinates.Grids.Grid as Grid
+from GridsPackage.GridModule import Grid
 
-class PolorGridCoordinates(Grid.Grid):
+class PolorGridCoordinates(Grid):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

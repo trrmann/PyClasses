@@ -1,7 +1,7 @@
 # XAxisError.py
-import Classes.Math.Algebra.Coordinates.Grids.Axes.errors.AxisError as AxisError
+from AxesPackage.AxisErrorModule import AxisError
 
-class XAxisError(AxisError.AxisError):
+class XAxisError(AxisError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

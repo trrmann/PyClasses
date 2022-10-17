@@ -1,7 +1,7 @@
 # AxisError.py
-import Classes.Math.Algebra.Coordinates.Grids.errors.NumberLineError as NumberLineError
+from GridsPackage.NumberLineErrorModule import NumberLineError
 
-class AxisError(NumberLineError.NumberLineError):
+class AxisError(NumberLineError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
