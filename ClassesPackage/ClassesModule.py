@@ -1,4 +1,4 @@
-# Classes.py
+# ClassesModule.py
 
 class Classes:
     def __new__(cls, *args, **kwargs):
