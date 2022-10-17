@@ -2,6 +2,6 @@ import ClassesPackage.ErrorModule
 import ClassesPackage.ClassesErrorModule
 import ClassesPackage.InvalidParameterErrorModule
 import ClassesPackage.ClassesModule
-import ClassesPackage.InputModule
+import ClassesPackage.InputFunctionModule
 #import MathPackage.MathModule
 #import SciencePackage.ScienceModule

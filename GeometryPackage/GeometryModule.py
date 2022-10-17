@@ -3,7 +3,7 @@ from AlgebraPackage.AlgebraModule import Algebra
 from MissingDimensionErrorModule import MissingDimensionError
 from UndefinedShapeErrorModule import UndefinedShapeError
 from UndefinedOrientationErrorModule import UndefinedOrientationError
-from ClassesPackage.InputModule import *
+from ClassesPackage.InputFunctionModule import *
 
 import math
 
