@@ -1,18 +1,18 @@
 # Triangle.py
+from ClassesPackage.InvalidParameterErrorModule import InvalidParameterError
 from ShapesPackage.ShapeModule import Shape
 from TrigonometryPackage.TrigonometryModule import Trigonometry
-import Classes.Math.Geometry.Shapes.Triangles.functions.AssertTriangle as AssertTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.SolveTriangle as SolveTriangle
-import Classes.errors.InvalidParameterError as InvalidParameterError
-import Classes.Math.Geometry.Shapes.Triangles.functions.AngleFromSides as AngleFromSides
-import Classes.Math.Geometry.Shapes.Triangles.functions.AreaOfTriangle as AreaOfTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.BaseOfTriangle as BaseOfTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.CircumradiusOfTriangle as CircumradiusOfTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.HeightOfTriangle as HeightOfTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.InradiusOfTriangle as InradiusOfTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.LengthOfMedian as LengthOfMedian
-import Classes.Math.Geometry.Shapes.Triangles.functions.PerimeterOfTriangle as PerimeterOfTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.SemiPerimeterOfTriangle as SemiPerimeterOfTriangle
+from TrianglesPackage.SolveTriangleFunctionModule import SolveTriangle
+from TrianglesPackage.AssertTriangleFunctionModule import AssertTriangle
+from TrianglesPackage.AngleFromSidesFunctionModule import AngleFromSides
+from TrianglesPackage.AreaOfTriangleFunctionModule import AreaOfTriangle
+from TrianglesPackage.PerimeterOfTriangleFunctionModule import PerimeterOfTriangle
+from TrianglesPackage.SemiPerimeterOfTriangleFunctionModule import SemiPerimeterOfTriangle
+from TrianglesPackage.BaseOfTriangleFunctionModule import BaseOfTriangle
+from TrianglesPackage.HeightOfTriangleFunctionModule import HeightOfTriangle
+from TrianglesPackage.LengthOfMedianFunctionModule import LengthOfMedian
+from TrianglesPackage.InradiusOfTriangleFunctionModule import InradiusOfTriangle
+from TrianglesPackage.CircumradiusOfTriangleFunctionModule import CircumradiusOfTriangle
 
 """
 A triangle is a closed polygon in a two-dimensional plane having three sides and three angles. By the name itself, a triangle is made by combining two words tri means three and angle.

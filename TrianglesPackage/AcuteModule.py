@@ -1,7 +1,7 @@
 # Acute.py
-import Classes.Math.Geometry.Shapes.Triangles.Scalene as ScaleneTriangle
+from TrianglesPackage.ScaleneModule import ScaleneTriangle
 
-class AcuteTriangle(ScaleneTriangle.ScaleneTriangle):
+class AcuteTriangle(ScaleneTriangle):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
