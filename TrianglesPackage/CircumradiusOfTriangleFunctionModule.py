@@ -1,5 +1,5 @@
 # CircumradiusOfTriangle.py
-import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
+from GeometryPackage.MissingDimensionErrorModule import MissingDimensionError
 import math
 
 def CircumradiusOfTriangle(a: float, b: float, c: float):

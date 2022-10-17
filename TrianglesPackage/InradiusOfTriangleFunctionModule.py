@@ -1,7 +1,7 @@
 # InradiusOfTriangle.py
-import Classes.Math.Geometry.Shapes.Triangles.functions.AreaOfTriangle as AreaOfTriangle
-import Classes.Math.Geometry.Shapes.Triangles.functions.SemiPerimeterOfTriangle as SemiPerimeterOfTriangle
-import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
+from GeometryPackage.MissingDimensionErrorModule import MissingDimensionError
+from TrianglesPackage.AreaOfTriangleFunctionModule import AreaOfTriangle
+from TrianglesPackage.SemiPerimeterOfTriangleFunctionModule import SemiPerimeterOfTriangle
 
 def InradiusOfTriangle(a: float, b: float, c: float):
     try:

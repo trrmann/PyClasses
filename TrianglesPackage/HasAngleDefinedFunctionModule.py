@@ -1,7 +1,7 @@
 # HasAngleDefined.py
-import Classes.Math.Geometry.Shapes.Triangles.Triangle as Triangle
-import Classes.Math.Geometry.Shapes.Triangles.errors.TriangleError as TriangleError
-import Classes.Math.Geometry.Shapes.Triangles.functions.NoAngleDefined as NoAngleDefined
+from TrianglesPackage.NoAngleDefinedFunctionModule import NoAngleDefined
+from TrianglesPackage.TriangleErrorModule import TriangleError
+from TrianglesPackage.TriangleModule import Triangle
 
 def HasAngleDefined(triangle, undefined):
     if isinstance(triangle, Triangle):

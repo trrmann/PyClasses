@@ -1,6 +1,6 @@
 # HeightOfTriangle.py
-import Classes.Math.Geometry.Shapes.Triangles.functions.SemiPerimeterOfTriangle as SemiPerimeterOfTriangle
-import Classes.Math.Geometry.errors.MissingDimensionError as MissingDimensionError
+from GeometryPackage.MissingDimensionErrorModule import MissingDimensionError
+from TrianglesPackage.SemiPerimeterOfTriangleFunctionModule import SemiPerimeterOfTriangle
 import math
 
 def HeightOfTriangle(a: float, b: float, c: float):
