@@ -1,8 +1,8 @@
 # Physics.py
-import Classes.Math.Math as Math
-import Classes.Science.Chemistry.Chemistry as fluid_density
-import Classes.Science.EarthScience.EarthScience as EarthScience
-from EarthScience import g
+import ClassesPackage.Math.Math as Math
+import ClassesPackage.Science.Chemistry.Chemistry as fluid_density
+import ClassesPackage.Science.EarthScience.EarthScience as EarthScience
+from EarthSciencePackage import g
 import math
 
 physics_constants = {

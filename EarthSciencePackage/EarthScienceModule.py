@@ -1,6 +1,6 @@
 # EarthScience.py
-import Classes.Science.Science as Science
-import Classes.Science.EarthScience.errors.UndefinedCelestialLocationError as UndefinedCelestialLocationError
+import ClassesPackage.Science.Science as Science
+import ClassesPackage.Science.EarthScience.errors.UndefinedCelestialLocationError as UndefinedCelestialLocationError
 
 astro_constants = {
     "g" : {

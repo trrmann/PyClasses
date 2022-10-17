@@ -1,4 +1,4 @@
-from Classes.Input import request_int, request_float, has_range, is_in_range, is_between_range, value_out_of_range, request_valid_int, request_valid_float
+from ClassesPackage.InputModule import request_int, request_float, has_range, is_in_range, is_between_range, value_out_of_range, request_valid_int, request_valid_float
 
 test = []
 for index in range(22):

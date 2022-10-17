@@ -1,7 +1,7 @@
 # ClassesError.py
-import Classes.Error as Error
+from ErrorModule import Error
 
-class ClassesError(Error.Error):
+class ClassesError(Error):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

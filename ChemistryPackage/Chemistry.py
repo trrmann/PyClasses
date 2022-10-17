@@ -1,6 +1,6 @@
 # Chemestry.py
-import Classes.Science.Chemistry.errors.UndefinedFluidTypeError as UndefinedFluidTypeError
-import Classes.Science.EarthScience.EarthScience as EarthScience
+import ClassesPackage.Science.Chemistry.errors.UndefinedFluidTypeError as UndefinedFluidTypeError
+import ClassesPackage.Science.EarthScience.EarthScience as EarthScience
 
 chemestry_constants = {
     "fluidDensity" : {

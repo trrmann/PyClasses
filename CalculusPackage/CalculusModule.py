@@ -1,7 +1,7 @@
 # Calculus.py
-import Classes.Math.Trigonometry.Trigonometry as Trigonometry
+from TrigonometryPackage.TrigonometryModule import Trigonometry
 
-class Calculus(Trigonometry.Trigonometry):
+class Calculus(Trigonometry):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 

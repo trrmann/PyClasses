@@ -1,5 +1,5 @@
 # BiologyError.py
-import Classes.Science.EarthScience.errors.EarthScienceError as EarthScienceError
+import ClassesPackage.Science.EarthScience.errors.EarthScienceError as EarthScienceError
 
 class BiologyError(EarthScienceError.EarthScienceError):
     def __new__(cls, *args, **kwargs):

@@ -1,1 +1,1 @@
-from Classes.Science.Chemistry.errors.UndefinedFluidTypeError import UndefinedFluidTypeError
+from ClassesPackage.Science.Chemistry.errors.UndefinedFluidTypeError import UndefinedFluidTypeError

@@ -1,5 +1,5 @@
 # Biology.py
-import Classes.Science.EarthScience.EarthScience as EarthScience
+import ClassesPackage.Science.EarthScience.EarthScience as EarthScience
 
 class Biology(EarthScience.EarthScience):
     def __new__(cls, *args, **kwargs):
