@@ -9,10 +9,19 @@ from ClassesPackage.TestCaseModule import TestCase
 functionDictionary = {"Classes": Classes,
                       "print": print,
                       "float": float}
-testCase1 = TestCase(testCaseName="case 1", functionName="Classes")
+testCase1 = TestCase(
+        testCaseName = "case 1",
+        functionName = "Classes"
+    )
 arguments = ["Test"]
 kwargs = {"none": None}
-testCase2 = TestCase("case 2", "print", arguments, kwargs, expected_std_output="Test")
+testCase2 = TestCase(
+        arguments,
+        kwargs,
+        testCaseName = "case 2",
+        functionName = "print",
+        expected_std_output="Test"
+    )
 arguments = ["1.5"]
 testCase3 = TestCase("case 3", "float", arguments, kwargs, expected_output=1.5)
 arguments = ["failMe"]
@@ -21,6 +30,16 @@ testCasesDictionary = {testCase1.testCaseName: testCase1,
                         testCase2.testCaseName: testCase2,
                         testCase3.testCaseName: testCase3,
                         testCase4.testCaseName: testCase4}
+
+
+
+            testCaseName: str = None,
+            functionName: str = None,
+            stdin_input: str = None,
+            expected_output = None,
+            expected_std_output: str = None,
+            expected_exception: Exception = None,
+
 
 test = Test(functionDictionary, testCases = testCasesDictionary)
 
