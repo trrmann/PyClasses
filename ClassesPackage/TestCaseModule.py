@@ -67,6 +67,9 @@ class TestCase(Classes):
         out = f"{out}, functionName={self.functionName}"
         out = f"{out}, functionArguments={self.functionArguments}"
         out = f"{out}, functionKeyWordArguments={self.functionKeyWordArguments}"
+        out = f"{out}, exp_output={self.expected_output}"
+        out = f"{out}, exp_std_output={self.expected_std_output}"
+        out = f"{out}, exp_exception={self.expected_exception}"
         if self.stdin_input != None: out = f"{out}, stdin_input={self.stdin_input}"
         out = f"{out})"
         return out
@@ -102,8 +105,6 @@ class TestCase(Classes):
         print(self)
         print(resultsDictionary)
         result = True
-        print(f"exc({self.expected_exception})({type(self.expected_exception)})")
-        if self.result_exception_key in resultsDictionary.keys(): print(f"exc({resultsDictionary[self.result_exception_key]})({type(resultsDictionary[self.result_exception_key])})")
         if self.expected_output != None:
             result = result and (resultsDictionary[self.result_output_key] == self.expected_output)
         elif self.result_output_key in resultsDictionary:
