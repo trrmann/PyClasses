@@ -66,7 +66,7 @@ class TestCase(Classes):
 
     def setup_method(self, stdin_input):
         if os.path.exists(self.outFileName):
-            os.remove(self.outFilename)
+            os.remove(self.outFileName)
         test_in_file = open(self.inFileName, "w")
         test_in_file.write(stdin_input)
         test_in_file.close()
