@@ -19,15 +19,14 @@ class TestCase(Classes):
     outFileName = "test_output.txt"
 
     def __init__(self,
-            testCaseName: str = None,
-            functionName: str = None,
+            testCaseName: str,
+            functionName: str,
             stdin_input: str = None,
             expected_output = None,
             expected_std_output: str = None,
             expected_exception: Exception = None,
             className: str="TestCase",
-            *functionArguments,
-            **functionKeyWordArguments
+            **functionArguments
         ):
         super().__init__(className)
         self.inFileName = TestCase.inFileName
@@ -37,16 +36,25 @@ class TestCase(Classes):
         self.testCaseName = testCaseName
         self.functionName = functionName
         print(functionArguments)
-        if functionArguments.count(functionArguments) > 0:
-            self.functionArguments = functionArguments
-        else:
-            self.functionArguments = None
-        if len(functionKeyWordArguments) > 0:
-            if "functionKeyWordArguments" in functionKeyWordArguments.keys():
-                self.functionKeyWordArguments = functionKeyWordArguments["functionKeyWordArguments"]
+        if len(functionArguments) > 0:
+            if "functionArguments" in functionArguments.keys():
+                if(len(functionArguments["functionArguments"])) > 0:
+                    if "arguments" in functionArguments["functionArguments"].keys():
+                        self.functionArguments = functionArguments["functionArguments"]["arguments"]
+                    else:
+                        self.functionArguments = None
+                    if "keyWordArguments" in functionArguments["functionArguments"].keys():
+                        self.functionKeyWordArguments = functionArguments["functionArguments"]["keyWordArguments"]
+                    else:
+                        self.functionKeyWordArguments = None
+                else:
+                    self.functionArguments = None
+                    self.functionKeyWordArguments = None
             else:
+                self.functionArguments = None
                 self.functionKeyWordArguments = None
         else:
+            self.functionArguments = None
             self.functionKeyWordArguments = None
         self.stdin_input = stdin_input
         self.expected_output = expected_output
