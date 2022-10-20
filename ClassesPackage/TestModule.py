@@ -6,7 +6,7 @@ class Test(Classes):
         return super().__new__(cls)
 
     def __init__(self, functionDictionary, className: str="Test", *args, **kwargs):
-        super().__init__(kwargs["className"])
+        super().__init__(className)
         self.result_eval_results_key = "eval_results"
         self.result_test_result_key = "test_result"
         self.functionDictionary = functionDictionary
