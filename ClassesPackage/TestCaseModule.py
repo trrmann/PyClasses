@@ -65,22 +65,22 @@ class TestCase(Classes):
     def setup_method(self, stdin_input):
         if os.path.exists(self.outFilename):
             os.remove(self.outFilename)
-        test_in_file = open(inFileName, "w")
+        test_in_file = open(TestCase.inFileName, "w")
         test_in_file.write(stdin_input)
         test_in_file.close()
         self.orig_stdin = sys.stdin
         self.orig_stdout = sys.stdout
-        sys.stdin = open(inFileName)
-        sys.stdout = open(outFilename, "w")
+        sys.stdin = open(TestCase.inFileName)
+        sys.stdout = open(TestCase.outFilename, "w")
 
     def get_input(self):
-        test_in_file = open(inFilename)
+        test_in_file = open(TestCase.inFilename)
         input = test_in_file.read()
         test_in_file.close()
         return input
 
     def get_output(self):
-        test_out_file = open(outFilename)
+        test_out_file = open(TestCase.outFilename)
         output = test_out_file.read()
         test_out_file.close()
         return output
@@ -91,7 +91,7 @@ class TestCase(Classes):
         sys.stdout = self.orig_stdout
 
     def cleanup(self):
-        if os.path.exists(inFileName):
-            os.remove(inFileName)
-        if os.path.exists(outFilename):
-            os.remove(outFilename)
+        if os.path.exists(TestCase.inFileName):
+            os.remove(TestCase.inFileName)
+        if os.path.exists(TestCase.outFilename):
+            os.remove(TestCase.outFilename)
