@@ -41,7 +41,10 @@ class TestCase(Classes):
         else:
             self.functionArguments = None
         if len(functionKeyWordArguments) > 0:
-            self.functionKeyWordArguments = functionKeyWordArguments["functionKeyWordArguments"]
+            if "functionKeyWordArguments" in functionKeyWordArguments.keys():
+                self.functionKeyWordArguments = functionKeyWordArguments["functionKeyWordArguments"]
+            else:
+                self.functionKeyWordArguments = None
         else:
             self.functionKeyWordArguments = None
         self.stdin_input = stdin_input
