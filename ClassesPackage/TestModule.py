@@ -20,7 +20,7 @@ class Test(Classes):
         full_results[self.result_test_result_key] = False
         for key, case in self.testCases.items():
             full_results[key] = case.execute(functionDictionary = self.functionDictionary)
-            full_results[key][self.result_eval_results_key] = case.eval_results(full_results[key])
+            full_results[key][self.result_eval_results_key] = case.eval_results(resultsDictionary = full_results[key])
             full_results[self.result_test_result_key] = full_results[self.result_test_result_key] and not full_results[key][self.result_eval_results_key]
         full_results[self.result_test_result_key] = not full_results[self.result_test_result_key]
         return full_results
