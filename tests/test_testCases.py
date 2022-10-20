@@ -18,7 +18,7 @@ kwargs = {"none": None}
 testCase2 = TestCase(
         "case 2",
         "print",
-        expected_std_output = f"\[\'Test\'\] {kwargs}",
+        expected_std_output = "['Test'] {'none': None}\n",
         functionArguments = {
             "arguments" : arguments,
             "keyWordArguments" : kwargs
