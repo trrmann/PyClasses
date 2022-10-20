@@ -12,7 +12,7 @@ functionDictionary = {"Classes": Classes,
 testCase1 = TestCase(
         "case 1",
         "Classes",
-        expected_output="Classes(className=Classes)"
+        expected_output=Classes()
     )
 arguments = ["Test"]
 kwargs = {"none": None}
