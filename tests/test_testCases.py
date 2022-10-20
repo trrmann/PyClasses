@@ -23,9 +23,21 @@ testCase2 = TestCase(
         expected_std_output="Test"
     )
 arguments = ["1.5"]
-testCase3 = TestCase("case 3", "float", arguments, kwargs, expected_output=1.5)
+testCase3 = TestCase(
+        arguments,
+        kwargs,
+        testCaseName = "case 3",
+        functionName = "float",
+        expected_output=1.5
+    )
 arguments = ["failMe"]
-testCase4 = TestCase("case 4", "float", arguments, kwargs, expected_exception=ValueError)
+testCase4 = TestCase(
+        arguments,
+        kwargs,
+        testCaseName = "case 4",
+        functionName = "float",
+        expected_exception=ValueError
+    )
 testCasesDictionary = {testCase1.testCaseName: testCase1,
                         testCase2.testCaseName: testCase2,
                         testCase3.testCaseName: testCase3,
