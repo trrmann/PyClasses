@@ -64,11 +64,12 @@ testCase6 = TestCase(
         }
     )
 
-testCasesDictionary = {testCase1.testCaseName: testCase1,
-                        testCase2.testCaseName: testCase2,
-                        testCase3.testCaseName: testCase3,
-                        testCase4.testCaseName: testCase4,
-                        testCase5.testCaseName: testCase5,
-                        testCase6.testCaseName: testCase6}
-
-print(Test(functionDictionary, testCases = testCasesDictionary).execute())
+print(Test(functionDictionary,
+    testCases = {
+        testCase1.testCaseName: testCase1,
+        testCase2.testCaseName: testCase2,
+        testCase3.testCaseName: testCase3,
+        testCase4.testCaseName: testCase4,
+        testCase5.testCaseName: testCase5,
+        testCase6.testCaseName: testCase6
+    }).execute())
