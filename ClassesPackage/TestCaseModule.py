@@ -7,6 +7,15 @@ class TestCase(Classes):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
+    result_input_key = "input"
+    result_output_key = "output"
+    result_std_input_key = "std_input"
+    result_std_output_key = "std_output"
+    result_exception_key = "exception"
+
+    inFileName = "test_input.txt"
+    outFilename = "test_output.txt"
+
     def __init__(self,
             testCaseName: str,
             functionName: str,
@@ -20,13 +29,6 @@ class TestCase(Classes):
         super().__init__(className)
         self.orig_stdin = sys.stdin
         self.orig_stdout = sys.stdout
-        self.result_input_key = "input"
-        self.result_output_key = "output"
-        self.result_std_input_key = "std_input"
-        self.result_std_output_key = "std_output"
-        self.result_exception_key = "exception"
-        self.inFileName = "test_input.txt"
-        self.outFilename = "test_output.txt"
         self.testCaseName = testCaseName
         self.functionName = functionName
         self.arguments = arguments
