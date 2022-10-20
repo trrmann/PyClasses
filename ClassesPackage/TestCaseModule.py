@@ -3,6 +3,7 @@ from ClassesPackage.ClassesModule import Classes
 import sys
 import os
 
+
 class TestCase(Classes):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
@@ -20,10 +21,10 @@ class TestCase(Classes):
             testCaseName: str,
             functionName: str,
             *arguments,
-            stdin_input: str,
-            expected_output,
-            expected_std_output: str,
-            expected_exception: Exception,
+            stdin_input: str = None,
+            expected_output = None,
+            expected_std_output: str = None,
+            expected_exception: Exception = None,
             className: str="TestCase"
         ):
         super().__init__(className)
@@ -39,8 +40,18 @@ class TestCase(Classes):
         self.expected_std_output = expected_std_output
         self.expected_exception = expected_exception
 
+    def to_string(self):
+        out = f"("
+        out = f"{out}className={self.className}"
+        out = f"{out}, testCaseName={self.testCaseName}"
+        out = f"{out}, functionName={self.functionName}"
+        out = f"{out}, arguments={self.arguments}"
+        if self.stdin_input != None: out = f"{out}, stdin_input={self.stdin_input}"
+        out = f"{out})"
+        return out
+
     def __repr__(self) -> str:
-        return f"{type(self).__name__}(className={self.className}, testCaseName={self.testCaseName}, functionName={self.functionName}, arguments={self.arguments}, stdin_input={self.stdin_input})"
+        return f"{type(self).__name__}{self.to_string()}"
 
     def execute(self, **kwargs):
         functionDictionary = kwargs["functionDictionary"]
