@@ -27,6 +27,8 @@ class TestCase(Classes):
             className: str="TestCase"
         ):
         super().__init__(className)
+        self.inFileName = TestCase.inFileName
+        self.outFilename = TestCase.outFilename
         self.orig_stdin = sys.stdin
         self.orig_stdout = sys.stdout
         self.testCaseName = testCaseName
