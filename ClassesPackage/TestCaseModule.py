@@ -81,33 +81,41 @@ class TestCase(Classes):
             result = result and (resultsDictionary[self.result_exception_key] == self.expected_exception)
         return result
 
-    def setup_method(self, stdin_input):
-        if os.path.exists(self.outFileName):
-            os.remove(self.outFileName)
-        test_in_file = open(self.inFileName, "w")
-        test_in_file.write(stdin_input)
-        test_in_file.close()
-        self.orig_stdin = sys.stdin
-        self.orig_stdout = sys.stdout
-        sys.stdin = open(self.inFileName)
-        sys.stdout = open(self.outFileName, "w")
+    def setup_method(self):
+        if self.stdin_input != None:
+            test_in_file = open(self.inFileName, "w")
+            test_in_file.write(self.stdin_input)
+            test_in_file.close()
+            self.orig_stdin = sys.stdin
+            sys.stdin = open(self.inFileName)
+        if self.expected_std_output != None:
+            if os.path.exists(self.outFileName):
+                os.remove(self.outFileName)
+            self.orig_stdout = sys.stdout
+            sys.stdout = open(self.outFileName, "w")
 
     def get_input(self):
-        test_in_file = open(self.inFileName)
-        input = test_in_file.read()
-        test_in_file.close()
-        return input
+        if self.stdin_input != None:
+            test_in_file = open(self.inFileName)
+            input = test_in_file.read()
+            test_in_file.close()
+            return input
+        return None
 
     def get_output(self):
-        test_out_file = open(self.outFileName)
-        output = test_out_file.read()
-        test_out_file.close()
-        return output
+        if self.expected_std_output != None:
+            test_out_file = open(self.outFileName)
+            output = test_out_file.read()
+            test_out_file.close()
+            return output
+        return None
 
     def teardown_method(self):
-        sys.stdin = self.orig_stdin
-        sys.stdout.close()
-        sys.stdout = self.orig_stdout
+        if self.stdin_input != None:
+            sys.stdin = self.orig_stdin
+        if self.expected_std_output != None:
+            sys.stdout.close()
+            sys.stdout = self.orig_stdout
 
     def cleanup(self):
         if os.path.exists(self.inFileName):
