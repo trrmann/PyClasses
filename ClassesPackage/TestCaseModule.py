@@ -36,7 +36,10 @@ class TestCase(Classes):
         self.testCaseName = testCaseName
         self.functionName = functionName
         self.functionArguments = functionArguments
-        self.functionKeyWordArguments = functionKeyWordArguments["functionKeyWordArguments"]
+        if len(functionKeyWordArguments) > 0:
+            self.functionKeyWordArguments = functionKeyWordArguments["functionKeyWordArguments"]
+        else:
+            self.functionKeyWordArguments = None
         self.stdin_input = stdin_input
         self.expected_output = expected_output
         self.expected_std_output = expected_std_output
