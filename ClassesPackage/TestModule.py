@@ -1,7 +1,8 @@
 # testModule.py
-from ClassesPackage.ClassesModule import Classes
+#from ClassesPackage.ClassesModule import Classes
 
-class Test(Classes):
+#class Test(Classes):
+class Test:
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
