@@ -18,9 +18,9 @@ class TestCase(Classes):
     outFileName = "test_output.txt"
 
     def __init__(self,
+            *arguments,
             testCaseName: str,
             functionName: str,
-            *arguments,
             stdin_input: str = None,
             expected_output = None,
             expected_std_output: str = None,
