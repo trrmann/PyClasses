@@ -35,9 +35,19 @@ testCase3 = TestCase(
             "keyWordArguments" : None
         }
     )
-arguments = "failMe"
+arguments = 1.5
 testCase4 = TestCase(
         "case 4",
+        "float",
+        expected_output=1.5,
+        functionArguments = {
+            "arguments" : arguments,
+            "keyWordArguments" : None
+        }
+    )
+arguments = "failMe"
+testCase5 = TestCase(
+        "case 5",
         "float",
         expected_exception=ValueError,
         functionArguments = {
@@ -48,7 +58,8 @@ testCase4 = TestCase(
 testCasesDictionary = {testCase1.testCaseName: testCase1,
                         testCase2.testCaseName: testCase2,
                         testCase3.testCaseName: testCase3,
-                        testCase4.testCaseName: testCase4}
+                        testCase4.testCaseName: testCase4,
+                        testCase5.testCaseName: testCase5}
 
 test = Test(functionDictionary, testCases = testCasesDictionary)
 
