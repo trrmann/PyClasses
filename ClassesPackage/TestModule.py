@@ -9,6 +9,9 @@ class Test(Classes):
         super().__init__(className)
         self.result_eval_results_key = "eval_results"
         self.result_test_result_key = "test_result"
+        self.result_test_pass_count_key = "test_pass_count"
+        self.result_test_fail_count_key = "test_fail_count"
+        self.result_test_count_key = "test_count"
         self.functionDictionary = functionDictionary
         self.testCases = kwargs["testCases"]
 
@@ -22,4 +25,9 @@ class Test(Classes):
             full_results[key] = case.execute(functionDictionary = self.functionDictionary)
             full_results[key][self.result_eval_results_key] = case.eval_results(resultsDictionary = full_results[key])
             full_results[self.result_test_result_key] = full_results[self.result_test_result_key] and full_results[key][self.result_eval_results_key]
+            if full_results[key][self.result_eval_results_key]:
+                full_results[self.result_test_pass_count_key] = full_results[self.result_test_pass_count_key] + 1
+            else:
+                full_results[self.result_test_fail_count_key] = full_results[self.result_test_fail_count_key] + 1
+            full_results[self.result_test_count_key] = full_results[self.result_test_count_key] + 1
         return full_results
