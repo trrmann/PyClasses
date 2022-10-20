@@ -11,7 +11,8 @@ functionDictionary = {"Classes": Classes,
                       "float": float}
 testCase1 = TestCase(
         "case 1",
-        "Classes"
+        "Classes",
+        expected_output="Classes(className=Classes)"
     )
 arguments = ["Test"]
 kwargs = {"none": None}
