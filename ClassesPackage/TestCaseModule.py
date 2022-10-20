@@ -103,7 +103,7 @@ class TestCase(Classes):
         print(resultsDictionary)
         result = True
         print(f"exc({self.expected_exception})")
-        print(f"exc({resultsDictionary[self.result_exception_key]})")
+        if self.result_exception_key in resultsDictionary.keys(): print(f"exc({resultsDictionary[self.result_exception_key]})")
         if self.expected_output != None:
             result = result and (resultsDictionary[self.result_output_key] == self.expected_output)
         if self.expected_std_output != None:
