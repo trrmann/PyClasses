@@ -16,24 +16,24 @@ testCase1 = TestCase(
 arguments = ["Test"]
 kwargs = {"none": None}
 testCase2 = TestCase(
-        arguments,
-        kwargs,
+        #arguments,
+        #kwargs,
         testCaseName = "case 2",
         functionName = "print",
         expected_std_output="Test"
     )
 arguments = ["1.5"]
 testCase3 = TestCase(
-        arguments,
-        kwargs,
+        #arguments,
+        #kwargs,
         testCaseName = "case 3",
         functionName = "float",
         expected_output=1.5
     )
 arguments = ["failMe"]
 testCase4 = TestCase(
-        arguments,
-        kwargs,
+        #arguments,
+        #kwargs,
         testCaseName = "case 4",
         functionName = "float",
         expected_exception=ValueError
