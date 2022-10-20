@@ -8,7 +8,8 @@ from ClassesPackage.TestCaseModule import TestCase
 
 functionDictionary = {"Classes": Classes,
                       "print": print,
-                      "float": float}
+                      "float": float,
+                      "input": input}
 testCase1 = TestCase(
         "case 1",
         "Classes",
@@ -55,11 +56,25 @@ testCase5 = TestCase(
             "keyWordArguments" : None
         }
     )
+
+testCase6 = TestCase(
+        "case 6",
+        "input",
+        stdin_input = "5\n",
+        expected_output = "5",
+        expected_std_output = "Enter a value:  ",
+        functionArguments = {
+            "arguments" : "Enter a value:  ",
+            "keyWordArguments" : None
+        }
+    )
+
 testCasesDictionary = {testCase1.testCaseName: testCase1,
                         testCase2.testCaseName: testCase2,
                         testCase3.testCaseName: testCase3,
                         testCase4.testCaseName: testCase4,
-                        testCase5.testCaseName: testCase5}
+                        testCase5.testCaseName: testCase5,
+                        testCase6.testCaseName: testCase6}
 
 test = Test(functionDictionary, testCases = testCasesDictionary)
 
