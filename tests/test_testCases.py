@@ -31,7 +31,7 @@ testCase3 = TestCase(
         expected_output=1.5,
         functionArguments = {
             "arguments" : arguments,
-            "keyWordArguments" : kwargs
+            "keyWordArguments" : None
         }
     )
 arguments = ["failMe"]
@@ -41,7 +41,7 @@ testCase4 = TestCase(
         expected_exception=ValueError,
         functionArguments = {
             "arguments" : arguments,
-            "keyWordArguments" : kwargs
+            "keyWordArguments" : None
         }
     )
 testCasesDictionary = {testCase1.testCaseName: testCase1,
