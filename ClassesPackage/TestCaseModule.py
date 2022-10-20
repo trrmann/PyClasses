@@ -18,14 +18,15 @@ class TestCase(Classes):
     outFileName = "test_output.txt"
 
     def __init__(self,
-            *arguments,
             testCaseName: str,
             functionName: str,
             stdin_input: str = None,
             expected_output = None,
             expected_std_output: str = None,
             expected_exception: Exception = None,
-            className: str="TestCase"
+            className: str="TestCase",
+            *functionArguments,
+            **functionKeyWordArguments
         ):
         super().__init__(className)
         self.inFileName = TestCase.inFileName
@@ -34,7 +35,8 @@ class TestCase(Classes):
         self.orig_stdout = sys.stdout
         self.testCaseName = testCaseName
         self.functionName = functionName
-        self.arguments = arguments
+        self.functionArguments = functionArguments
+        self.functionKeyWordArguments = functionKeyWordArguments["functionKeyWordArguments"]
         self.stdin_input = stdin_input
         self.expected_output = expected_output
         self.expected_std_output = expected_std_output
@@ -45,7 +47,8 @@ class TestCase(Classes):
         out = f"{out}className={self.className}"
         out = f"{out}, testCaseName={self.testCaseName}"
         out = f"{out}, functionName={self.functionName}"
-        out = f"{out}, arguments={self.arguments}"
+        out = f"{out}, functionArguments={self.functionArguments}"
+        out = f"{out}, functionKeyWordArguments={self.functionKeyWordArguments}"
         if self.stdin_input != None: out = f"{out}, stdin_input={self.stdin_input}"
         out = f"{out})"
         return out
