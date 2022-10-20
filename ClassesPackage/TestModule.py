@@ -1,17 +1,16 @@
 # testModule.py
-#from ClassesPackage.ClassesModule import Classes
+from ClassesPackage.ClassesModule import Classes
 
-#class Test(Classes):
-class Test:
+class Test(Classes):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, functionDictionary, testCases, className: str="Test"):
-        super().__init__(className)
+    def __init__(self, functionDictionary, className: str="Test", *args, **kwargs):
+        super().__init__(kwargs["className"])
         self.result_eval_results_key = "eval_results"
         self.result_test_result_key = "test_result"
         self.functionDictionary = functionDictionary
-        self.testCases = testCases
+        self.testCases = kwargs["testCases"]
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}(className={self.className}, numberOfFunctionsInDictionary={len(self.functionDictionary)}, numberOfTestCases={len(self.testCases)})"
