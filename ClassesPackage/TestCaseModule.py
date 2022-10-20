@@ -36,7 +36,7 @@ class TestCase(Classes):
         self.orig_stdout = sys.stdout
         self.testCaseName = testCaseName
         self.functionName = functionName
-        if len(functionArguments) > 0:
+        if functionArguments.count() > 0:
             self.functionArguments = functionArguments
         else:
             self.functionArguments = None
