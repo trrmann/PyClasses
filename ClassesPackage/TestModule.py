@@ -21,6 +21,9 @@ class Test(Classes):
     def execute(self):
         full_results = {}
         full_results[self.result_test_result_key] = True
+        full_results[self.result_test_pass_count_key] = 0
+        full_results[self.result_test_fail_count_key] = 0
+        full_results[self.result_test_count_key] = 0
         for key, case in self.testCases.items():
             full_results[key] = case.execute(functionDictionary = self.functionDictionary)
             full_results[key][self.result_eval_results_key] = case.eval_results(resultsDictionary = full_results[key])
