@@ -55,7 +55,8 @@ class TestCase(Classes):
         TestCase.cleanup(self = self)
         return resultsDictionary
 
-    def eval_results(self, resultsDictionary):
+    def eval_results(self, **kwargs):
+        resultsDictionary = kwargs["resultsDictionary"]
         fail = not(resultsDictionary[self.result_output_key] == self.expected_output)
         fail = fail and not(resultsDictionary[self.result_std_output_key] == self.expected_std_output)
         fail = fail and not(resultsDictionary[self.result_exception_key] == self.expected_exception)
@@ -86,8 +87,8 @@ class TestCase(Classes):
 
     def teardown_method(self):
         sys.stdin = self.orig_stdin
+        sys.stdout.close()
         sys.stdout = self.orig_stdout
-        self.outFilename.close()
 
     def cleanup(self):
         if os.path.exists(self.inFileName):
