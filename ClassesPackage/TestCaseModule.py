@@ -74,7 +74,7 @@ class TestCase(Classes):
         sys.stdout = open(self.outFilename, "w")
 
     def get_input(self):
-        test_in_file = open(self.inFilename)
+        test_in_file = open(TestCase.inFilename)
         input = test_in_file.read()
         test_in_file.close()
         return input
