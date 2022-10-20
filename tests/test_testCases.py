@@ -24,7 +24,7 @@ testCase2 = TestCase(
             "keyWordArguments" : kwargs
         }
     )
-arguments = ["1.5"]
+arguments = "1.5"
 testCase3 = TestCase(
         "case 3",
         "float",
@@ -34,7 +34,7 @@ testCase3 = TestCase(
             "keyWordArguments" : None
         }
     )
-arguments = ["failMe"]
+arguments = "failMe"
 testCase4 = TestCase(
         "case 4",
         "float",
