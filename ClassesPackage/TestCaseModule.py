@@ -102,8 +102,6 @@ class TestCase(Classes):
 
     def eval_results(self, **kwargs):
         resultsDictionary = kwargs["resultsDictionary"]
-        print(self)
-        print(resultsDictionary)
         result = True
         if self.expected_output != None:
             result = result and (resultsDictionary[self.result_output_key] == self.expected_output)
