@@ -43,7 +43,7 @@ class TestCase(Classes):
     def execute(self, **kwargs):
         functionDictionary = kwargs["functionDictionary"]
         resultsDictionary = {}
-        TestCase.setup_method(stdin_input = self.stdin_input)
+        TestCase.setup_method(self = self, stdin_input = self.stdin_input)
         resultsDictionary[self.result_input_key] = self.arguments
         try:
             resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.arguments)
