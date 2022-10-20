@@ -49,10 +49,10 @@ class TestCase(Classes):
             resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.arguments)
         except Exception as ex:
             resultsDictionary[self.result_exception_key] = ex
-        TestCase.teardown_method()
-        resultsDictionary[self.result_std_input_key] = TestCase.get_input()
-        resultsDictionary[self.result_std_output_key] = TestCase.get_output()
-        TestCase.cleanup()
+        TestCase.teardown_method(self = self)
+        resultsDictionary[self.result_std_input_key] = TestCase.get_input(self = self)
+        resultsDictionary[self.result_std_output_key] = TestCase.get_output(self = self)
+        TestCase.cleanup(self = self)
         return resultsDictionary
 
     def eval_results(self, resultsDictionary):
