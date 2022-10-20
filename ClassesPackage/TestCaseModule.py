@@ -106,10 +106,16 @@ class TestCase(Classes):
         if self.result_exception_key in resultsDictionary.keys(): print(f"exc({resultsDictionary[self.result_exception_key]})({type(resultsDictionary[self.result_exception_key])})")
         if self.expected_output != None:
             result = result and (resultsDictionary[self.result_output_key] == self.expected_output)
+        elif self.result_output_key in resultsDictionary:
+            result = result and (resultsDictionary[self.result_output_key] != None)
         if self.expected_std_output != None:
             result = result and (resultsDictionary[self.result_std_output_key] == self.expected_std_output)
+        elif self.result_std_output_key in resultsDictionary:
+            result = result and (resultsDictionary[self.result_std_output_key] != None)
         if self.expected_exception != None:
-            result = result and (type(resultsDictionary[self.result_exception_key]) == self.expected_exception)
+            result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expected_exception) or (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception)))
+        elif self.result_exception_key in resultsDictionary:
+            result = result and (resultsDictionary[self.result_exception_key] != None)
         return result
 
     def setup_method(self):
