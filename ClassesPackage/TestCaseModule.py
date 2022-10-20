@@ -109,7 +109,7 @@ class TestCase(Classes):
         if self.expected_std_output != None:
             result = result and (resultsDictionary[self.result_std_output_key] == self.expected_std_output)
         if self.expected_exception != None:
-            result = result and (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception))
+            result = result and (type(resultsDictionary[self.result_exception_key]) == self.expected_exception)
         return result
 
     def setup_method(self):
