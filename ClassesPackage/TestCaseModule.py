@@ -73,9 +73,12 @@ class TestCase(Classes):
         print(self)
         print(resultsDictionary)
         result = True
-        if self.expected_output != None: result = result and (resultsDictionary[self.result_output_key] == self.expected_output)
-        if self.expected_std_output != None: result = result and (resultsDictionary[self.result_std_output_key] == self.expected_std_output)
-        if self.expected_exception != None: result = result and (resultsDictionary[self.result_exception_key] == self.expected_exception)
+        if self.expected_output != None:
+            result = result and (resultsDictionary[self.result_output_key] == self.expected_output)
+        if self.expected_std_output != None:
+            result = result and (resultsDictionary[self.result_std_output_key] == self.expected_std_output)
+        if self.expected_exception != None:
+            result = result and (resultsDictionary[self.result_exception_key] == self.expected_exception)
         return result
 
     def setup_method(self, stdin_input):
