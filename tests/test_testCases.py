@@ -15,44 +15,39 @@ testCase1 = TestCase(
         "Classes",
         expected_output=Classes()
     )
-arguments = ["Test"]
-kwargs = {"none": None}
 testCase2 = TestCase(
         "case 2",
         "print",
         expected_std_output = "['Test'] {'none': None}\n",
         functionArguments = {
-            "arguments" : arguments,
-            "keyWordArguments" : kwargs
+            "arguments" : ["Test"],
+            "keyWordArguments" : {"none": None}
         }
     )
-arguments = "1.5"
 testCase3 = TestCase(
         "case 3",
         "float",
         expected_output=1.5,
         functionArguments = {
-            "arguments" : arguments,
+            "arguments" : "1.5",
             "keyWordArguments" : None
         }
     )
-arguments = 1.5
 testCase4 = TestCase(
         "case 4",
         "float",
         expected_output=1.5,
         functionArguments = {
-            "arguments" : arguments,
+            "arguments" : 1.5,
             "keyWordArguments" : None
         }
     )
-arguments = "failMe"
 testCase5 = TestCase(
         "case 5",
         "float",
         expected_exception=ValueError,
         functionArguments = {
-            "arguments" : arguments,
+            "arguments" : "failMe",
             "keyWordArguments" : None
         }
     )
