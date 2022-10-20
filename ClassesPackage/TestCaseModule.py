@@ -73,7 +73,14 @@ class TestCase(Classes):
         resultsDictionary[self.result_input_key] = self.functionArguments
         resultsDictionary[self.result_kw_input_key] = self.functionKeyWordArguments
         try:
-            resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments, self.functionKeyWordArguments)
+            if (self.functionArguments == None) and (self.functionKeyWordArguments == None):
+                resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)()
+            elif (self.functionArguments == None):
+                resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionKeyWordArguments)
+            elif (self.functionKeyWordArguments == None):
+                resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments)
+            else:
+                resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments, self.functionKeyWordArguments)
         except Exception as ex:
             resultsDictionary[self.result_exception_key] = ex
         TestCase.teardown_method(self = self)
