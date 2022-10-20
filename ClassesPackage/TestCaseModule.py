@@ -14,7 +14,7 @@ class TestCase(Classes):
     result_exception_key = "exception"
 
     inFileName = "test_input.txt"
-    outFilename = "test_output.txt"
+    outFileName = "test_output.txt"
 
     def __init__(self,
             testCaseName: str,
@@ -28,7 +28,7 @@ class TestCase(Classes):
         ):
         super().__init__(className)
         self.inFileName = TestCase.inFileName
-        self.outFilename = TestCase.outFilename
+        self.outFileName = TestCase.outFileName
         self.orig_stdin = sys.stdin
         self.orig_stdout = sys.stdout
         self.testCaseName = testCaseName
@@ -65,7 +65,7 @@ class TestCase(Classes):
         return not fail
 
     def setup_method(self, stdin_input):
-        if os.path.exists(self.outFilename):
+        if os.path.exists(self.outFileName):
             os.remove(self.outFilename)
         test_in_file = open(self.inFileName, "w")
         test_in_file.write(stdin_input)
@@ -73,16 +73,16 @@ class TestCase(Classes):
         self.orig_stdin = sys.stdin
         self.orig_stdout = sys.stdout
         sys.stdin = open(self.inFileName)
-        sys.stdout = open(self.outFilename, "w")
+        sys.stdout = open(self.outFileName, "w")
 
     def get_input(self):
-        test_in_file = open(self.inFilename)
+        test_in_file = open(self.inFileName)
         input = test_in_file.read()
         test_in_file.close()
         return input
 
     def get_output(self):
-        test_out_file = open(self.outFilename)
+        test_out_file = open(self.outFileName)
         output = test_out_file.read()
         test_out_file.close()
         return output
@@ -95,5 +95,5 @@ class TestCase(Classes):
     def cleanup(self):
         if os.path.exists(self.inFileName):
             os.remove(self.inFileName)
-        if os.path.exists(self.outFilename):
-            os.remove(self.outFilename)
+        if os.path.exists(self.outFileName):
+            os.remove(self.outFileName)
