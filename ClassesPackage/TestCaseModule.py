@@ -36,7 +36,10 @@ class TestCase(Classes):
         self.orig_stdout = sys.stdout
         self.testCaseName = testCaseName
         self.functionName = functionName
-        self.functionArguments = functionArguments
+        if len(functionArguments) > 0:
+            self.functionArguments = functionArguments
+        else:
+            self.functionArguments = None
         if len(functionKeyWordArguments) > 0:
             self.functionKeyWordArguments = functionKeyWordArguments["functionKeyWordArguments"]
         else:
