@@ -71,8 +71,4 @@ testCasesDictionary = {testCase1.testCaseName: testCase1,
                         testCase5.testCaseName: testCase5,
                         testCase6.testCaseName: testCase6}
 
-test = Test(functionDictionary, testCases = testCasesDictionary)
-
-result = test.execute()
-
-print(result)
+print(Test(functionDictionary, testCases = testCasesDictionary).execute())
