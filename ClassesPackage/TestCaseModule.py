@@ -9,6 +9,7 @@ class TestCase(Classes):
         return super().__new__(cls)
 
     result_input_key = "input"
+    result_kw_input_key = "keyWordInput"
     result_output_key = "output"
     result_std_input_key = "std_input"
     result_std_output_key = "std_output"
@@ -63,9 +64,10 @@ class TestCase(Classes):
         functionDictionary = kwargs["functionDictionary"]
         resultsDictionary = {}
         TestCase.setup_method(self = self)
-        resultsDictionary[self.result_input_key] = self.arguments
+        resultsDictionary[self.result_input_key] = self.functionArguments
+        resultsDictionary[self.result_kw_input_key] = self.functionKeyWordArguments
         try:
-            resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.arguments)
+            resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments, self.functionKeyWordArguments)
         except Exception as ex:
             resultsDictionary[self.result_exception_key] = ex
         TestCase.teardown_method(self = self)
