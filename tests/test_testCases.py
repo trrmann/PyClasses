@@ -31,16 +31,6 @@ testCasesDictionary = {testCase1.testCaseName: testCase1,
                         testCase3.testCaseName: testCase3,
                         testCase4.testCaseName: testCase4}
 
-
-
-            testCaseName: str = None,
-            functionName: str = None,
-            stdin_input: str = None,
-            expected_output = None,
-            expected_std_output: str = None,
-            expected_exception: Exception = None,
-
-
 test = Test(functionDictionary, testCases = testCasesDictionary)
 
 result = test.execute()
