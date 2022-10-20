@@ -40,7 +40,8 @@ class TestCase(Classes):
     def __repr__(self) -> str:
         return f"{type(self).__name__}(className={self.className}, testCaseName={self.testCaseName}, functionName={self.functionName}, arguments={self.arguments}, stdin_input={self.stdin_input})"
 
-    def execute(self, functionDictionary):
+    def execute(self, **kwargs):
+        functionDictionary = kwargs["functionDictionary"]
         resultsDictionary = {}
         TestCase.setup_method(self.stdin_input)
         resultsDictionary[self.result_input_key] = self.arguments
