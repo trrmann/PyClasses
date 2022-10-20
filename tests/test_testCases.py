@@ -10,9 +10,12 @@ functionDictionary = {"Classes": Classes,
                       "print": print,
                       "float": float}
 testCase1 = TestCase(testCaseName="case 1", functionName="Classes")
-testCase2 = TestCase("case 2", "print", {"Test"}, expected_std_output="Test")
-testCase3 = TestCase("case 3", "float", {"1.5"}, expected_output=1.5)
-testCase4 = TestCase("case 4", "float", {"failMe"}, expected_exception=ValueError)
+arguments = ["Test"]
+testCase2 = TestCase("case 2", "print", arguments, expected_std_output="Test")
+arguments = ["1.5"]
+testCase3 = TestCase("case 3", "float", arguments, expected_output=1.5)
+arguments = ["failMe"]
+testCase4 = TestCase("case 4", "float", arguments, expected_exception=ValueError)
 testCasesDictionary = {testCase1.testCaseName: testCase1,
                         testCase2.testCaseName: testCase2,
                         testCase3.testCaseName: testCase3,
