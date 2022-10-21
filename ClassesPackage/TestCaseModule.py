@@ -15,7 +15,6 @@ class TestCase(Classes):
     inFileName = "test_input.txt"
     outFileName = "test_output.txt"
 
-    # change output to value of
     # add value in
     # add instance of
     # add instance in
@@ -32,7 +31,7 @@ class TestCase(Classes):
             stdin_input: str = None,
             assertCase: bool = False,
             assertFailMessage: str = None,
-            expected_output = None,
+            expected_output_value_of = None,
             expected_std_output: str = None,
             expected_exception: Exception = None,
             className: str="TestCase",
@@ -69,7 +68,7 @@ class TestCase(Classes):
         self.stdin_input = stdin_input
         self.assertCase = bool(assertCase)
         self.assertFailMessage = str(assertFailMessage)
-        self.expected_output = expected_output
+        self.expected_output_value_of = expected_output_value_of
         self.expected_std_output = expected_std_output
         self.expected_exception = expected_exception
 
@@ -81,7 +80,7 @@ class TestCase(Classes):
         out = f"{out}, functionName={self.functionName}"
         out = f"{out}, functionArguments={self.functionArguments}"
         out = f"{out}, functionKeyWordArguments={self.functionKeyWordArguments}"
-        out = f"{out}, exp_output={self.expected_output}"
+        out = f"{out}, exp_output={self.expected_output_value_of}"
         out = f"{out}, exp_std_output={self.expected_std_output}"
         out = f"{out}, exp_exception={self.expected_exception}"
         if self.stdin_input != None: out = f"{out}, stdin_input={self.stdin_input}"
@@ -156,13 +155,13 @@ class TestCase(Classes):
     def eval_results(self, **kwargs):
         resultsDictionary = kwargs["resultsDictionary"]
         result = True
-        if self.expected_output != None:
+        if self.expected_output_value_of != None:
             if self.assertCase and self.assertFailMessage != None:
-                assert TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output), self.assertFailMessage
+                assert TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output_value_of), self.assertFailMessage
             elif self.assertCase:
-                assert(TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output))
+                assert(TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output_value_of))
             else:
-                result = result and TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output)
+                result = result and TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output_value_of)
         elif self.result_output_key in resultsDictionary:
             if self.assertCase and self.assertFailMessage != None:
                 assert (resultsDictionary[self.result_output_key] == None), self.assertFailMessage
