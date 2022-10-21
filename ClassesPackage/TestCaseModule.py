@@ -240,7 +240,7 @@ class TestCase(Classes):
             os.remove(self.outFileName)
 
 def testCaseListToTestCaseDictionary(testCaseList = None):
-    if type(testCaseList) != type([TestCase(), TestCase()]):
+    if type(testCaseList) != type([TestCase("",""), TestCase("","")]):
         testCaseDictionary = {}
         counter = 0
         while counter < len(testCaseList):
