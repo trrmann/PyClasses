@@ -24,7 +24,7 @@ print(Test( "unit/functional/regression test", {
             "TestCase",
             expectedOutputValueOf=TestCase("","",""),
             functionArguments = {
-                "arguments" : ("","","")
+                "arguments" : ["","",""]
             }
         ),
         TestCase(
@@ -43,7 +43,7 @@ print(Test( "unit/functional/regression test", {
             "print",
             expectedStdOutputValueOf = "Test\n",
             functionArguments = {
-                "arguments" : "Test"
+                "arguments" : ["Test"]
             }
         ),
         TestCase(
@@ -52,7 +52,7 @@ print(Test( "unit/functional/regression test", {
             "float",
             expectedOutputValueOf=1.5,
             functionArguments = {
-                "arguments" : "1.5",
+                "arguments" : ["1.5"],
                 "keyWordArguments" : None
             }
         ),
@@ -62,7 +62,7 @@ print(Test( "unit/functional/regression test", {
             "float",
             expectedOutputValueOf=1.5,
             functionArguments = {
-                "arguments" : 1.5,
+                "arguments" : [1.5],
                 "keyWordArguments" : None
             }
         ),
@@ -72,7 +72,7 @@ print(Test( "unit/functional/regression test", {
             "float",
             expectedException=ValueError,
             functionArguments = {
-                "arguments" : "failMe",
+                "arguments" : ["failMe"],
                 "keyWordArguments" : None
             }
         ),
@@ -84,7 +84,7 @@ print(Test( "unit/functional/regression test", {
             expectedOutputValueOf = "5",
             expectedStdOutputValueOf = "Enter a value:  ",
             functionArguments = {
-                "arguments" : "Enter a value:  ",
+                "arguments" : ["Enter a value:  "],
                 "keyWordArguments" : None
             }
         )
