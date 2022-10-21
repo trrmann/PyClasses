@@ -17,6 +17,7 @@ class Test(Classes):
         self.functionDictionary = functionDictionary
         print(kwargs)
         print(args)
+        print(functionDictionary)
         if "testCases" in kwargs.keys(): self.testCases = kwargs["testCases"]
         else: self.testCases = {}
 
