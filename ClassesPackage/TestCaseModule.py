@@ -144,6 +144,8 @@ class TestCase(Classes):
             elif (self.functionArguments == None):
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionKeyWordArguments)
             elif (self.functionKeyWordArguments == None):
+                print(self.functionName)
+                print(self.functionArguments)
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments)
             else:
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments, self.functionKeyWordArguments)
