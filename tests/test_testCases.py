@@ -59,7 +59,7 @@ print(Test( "unit/functional/regression test", {
         ),
         TestCase(
             "case 6",
-            "test import for display of correct output and correct user input passed is returned",
+            "test input for display of correct output and correct user input passed is returned",
             "input",
             stdInInput = "5\n",
             expectedOutputValueOf = "5",
