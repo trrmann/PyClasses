@@ -76,12 +76,10 @@ class TestCase(Classes):
         white1 = ""
         white2 = ""
         white3 = ""
-        white4 = ""
         if whitespace:
             white1 = "\n"
             white2 = f"{white1}    "
             white3 = f"{white2}    "
-            white4 = f"{white3}    "
         out = f"{white1}("
         out = f"{out}className=\"{self.className}\""
         out = f"{out}, testCaseID=\"{self.testCaseID}\""

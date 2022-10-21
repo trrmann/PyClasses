@@ -14,7 +14,7 @@ class Test(Classes):
         self.result_test_fail_count_key = "test_fail_count"
         self.result_test_fail_test_list_key = "test_fail_test_list"
         self.result_test_count_key = "test_count"
-        self.result_testName = "testName"
+        self.result_testName_key = "testName"
         self.result_testCasesDefinition = "testCaseDefinitions"
         self.testName = str(testName)
         self.functionDictionary = functionDictionary
@@ -31,7 +31,7 @@ class Test(Classes):
         full_results[self.result_test_fail_count_key] = 0
         full_results[self.result_test_count_key] = 0
         full_results[self.result_test_fail_test_list_key] = []
-        full_results[self.result_testName] = self.testName
+        full_results[self.result_testName_key] = self.testName
         for key, case in self.testCases.items():
             full_results[key] = case.execute(functionDictionary = self.functionDictionary)
             full_results[key][self.result_eval_results_key] = case.eval_results(resultsDictionary = full_results[key])
@@ -44,3 +44,14 @@ class Test(Classes):
             full_results[self.result_test_count_key] = full_results[self.result_test_count_key] + 1
         full_results[self.result_testCasesDefinition] = testCaseDictionaryToTestCaseList(testCaseDictionary = self.testCases)
         return full_results
+
+def resultsToString(**kwargs):
+    if "kwargs" in kwargs.keys():
+        if "fullResults" in kwargs["kwargs"]:
+            fullResults = kwargs["kwargs"]["fullResults"]           
+            output = f"Test Name:  {fullResults[Test.result_testName_key]}"
+            testResult = fullResults[Test.result_test_result_key]
+            testPassCount = fullResults[Test.result_test_pass_count_key]
+            testFailCount = fullResults[Test.result_test_fail_count_key]
+            testCount = fullResults[Test.result_test_count_key]
+            testFailList = fullResults[Test.result_test_fail_test_list_key]
