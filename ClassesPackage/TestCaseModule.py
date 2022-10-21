@@ -246,7 +246,6 @@ def testCaseListToTestCaseDictionary(testCaseList = None):
         while counter < len(testCaseList):
             testCaseDictionary[testCaseList[counter].testCaseName] = testCaseList[counter]
             counter = counter + 1
-        print(testCaseDictionary)
         return testCaseDictionary
     else: return {}
 
