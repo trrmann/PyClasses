@@ -154,7 +154,7 @@ class TestCase(Classes):
                     case 2:
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1])
                     case 3:
-                        resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1])
+                        resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2])
             else:
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments, self.functionKeyWordArguments)
         except Exception as ex:
