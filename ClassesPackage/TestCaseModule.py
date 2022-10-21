@@ -146,11 +146,15 @@ class TestCase(Classes):
             elif (self.functionKeyWordArguments == None):
                 print(self.functionName)
                 print(self.functionArguments)
-                argIndex=0
-                resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)
-                while argIndex < len(self.functionArguments):
-                    (self.functionArguments[argIndex])
-                    argIndex = argIndex + 1
+                match len(self.functionArguments):
+                    case 0:
+                        resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments)
+                    case 1:
+                        resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0])
+                    case 2:
+                        resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0])
+                    case 3:
+                        resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0])
             else:
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments, self.functionKeyWordArguments)
         except Exception as ex:
