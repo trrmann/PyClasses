@@ -29,6 +29,15 @@ print(Test( "unit/functional/regression test", {
         ),
         TestCase(
             "case 3",
+            "print test string",
+            "print",
+            expectedStdOutputValueOf = "Test",
+            functionArguments = {
+                "arguments" : "Test"
+            }
+        ),
+        TestCase(
+            "case 4",
             "convert valid string to float",
             "float",
             expectedOutputValueOf=1.5,
@@ -38,7 +47,7 @@ print(Test( "unit/functional/regression test", {
             }
         ),
         TestCase(
-            "case 4",
+            "case 5",
             "verify float is float",
             "float",
             expectedOutputValueOf=1.5,
@@ -48,7 +57,7 @@ print(Test( "unit/functional/regression test", {
             }
         ),
         TestCase(
-            "case 5",
+            "case 6",
             "raise error on float conversion when invalid string passed",
             "float",
             expectedException=ValueError,
@@ -58,7 +67,7 @@ print(Test( "unit/functional/regression test", {
             }
         ),
         TestCase(
-            "case 6",
+            "case 7",
             "test input for display of correct output and correct user input passed is returned",
             "input",
             stdInInput = "5\n",
