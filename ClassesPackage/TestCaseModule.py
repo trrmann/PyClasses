@@ -144,6 +144,7 @@ class TestCase(Classes):
             elif (self.functionArguments == None):
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(kwargs=self.functionKeyWordArguments)
             elif (self.functionKeyWordArguments == None):
+                print(self.testCaseID)
                 print(self.functionName)
                 print(self.functionArguments)
                 match len(self.functionArguments):
