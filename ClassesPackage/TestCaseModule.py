@@ -8,10 +8,7 @@ class TestCase(Classes):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    result_input_key = "input"
-    result_kw_input_key = "keyWordInput"
     result_output_key = "output"
-    result_std_input_key = "std_input"
     result_std_output_key = "std_output"
     result_exception_key = "exception"
 
@@ -133,8 +130,6 @@ class TestCase(Classes):
         functionDictionary = kwargs["functionDictionary"]
         resultsDictionary = {}
         TestCase.setup_method(self = self)
-        resultsDictionary[self.result_input_key] = self.functionArguments
-        resultsDictionary[self.result_kw_input_key] = self.functionKeyWordArguments
         try:
             if (self.functionArguments == None) and (self.functionKeyWordArguments == None):
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)()
@@ -147,7 +142,6 @@ class TestCase(Classes):
         except Exception as ex:
             resultsDictionary[self.result_exception_key] = ex
         TestCase.teardown_method(self = self)
-        resultsDictionary[self.result_std_input_key] = TestCase.get_input(self = self)
         resultsDictionary[self.result_std_output_key] = TestCase.get_output(self = self)
         TestCase.cleanup(self = self)
         return resultsDictionary
