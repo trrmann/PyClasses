@@ -21,7 +21,7 @@ print(Test( "unit/functional/regression test", {
         TestCase(
             "case 2",
             "init minimum TestCase object",
-            "TestCase",
+            "print",
             expectedOutputValueOf=TestCase(),
             functionArguments = {
                 "arguments" : ["", "", ""]
