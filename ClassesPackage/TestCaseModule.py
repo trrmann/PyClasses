@@ -250,6 +250,7 @@ def testCaseListToTestCaseDictionary(testCaseList = None):
             print(counter)
             testCaseDictionary[testCaseList[counter].testCaseName] = testCaseList[counter]
             counter = counter + 1
+        print(testCaseDictionary)
         return testCaseDictionary
     else: return {}
 
