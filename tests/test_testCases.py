@@ -33,8 +33,8 @@ print(Test( "unit/functional/regression test", {
             "print",
             expectedStdOutputValueOf = "['Test'] {'none': None}\n",
             functionArguments = {
-                "arguments" : ["Test"],
-                "keyWordArguments" : {"none": None}
+                "arguments" : ["Test"]#,
+                #"keyWordArguments" : {"none": None}
             }
         ),
         TestCase(
