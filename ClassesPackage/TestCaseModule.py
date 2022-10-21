@@ -90,11 +90,11 @@ class TestCase(Classes):
         if (self.functionArguments != None) and (type(self.functionArguments)==type(str(""))): out = f"{out}, functionArguments=\"{self.functionArguments}\""
         if (self.functionArguments != None) and (type(self.functionArguments)!=type(str(""))): out = f"{out}, functionArguments={self.functionArguments}"
         if self.functionKeyWordArguments != None: out = f"{out}, functionKeyWordArguments={self.functionKeyWordArguments}"
+        if self.stdInInput != None: out = f"{out}, stdInInput=\"{self.stdInInput}\""
         if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)==type(str(""))): out = f"{out}{white3}, expectedOutputValueOf=\"{self.expectedOutputValueOf}\""
         if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)!=type(str(""))): out = f"{out}{white3}, expectedOutputValueOf={self.expectedOutputValueOf}"
         if self.expectedStdOutputValueOf != None: out = f"{out}{white3}, expectedStdOutputValueOf=\"{self.expectedStdOutputValueOf}\""
         if self.expectedException != None: out = f"{out}{white3}, expectedException={self.expectedException}"
-        if self.stdInInput != None: out = f"{out}{white3}, stdInInput=\"{self.stdInInput}\""
         out = f"{out})"
         return out
 
