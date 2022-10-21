@@ -13,6 +13,7 @@ class Test(Classes):
         self.result_test_fail_count_key = "test_fail_count"
         self.result_test_fail_test_list_key = "test_fail_test_list"
         self.result_test_count_key = "test_count"
+        self.result_testCasesDefinition = "testCaseDefinitions"
         self.functionDictionary = functionDictionary
         self.testCases = kwargs["testCases"]
 
@@ -36,4 +37,5 @@ class Test(Classes):
                 full_results[self.result_test_fail_count_key] = full_results[self.result_test_fail_count_key] + 1
                 full_results[self.result_test_fail_test_list_key].append(key)
             full_results[self.result_test_count_key] = full_results[self.result_test_count_key] + 1
+        full_results[self.result_testCasesDefinition] = self.testCases
         return full_results
