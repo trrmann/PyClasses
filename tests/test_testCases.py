@@ -24,8 +24,7 @@ print(Test( "unit/functional/regression test", {
             "TestCase",
             expectedOutputValueOf=TestCase(),
             functionArguments = {
-                "arguments" : "",
-                "keyWordArguments" : {"testCaseName": "", "functionName": ""}
+                "arguments" : ["", "", ""]
             }
         ),
         TestCase(
