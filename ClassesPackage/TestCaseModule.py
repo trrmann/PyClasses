@@ -200,6 +200,10 @@ class TestCase(Classes):
                         print(16)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8], self.functionArguments[9], self.functionArguments[10], self.functionArguments[11], self.functionArguments[12], self.functionArguments[13], self.functionArguments[14], self.functionArguments[15])
             else:
+                print(self.testCaseID)
+                print(self.functionName)
+                print(self.functionArguments)
+                print(self.functionKeyWordArguments)
                 match len(self.functionArguments):
                     case 0:
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments, kwargs=self.functionKeyWordArguments)
