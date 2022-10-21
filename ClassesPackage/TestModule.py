@@ -13,6 +13,7 @@ class Test(Classes):
         self.result_test_fail_count_key = "test_fail_count"
         self.result_test_fail_test_list_key = "test_fail_test_list"
         self.result_test_count_key = "test_count"
+        self.result_testName = "testName"
         self.result_testCasesDefinition = "testCaseDefinitions"
         self.testName = str(testName)
         self.functionDictionary = functionDictionary
@@ -29,6 +30,7 @@ class Test(Classes):
         full_results[self.result_test_fail_count_key] = 0
         full_results[self.result_test_count_key] = 0
         full_results[self.result_test_fail_test_list_key] = []
+        full_results[self.result_testName] = self.testName
         for key, case in self.testCases.items():
             full_results[key] = case.execute(functionDictionary = self.functionDictionary)
             full_results[key][self.result_eval_results_key] = case.eval_results(resultsDictionary = full_results[key])
