@@ -5,7 +5,7 @@ from ClassesPackage.TestModule import Test
 from ClassesPackage.TestCaseModule import TestCase
 from ClassesPackage.TestCaseModule import *
 
-print(Test({
+print(Test( "unit/functional/regression test", {
         "Classes": Classes,
         "print": print,
         "float": float,
