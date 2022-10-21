@@ -95,7 +95,7 @@ class TestCase(Classes):
         if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)!=type(str(""))): out = f"{out}{white3}, expectedOutputValueOf={self.expectedOutputValueOf}"
         if self.expectedStdOutputValueOf != None: out = f"{out}{white3}, expectedStdOutputValueOf=\"{self.expectedStdOutputValueOf}\""
         if self.expectedException != None: out = f"{out}{white3}, expectedException={self.expectedException}"
-        out = f"{out})"
+        out = f"{out}){white1}"
         return out
 
     def __repr__(self) -> str:
