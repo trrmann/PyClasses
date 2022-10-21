@@ -28,7 +28,7 @@ class TestCase(Classes):
             testCaseID: str,
             testCaseName: str,
             functionName: str,
-            stdin_input: str = None,
+            stdInInput: str = None,
             assertCase: bool = False,
             assertFailMessage: str = None,
             expectedOutputValueOf = None,
@@ -65,7 +65,7 @@ class TestCase(Classes):
         else:
             self.functionArguments = None
             self.functionKeyWordArguments = None
-        self.stdin_input = stdin_input
+        self.stdInInput = stdInInput
         self.assertCase = bool(assertCase)
         self.assertFailMessage = str(assertFailMessage)
         self.expectedOutputValueOf = expectedOutputValueOf
@@ -83,7 +83,7 @@ class TestCase(Classes):
         out = f"{out}, expectedOutputValueOf={self.expectedOutputValueOf}"
         out = f"{out}, exp_std_output={self.expected_std_output}"
         out = f"{out}, exp_exception={self.expected_exception}"
-        if self.stdin_input != None: out = f"{out}, stdin_input={self.stdin_input}"
+        if self.stdInInput != None: out = f"{out}, stdInInput={self.stdInInput}"
         out = f"{out})"
         return out
 
@@ -200,9 +200,9 @@ class TestCase(Classes):
         return result
 
     def setup_method(self):
-        if self.stdin_input != None:
+        if self.stdInInput != None:
             test_in_file = open(self.inFileName, "w")
-            test_in_file.write(self.stdin_input)
+            test_in_file.write(self.stdInInput)
             test_in_file.close()
             self.orig_stdin = sys.stdin
             sys.stdin = open(self.inFileName)
@@ -213,7 +213,7 @@ class TestCase(Classes):
             sys.stdout = open(self.outFileName, "w")
 
     def get_input(self):
-        if self.stdin_input != None:
+        if self.stdInInput != None:
             test_in_file = open(self.inFileName)
             input = test_in_file.read()
             test_in_file.close()
@@ -229,7 +229,7 @@ class TestCase(Classes):
         return None
 
     def teardown_method(self):
-        if self.stdin_input != None:
+        if self.stdInInput != None:
             sys.stdin = self.orig_stdin
         if self.expected_std_output != None:
             sys.stdout.close()

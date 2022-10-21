@@ -61,7 +61,7 @@ print(Test( "unit/functional/regression test", {
             "case 6",
             "test import for display of correct output and correct user input passed is returned",
             "input",
-            stdin_input = "5\n",
+            stdInInput = "5\n",
             expectedOutputValueOf = "5",
             expected_std_output = "Enter a value:  ",
             functionArguments = {
