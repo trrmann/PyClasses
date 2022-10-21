@@ -18,15 +18,15 @@ print(Test( "unit/functional/regression test", {
             "Classes",
             expectedOutputValueOf=Classes()
         ),
-        TestCase(
-            "case 2",
-            "init minimum TestCase object",
-            "TestCase",
-            expectedOutputValueOf=TestCase("","",""),
-            functionArguments = {
-                "arguments" : {"testCaseID":"", "testCaseName":"", "functionName":""}
-            }
-        ),
+#        TestCase(
+#            "case 2",
+#            "init minimum TestCase object",
+#            "TestCase",
+#            expectedOutputValueOf=TestCase("","",""),
+#            functionArguments = {
+#                "arguments" : ["","",""]
+#            }
+#        ),
         TestCase(
             "case 3",
             "print test string",
