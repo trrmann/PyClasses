@@ -65,14 +65,14 @@ testCase6 = TestCase(
         }
     )
 
-print(Test(functionDictionary, testCaseListToTestCaseDictionary(
+print(Test(functionDictionary, testCaseListToTestCaseDictionary([
         testCase1,
         testCase2,
         testCase3,
         testCase4,
         testCase5,
         testCase6
-    )).execute())
+    ])).execute())
 
 #    testCases = {
 #        testCase1.testCaseName: testCase1,
@@ -82,4 +82,3 @@ print(Test(functionDictionary, testCaseListToTestCaseDictionary(
 #        testCase5.testCaseName: testCase5,
 #        testCase6.testCaseName: testCase6
 #    }
-
