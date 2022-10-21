@@ -26,6 +26,7 @@ class TestCase(Classes):
     # add md5 chksum in
 
     def __init__(self,
+            testCaseID: str,
             testCaseName: str,
             functionName: str,
             stdin_input: str = None,
@@ -42,6 +43,7 @@ class TestCase(Classes):
         self.outFileName = TestCase.outFileName
         self.orig_stdin = sys.stdin
         self.orig_stdout = sys.stdout
+        self.testCaseID = testCaseID
         self.testCaseName = testCaseName
         self.functionName = functionName
         if len(functionArguments) > 0:
@@ -74,6 +76,7 @@ class TestCase(Classes):
     def to_string(self):
         out = f"("
         out = f"{out}className={self.className}"
+        out = f"{out}, testCaseID={self.testCaseID}"
         out = f"{out}, testCaseName={self.testCaseName}"
         out = f"{out}, functionName={self.functionName}"
         out = f"{out}, functionArguments={self.functionArguments}"
@@ -244,7 +247,7 @@ def testCaseListToTestCaseDictionary(testCaseList = None):
         testCaseDictionary = {}
         counter = 0
         while counter < len(testCaseList):
-            testCaseDictionary[testCaseList[counter].testCaseName] = testCaseList[counter]
+            testCaseDictionary[testCaseList[counter].testCaseID] = testCaseList[counter]
             counter = counter + 1
         return testCaseDictionary
     else: return {}
