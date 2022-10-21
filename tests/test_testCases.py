@@ -65,7 +65,7 @@ testCase6 = TestCase(
         }
     )
 
-print(Test(functionDictionary, testCases=testCaseListToTestCaseDictionary([
+print(Test(functionDictionary, testCaseListToTestCaseDictionary([
         testCase1,
         testCase2,
         testCase3,
