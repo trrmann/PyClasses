@@ -74,16 +74,16 @@ class TestCase(Classes):
 
     def to_string(self):
         out = f"("
-        out = f"{out}className={self.className}"
-        out = f"{out}, testCaseID={self.testCaseID}"
-        out = f"{out}, testCaseName={self.testCaseName}"
-        out = f"{out}, functionName={self.functionName}"
-        out = f"{out}, functionArguments={self.functionArguments}"
-        out = f"{out}, functionKeyWordArguments={self.functionKeyWordArguments}"
-        out = f"{out}, expectedOutputValueOf={self.expectedOutputValueOf}"
-        out = f"{out}, expectedStdOutputValueOf={self.expectedStdOutputValueOf}"
-        out = f"{out}, expectedException={self.expectedException}"
-        if self.stdInInput != None: out = f"{out}, stdInInput={self.stdInInput}"
+        out = f"{out}className=\"{self.className}\""
+        out = f"{out}, testCaseID=\"{self.testCaseID}\""
+        out = f"{out}, testCaseName=\"{self.testCaseName}\""
+        out = f"{out}, functionName=\"{self.functionName}\""
+        out = f"{out}, functionArguments=\"{self.functionArguments}\""
+        out = f"{out}, functionKeyWordArguments=\"{self.functionKeyWordArguments}\""
+        out = f"{out}, expectedOutputValueOf=\"{self.expectedOutputValueOf}\""
+        out = f"{out}, expectedStdOutputValueOf=\"{self.expectedStdOutputValueOf}\""
+        out = f"{out}, expectedException=\"{self.expectedException}\""
+        if self.stdInInput != None: out = f"{out}, stdInInput=\"{self.stdInInput}\""
         out = f"{out})"
         return out
 
