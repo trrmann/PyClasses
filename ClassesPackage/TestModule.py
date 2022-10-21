@@ -16,6 +16,7 @@ class Test(Classes):
         self.result_testCasesDefinition = "testCaseDefinitions"
         self.functionDictionary = functionDictionary
         if "testCases" in kwargs.keys(): self.testCases = kwargs["testCases"]
+        else: self.testCases = {}
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}(className={self.className}, numberOfFunctionsInDictionary={len(self.functionDictionary)}, numberOfTestCases={len(self.testCases)})"
