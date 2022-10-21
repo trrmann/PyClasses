@@ -241,11 +241,11 @@ class TestCase(Classes):
 
 def testCaseListToTestCaseDictionary(testCaseList = None):
 #    if type(testCaseList) != type([TestCase("",""), TestCase("","")]):
-        testCaseDictionary = {}
-        counter = 0
-        while counter < len(testCaseList):
-            testCaseDictionary[testCaseList[counter].testCaseName] = testCaseList[counter]
-        return testCaseDictionary
+    testCaseDictionary = {}
+    counter = 0
+    while counter < len(testCaseList):
+        testCaseDictionary[testCaseList[counter].testCaseName] = testCaseList[counter]
+    return testCaseDictionary
 #    else: return {}
 
 def testCaseDictionaryToTestCaseList(**testCaseDictionary):
