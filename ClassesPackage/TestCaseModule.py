@@ -2,7 +2,7 @@
 from ClassesPackage.ClassesModule import Classes
 import sys
 import os
-
+import hashlib
 
 class TestCase(Classes):
     def __new__(cls, *args, **kwargs):
@@ -18,10 +18,22 @@ class TestCase(Classes):
     inFileName = "test_input.txt"
     outFileName = "test_output.txt"
 
+    # change output to value of
+    # add value in
+    # add instance of
+    # add instance in
+    # add instance of all
+    # add type of
+    # add type in
+    # add md5 chksum of
+    # add md5 chksum in
+
     def __init__(self,
             testCaseName: str,
             functionName: str,
             stdin_input: str = None,
+            assertCase: bool = False,
+            assertFailMessage: str = None,
             expected_output = None,
             expected_std_output: str = None,
             expected_exception: Exception = None,
@@ -56,6 +68,8 @@ class TestCase(Classes):
             self.functionArguments = None
             self.functionKeyWordArguments = None
         self.stdin_input = stdin_input
+        self.assertCase = bool(assertCase)
+        self.assertFailMessage = str(assertFailMessage)
         self.expected_output = expected_output
         self.expected_std_output = expected_std_output
         self.expected_exception = expected_exception
@@ -76,6 +90,44 @@ class TestCase(Classes):
 
     def __repr__(self) -> str:
         return f"{type(self).__name__}{self.to_string()}"
+
+    def md5(string: str=""):
+        return {"size": len(str(string)), "hash": hashlib.md5(str(string)).hexdigest()}
+
+    def md5sEqual(MD5One: str = None, MD5Two: str = None, **kwargs):
+        sizeOne = None
+        hashOne = None
+        if MD5One != None:
+            MD5One = TestCase.md5(str(MD5One))
+        if (MD5One == None) and ("MD5One" in kwargs.keys()):
+            MD5One = kwargs["MD5One"]
+        if (MD5One == None) and ("StringOne" in kwargs.keys()):
+            MD5One = TestCase.md5(str(kwargs["StringOne"]))
+        if ("size" in MD5One.keys()) and ("hash" in MD5One.keys()):
+            sizeOne = MD5One["size"]
+            hashOne = MD5One["hash"]
+        sizeTwo = None
+        hashTwo = None
+        if MD5Two != None:
+            MD5Two = TestCase.md5(str(MD5Two))
+        if (MD5Two == None) and ("MD5Two" in kwargs.keys()):
+            MD5Two = kwargs["MD5Two"]
+        if (MD5Two == None) and ("StringTwo" in kwargs.keys()):
+            MD5Two = TestCase.md5(str(kwargs["StringTwo"]))
+        if ("size" in MD5Two.keys()) and ("hash" in MD5Two.keys()):
+            sizeTwo = MD5Two["size"]
+            hashTwo = MD5Two["hash"]
+        if (sizeOne != None) and (hashOne != None) and (sizeTwo != None) and (hashTwo != None):
+            return (sizeOne == sizeTwo) and (hashOne == hashTwo)
+        else: return False
+
+    def stringsEqual(stringOne: str = None, stringTwo: str = None, md5TestLowestSizeLimit: int=256):
+        if (stringOne == None) or (stringTwo == None):  return (stringOne == None) and (stringTwo == None)
+        if int(md5TestLowestSizeLimit) < 64: md5TestLowestSizeLimit = 64
+        if len(str(stringOne)) == len(str(stringTwo)):
+            if len(str(stringOne)) >= int(md5TestLowestSizeLimit): return TestCase.md5sEqual(str(stringOne), str(stringTwo))
+            else: return str(stringOne) == str(stringTwo)
+        else: return False
 
     def execute(self, **kwargs):
         functionDictionary = kwargs["functionDictionary"]
@@ -104,17 +156,47 @@ class TestCase(Classes):
         resultsDictionary = kwargs["resultsDictionary"]
         result = True
         if self.expected_output != None:
-            result = result and (resultsDictionary[self.result_output_key] == self.expected_output)
+            if self.assertCase and self.assertFailMessage != None:
+                assert TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output), self.assertFailMessage
+            elif self.assertCase:
+                assert(TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output))
+            else:
+                result = result and TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expected_output)
         elif self.result_output_key in resultsDictionary:
-            result = result and (resultsDictionary[self.result_output_key] == None)
+            if self.assertCase and self.assertFailMessage != None:
+                assert (resultsDictionary[self.result_output_key] == None), self.assertFailMessage
+            elif self.assertCase:
+                assert((resultsDictionary[self.result_output_key] == None))
+            else:
+                result = result and (resultsDictionary[self.result_output_key] == None)
         if self.expected_std_output != None:
-            result = result and (resultsDictionary[self.result_std_output_key] == self.expected_std_output)
+            if self.assertCase and self.assertFailMessage != None:
+                assert TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expected_std_output), self.assertFailMessage
+            elif self.assertCase:
+                assert(TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expected_std_output))
+            else:
+                result = result and TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expected_std_output)
         elif self.result_std_output_key in resultsDictionary:
-            result = result and (resultsDictionary[self.result_std_output_key] == None)
+            if self.assertCase and self.assertFailMessage != None:
+                assert (resultsDictionary[self.result_std_output_key] == None), self.assertFailMessage
+            elif self.assertCase:
+                assert((resultsDictionary[self.result_std_output_key] == None))
+            else:
+                result = result and (resultsDictionary[self.result_std_output_key] == None)
         if self.expected_exception != None:
-            result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expected_exception) or (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception)))
+            if self.assertCase and self.assertFailMessage != None:
+                assert ((type(resultsDictionary[self.result_exception_key]) == self.expected_exception) or (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception))), self.assertFailMessage
+            elif self.assertCase:
+                assert(((type(resultsDictionary[self.result_exception_key]) == self.expected_exception) or (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception))))
+            else:
+                result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expected_exception) or (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception)))
         elif self.result_exception_key in resultsDictionary:
-            result = result and (resultsDictionary[self.result_exception_key] == None)
+            if self.assertCase and self.assertFailMessage != None:
+                assert (resultsDictionary[self.result_exception_key] == None), self.assertFailMessage
+            elif self.assertCase:
+                assert((resultsDictionary[self.result_exception_key] == None))
+            else:
+                result = result and (resultsDictionary[self.result_exception_key] == None)
         return result
 
     def setup_method(self):
