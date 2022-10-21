@@ -15,7 +15,7 @@ print(Test( "unit/functional/regression test", {
             "case 1",
             "init empty Classes object",
             "Classes",
-            expected_output_value_of=Classes()
+            expectedOutputValueOf=Classes()
         ),
         TestCase(
             "case 2",
@@ -31,7 +31,7 @@ print(Test( "unit/functional/regression test", {
             "case 3",
             "convert valid string to float",
             "float",
-            expected_output_value_of=1.5,
+            expectedOutputValueOf=1.5,
             functionArguments = {
                 "arguments" : "1.5",
                 "keyWordArguments" : None
@@ -41,7 +41,7 @@ print(Test( "unit/functional/regression test", {
             "case 4",
             "verify float is float",
             "float",
-            expected_output_value_of=1.5,
+            expectedOutputValueOf=1.5,
             functionArguments = {
                 "arguments" : 1.5,
                 "keyWordArguments" : None
@@ -62,7 +62,7 @@ print(Test( "unit/functional/regression test", {
             "test import for display of correct output and correct user input passed is returned",
             "input",
             stdin_input = "5\n",
-            expected_output_value_of = "5",
+            expectedOutputValueOf = "5",
             expected_std_output = "Enter a value:  ",
             functionArguments = {
                 "arguments" : "Enter a value:  ",
