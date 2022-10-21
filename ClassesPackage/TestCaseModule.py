@@ -163,7 +163,10 @@ class TestCase(Classes):
             elif self.assertCase:
                 assert(TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expectedOutputValueOf))
             else:
-                result = result and TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expectedOutputValueOf)
+                if self.result_output_key in resultsDictionary.keys(): 
+                    result = result and TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expectedOutputValueOf)
+                else :
+                    result = result and False
         elif self.result_output_key in resultsDictionary:
             if self.assertCase and self.assertFailMessage != None:
                 assert (resultsDictionary[self.result_output_key] == None), self.assertFailMessage
