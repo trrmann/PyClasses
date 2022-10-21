@@ -32,7 +32,7 @@ class TestCase(Classes):
             assertCase: bool = False,
             assertFailMessage: str = None,
             expectedOutputValueOf = None,
-            expected_std_output: str = None,
+            expectedStdOutputValueOf: str = None,
             expectedException: Exception = None,
             className: str="TestCase",
             **functionArguments
@@ -69,7 +69,7 @@ class TestCase(Classes):
         self.assertCase = bool(assertCase)
         self.assertFailMessage = str(assertFailMessage)
         self.expectedOutputValueOf = expectedOutputValueOf
-        self.expected_std_output = expected_std_output
+        self.expectedStdOutputValueOf = expectedStdOutputValueOf
         self.expectedException = expectedException
 
     def to_string(self):
@@ -81,7 +81,7 @@ class TestCase(Classes):
         out = f"{out}, functionArguments={self.functionArguments}"
         out = f"{out}, functionKeyWordArguments={self.functionKeyWordArguments}"
         out = f"{out}, expectedOutputValueOf={self.expectedOutputValueOf}"
-        out = f"{out}, exp_std_output={self.expected_std_output}"
+        out = f"{out}, expectedStdOutputValueOf={self.expectedStdOutputValueOf}"
         out = f"{out}, expectedException={self.expectedException}"
         if self.stdInInput != None: out = f"{out}, stdInInput={self.stdInInput}"
         out = f"{out})"
@@ -169,13 +169,13 @@ class TestCase(Classes):
                 assert((resultsDictionary[self.result_output_key] == None))
             else:
                 result = result and (resultsDictionary[self.result_output_key] == None)
-        if self.expected_std_output != None:
+        if self.expectedStdOutputValueOf != None:
             if self.assertCase and self.assertFailMessage != None:
-                assert TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expected_std_output), self.assertFailMessage
+                assert TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expectedStdOutputValueOf), self.assertFailMessage
             elif self.assertCase:
-                assert(TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expected_std_output))
+                assert(TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expectedStdOutputValueOf))
             else:
-                result = result and TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expected_std_output)
+                result = result and TestCase.stringsEqual(resultsDictionary[self.result_std_output_key], self.expectedStdOutputValueOf)
         elif self.result_std_output_key in resultsDictionary:
             if self.assertCase and self.assertFailMessage != None:
                 assert (resultsDictionary[self.result_std_output_key] == None), self.assertFailMessage
@@ -206,7 +206,7 @@ class TestCase(Classes):
             test_in_file.close()
             self.orig_stdin = sys.stdin
             sys.stdin = open(self.inFileName)
-        if self.expected_std_output != None:
+        if self.expectedStdOutputValueOf != None:
             if os.path.exists(self.outFileName):
                 os.remove(self.outFileName)
             self.orig_stdout = sys.stdout
@@ -221,7 +221,7 @@ class TestCase(Classes):
         return None
 
     def get_output(self):
-        if self.expected_std_output != None:
+        if self.expectedStdOutputValueOf != None:
             test_out_file = open(self.outFileName)
             output = test_out_file.read()
             test_out_file.close()
@@ -231,7 +231,7 @@ class TestCase(Classes):
     def teardown_method(self):
         if self.stdInInput != None:
             sys.stdin = self.orig_stdin
-        if self.expected_std_output != None:
+        if self.expectedStdOutputValueOf != None:
             sys.stdout.close()
             sys.stdout = self.orig_stdout
 

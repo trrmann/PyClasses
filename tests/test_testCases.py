@@ -21,7 +21,7 @@ print(Test( "unit/functional/regression test", {
             "case 2",
             "print test string",
             "print",
-            expected_std_output = "['Test'] {'none': None}\n",
+            expectedStdOutputValueOf = "['Test'] {'none': None}\n",
             functionArguments = {
                 "arguments" : ["Test"],
                 "keyWordArguments" : {"none": None}
@@ -63,7 +63,7 @@ print(Test( "unit/functional/regression test", {
             "input",
             stdInInput = "5\n",
             expectedOutputValueOf = "5",
-            expected_std_output = "Enter a value:  ",
+            expectedStdOutputValueOf = "Enter a value:  ",
             functionArguments = {
                 "arguments" : "Enter a value:  ",
                 "keyWordArguments" : None
