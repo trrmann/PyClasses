@@ -72,25 +72,34 @@ class TestCase(Classes):
         self.expectedStdOutputValueOf = expectedStdOutputValueOf
         self.expectedException = expectedException
 
-    def to_string(self):
+    def to_string(self, whitespace: bool=False):
+        white1 = ""
+        white2 = ""
+        white3 = ""
+        white4 = ""
+        if whitespace:
+            white1 = "\n"
+            white2 = f"{white1}    "
+            white3 = f"{white2}    "
+            white4 = f"{white3}    "
         out = f"("
-        out = f"{out}className=\"{self.className}\""
-        out = f"{out}, testCaseID=\"{self.testCaseID}\""
-        out = f"{out}, testCaseName=\"{self.testCaseName}\""
-        out = f"{out}, functionName=\"{self.functionName}\""
-        if (self.functionArguments != None) and (type(self.functionArguments)==type(str(""))): out = f"{out}, functionArguments=\"{self.functionArguments}\""
-        if (self.functionArguments != None) and (type(self.functionArguments)!=type(str(""))): out = f"{out}, functionArguments={self.functionArguments}"
-        if self.functionKeyWordArguments != None: out = f"{out}, functionKeyWordArguments={self.functionKeyWordArguments}"
-        if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)==type(str(""))): out = f"{out}, expectedOutputValueOf=\"{self.expectedOutputValueOf}\""
-        if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)!=type(str(""))): out = f"{out}, expectedOutputValueOf={self.expectedOutputValueOf}"
-        if self.expectedStdOutputValueOf != None: out = f"{out}, expectedStdOutputValueOf=\"{self.expectedStdOutputValueOf}\""
-        if self.expectedException != None: out = f"{out}, expectedException={self.expectedException}"
-        if self.stdInInput != None: out = f"{out}, stdInInput=\"{self.stdInInput}\""
+        out = f"{white1}{out}className=\"{self.className}\""
+        out = f"{out}{white1}, testCaseID=\"{self.testCaseID}\""
+        out = f"{out}{white1}, testCaseName=\"{self.testCaseName}\""
+        out = f"{out}{white1}, functionName=\"{self.functionName}\""
+        if (self.functionArguments != None) and (type(self.functionArguments)==type(str(""))): out = f"{out}{white1}, functionArguments=\"{self.functionArguments}\""
+        if (self.functionArguments != None) and (type(self.functionArguments)!=type(str(""))): out = f"{out}{white1}, functionArguments={self.functionArguments}"
+        if self.functionKeyWordArguments != None: out = f"{out}{white1}, functionKeyWordArguments={self.functionKeyWordArguments}"
+        if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)==type(str(""))): out = f"{out}{white1}, expectedOutputValueOf=\"{self.expectedOutputValueOf}\""
+        if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)!=type(str(""))): out = f"{out}{white1}, expectedOutputValueOf={self.expectedOutputValueOf}"
+        if self.expectedStdOutputValueOf != None: out = f"{out}{white1}, expectedStdOutputValueOf=\"{self.expectedStdOutputValueOf}\""
+        if self.expectedException != None: out = f"{out}{white1}, expectedException={self.expectedException}"
+        if self.stdInInput != None: out = f"{out}{white1}, stdInInput=\"{self.stdInInput}\""
         out = f"{out})"
         return out
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}{self.to_string()}"
+        return f"{type(self).__name__}{self.to_string(whitespace=True)}"
 
     def md5(string: str=""):
         return {"size": len(str(string)), "hash": hashlib.md5(str(string)).hexdigest()}
