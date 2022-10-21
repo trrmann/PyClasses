@@ -241,6 +241,7 @@ class TestCase(Classes):
 
 def testCaseListToTestCaseDictionary(testCaseList = None):
     print(testCaseList)
+    print(len(testCaseList))
 #    if type(testCaseList) != type([TestCase("",""), TestCase("","")]):
     if len(testCaseList) >= 1:
         testCaseDictionary = {}
