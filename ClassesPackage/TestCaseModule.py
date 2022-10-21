@@ -240,14 +240,10 @@ class TestCase(Classes):
             os.remove(self.outFileName)
 
 def testCaseListToTestCaseDictionary(testCaseList = None):
-    print(testCaseList)
-#    if type(testCaseList) != type([TestCase("",""), TestCase("","")]):
-    if len(testCaseList) >= 1:
-        print(len(testCaseList))
+    if type(testCaseList) != type([TestCase("",""), TestCase("","")]) and (len(testCaseList) >= 1):
         testCaseDictionary = {}
         counter = 0
         while counter < len(testCaseList):
-            print(counter)
             testCaseDictionary[testCaseList[counter].testCaseName] = testCaseList[counter]
             counter = counter + 1
         print(testCaseDictionary)
