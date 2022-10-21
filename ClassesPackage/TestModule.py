@@ -1,5 +1,6 @@
 # testModule.py
 from ClassesPackage.ClassesModule import Classes
+from ClassesPackage.TestCaseModule import *
 
 class Test(Classes):
     def __new__(cls, *args, **kwargs):
@@ -41,5 +42,5 @@ class Test(Classes):
                 full_results[self.result_test_fail_count_key] = full_results[self.result_test_fail_count_key] + 1
                 full_results[self.result_test_fail_test_list_key].append(key)
             full_results[self.result_test_count_key] = full_results[self.result_test_count_key] + 1
-        full_results[self.result_testCasesDefinition] = self.testCases
+        full_results[self.result_testCasesDefinition] = testCaseDictionaryToTestCaseList(testCaseDictionary = self.testCases)
         return full_results
