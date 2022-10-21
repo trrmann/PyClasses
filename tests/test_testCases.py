@@ -5,6 +5,7 @@ from ClassesPackage.ClassesModule import Classes
 
 from ClassesPackage.TestModule import Test
 from ClassesPackage.TestCaseModule import TestCase
+from ClassesPackage.TestCaseModule import *
 
 functionDictionary = {"Classes": Classes,
                       "print": print,
@@ -64,12 +65,21 @@ testCase6 = TestCase(
         }
     )
 
-print(Test(functionDictionary,
-    testCases = {
-        testCase1.testCaseName: testCase1,
-        testCase2.testCaseName: testCase2,
-        testCase3.testCaseName: testCase3,
-        testCase4.testCaseName: testCase4,
-        testCase5.testCaseName: testCase5,
-        testCase6.testCaseName: testCase6
-    }).execute())
+print(Test(functionDictionary, testCaseListToTestCaseDictionary(
+        testCase1,
+        testCase2,
+        testCase3,
+        testCase4,
+        testCase5,
+        testCase6
+    )).execute())
+
+#    testCases = {
+#        testCase1.testCaseName: testCase1,
+#        testCase2.testCaseName: testCase2,
+#        testCase3.testCaseName: testCase3,
+#        testCase4.testCaseName: testCase4,
+#        testCase5.testCaseName: testCase5,
+#        testCase6.testCaseName: testCase6
+#    }
+

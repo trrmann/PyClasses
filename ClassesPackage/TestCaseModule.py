@@ -118,6 +118,8 @@ class TestCase(Classes):
             return (sizeOne == sizeTwo) and (hashOne == hashTwo)
         else: return False
 
+    # add md5 in md5s
+
     def stringsEqual(stringOne: str = None, stringTwo: str = None, md5TestLowestSizeLimit: int=256):
         if (stringOne == None) or (stringTwo == None):  return (stringOne == None) and (stringTwo == None)
         if int(md5TestLowestSizeLimit) < 64: md5TestLowestSizeLimit = 64
@@ -125,6 +127,8 @@ class TestCase(Classes):
             if len(str(stringOne)) >= int(md5TestLowestSizeLimit): return TestCase.md5sEqual(str(stringOne), str(stringTwo))
             else: return str(stringOne) == str(stringTwo)
         else: return False
+
+    # add string in strings
 
     def execute(self, **kwargs):
         functionDictionary = kwargs["functionDictionary"]
@@ -234,3 +238,21 @@ class TestCase(Classes):
             os.remove(self.inFileName)
         if os.path.exists(self.outFileName):
             os.remove(self.outFileName)
+
+def testCaseListToTestCaseDictionary(testCaseList = None):
+    if type(testCaseList) != type([TestCase(), TestCase()]):
+        testCaseDictionary = {}
+        counter = 0
+        while counter < len(testCaseList):
+            testCaseDictionary[testCaseList[counter].testCaseName] = testCaseList[counter]
+        return testCaseDictionary
+    else: return None
+
+def testCaseDictionaryToTestCaseList(**testCaseDictionary):
+    if "testCaseDictionary" in testCaseDictionary.keys():
+        testCaseList = []
+        testCaseDictionary["testCaseDictionary"]
+        for key in testCaseDictionary["testCaseDictionary"].keys():
+            testCaseList.append(testCaseDictionary["testCaseDictionary"][key])
+        return testCaseList
+    return []
