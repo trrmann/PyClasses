@@ -142,6 +142,9 @@ class TestCase(Classes):
             if (self.functionArguments == None) and (self.functionKeyWordArguments == None):
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)()
             elif (self.functionArguments == None):
+                print(self.testCaseID)
+                print(self.functionName)
+                print(self.functionKeyWordArguments)
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(kwargs=self.functionKeyWordArguments)
             elif (self.functionKeyWordArguments == None):
                 print(self.testCaseID)
