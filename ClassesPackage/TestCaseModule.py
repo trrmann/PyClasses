@@ -148,38 +148,55 @@ class TestCase(Classes):
                 print(self.functionArguments)
                 match len(self.functionArguments):
                     case 0:
+                        print(0)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments)
                     case 1:
+                        print(1)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0])
                     case 2:
+                        print(2)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1])
                     case 3:
+                        print(3)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2])
                     case 4:
+                        print(4)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3])
                     case 5:
+                        print(5)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4])
                     case 6:
+                        print(6)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5])
                     case 7:
+                        print(7)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6])
                     case 8:
+                        print(8)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7])
                     case 9:
+                        print(9)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8])
                     case 10:
+                        print(10)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8], self.functionArguments[9])
                     case 11:
+                        print(11)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8], self.functionArguments[9], self.functionArguments[10])
                     case 12:
+                        print(12)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8], self.functionArguments[9], self.functionArguments[10], self.functionArguments[11])
                     case 13:
+                        print(13)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8], self.functionArguments[9], self.functionArguments[10], self.functionArguments[11], self.functionArguments[12])
                     case 14:
+                        print(14)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8], self.functionArguments[9], self.functionArguments[10], self.functionArguments[11], self.functionArguments[12], self.functionArguments[13])
                     case 15:
+                        print(15)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8], self.functionArguments[9], self.functionArguments[10], self.functionArguments[11], self.functionArguments[12], self.functionArguments[13], self.functionArguments[14])
                     case 16:
+                        print(16)
                         resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)(self.functionArguments[0], self.functionArguments[1], self.functionArguments[2], self.functionArguments[3], self.functionArguments[4], self.functionArguments[5], self.functionArguments[6], self.functionArguments[7], self.functionArguments[8], self.functionArguments[9], self.functionArguments[10], self.functionArguments[11], self.functionArguments[12], self.functionArguments[13], self.functionArguments[14], self.functionArguments[15])
             else:
                 match len(self.functionArguments):
