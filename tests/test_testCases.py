@@ -31,7 +31,7 @@ print(Test( "unit/functional/regression test", {
             "case 3",
             "print test string",
             "print",
-            expectedStdOutputValueOf = "Test",
+            expectedStdOutputValueOf = "Test\n",
             functionArguments = {
                 "arguments" : "Test"
             }
