@@ -23,7 +23,9 @@ print(Test( "unit/functional/regression test", {
             "init minimum TestCase object",
             "TestCase",
             expectedOutputValueOf=TestCase(),
-            functionArguments = ("", "", "")
+            functionArguments = {
+                "keyWordArguments" : {"testCaseID": "", "testCaseName": "", "functionName": ""}
+            }
         ),
         TestCase(
             "case 3",
