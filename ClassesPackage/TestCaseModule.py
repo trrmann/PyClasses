@@ -33,7 +33,7 @@ class TestCase(Classes):
             assertFailMessage: str = None,
             expectedOutputValueOf = None,
             expected_std_output: str = None,
-            expected_exception: Exception = None,
+            expectedException: Exception = None,
             className: str="TestCase",
             **functionArguments
         ):
@@ -70,7 +70,7 @@ class TestCase(Classes):
         self.assertFailMessage = str(assertFailMessage)
         self.expectedOutputValueOf = expectedOutputValueOf
         self.expected_std_output = expected_std_output
-        self.expected_exception = expected_exception
+        self.expectedException = expectedException
 
     def to_string(self):
         out = f"("
@@ -82,7 +82,7 @@ class TestCase(Classes):
         out = f"{out}, functionKeyWordArguments={self.functionKeyWordArguments}"
         out = f"{out}, expectedOutputValueOf={self.expectedOutputValueOf}"
         out = f"{out}, exp_std_output={self.expected_std_output}"
-        out = f"{out}, exp_exception={self.expected_exception}"
+        out = f"{out}, expectedException={self.expectedException}"
         if self.stdInInput != None: out = f"{out}, stdInInput={self.stdInInput}"
         out = f"{out})"
         return out
@@ -183,13 +183,13 @@ class TestCase(Classes):
                 assert((resultsDictionary[self.result_std_output_key] == None))
             else:
                 result = result and (resultsDictionary[self.result_std_output_key] == None)
-        if self.expected_exception != None:
+        if self.expectedException != None:
             if self.assertCase and self.assertFailMessage != None:
-                assert ((type(resultsDictionary[self.result_exception_key]) == self.expected_exception) or (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception))), self.assertFailMessage
+                assert ((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException))), self.assertFailMessage
             elif self.assertCase:
-                assert(((type(resultsDictionary[self.result_exception_key]) == self.expected_exception) or (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception))))
+                assert(((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException))))
             else:
-                result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expected_exception) or (type(resultsDictionary[self.result_exception_key]) == type(self.expected_exception)))
+                result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException)))
         elif self.result_exception_key in resultsDictionary:
             if self.assertCase and self.assertFailMessage != None:
                 assert (resultsDictionary[self.result_exception_key] == None), self.assertFailMessage

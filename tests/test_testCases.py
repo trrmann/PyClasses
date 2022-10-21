@@ -51,7 +51,7 @@ print(Test( "unit/functional/regression test", {
             "case 5",
             "raise error on float conversion when invalid string passed",
             "float",
-            expected_exception=ValueError,
+            expectedException=ValueError,
             functionArguments = {
                 "arguments" : "failMe",
                 "keyWordArguments" : None
