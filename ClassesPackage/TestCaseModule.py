@@ -140,6 +140,8 @@ class TestCase(Classes):
         TestCase.setup_method(self = self)
         try:
             if (self.functionArguments == None) and (self.functionKeyWordArguments == None):
+                print(self.testCaseID)
+                print(self.functionName)
                 resultsDictionary[self.result_output_key] = functionDictionary.get(self.functionName)()
             elif (self.functionArguments == None):
                 print(self.testCaseID)
