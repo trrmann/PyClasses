@@ -68,4 +68,4 @@ def resultsToString(**kwargs):
             output = f"{output}\nstatus:  {testResult[Test.result_eval_results_key]}"
             output = f"{output}\noutput:  {testResult[TestCase.result_output_key]}"
             output = f"{output}\nstd output:  {testResult[TestCase.result_std_output_key]}"
-            output = f"{output}\nexception:  {testResult[TestCase.result_exception_key]}"
+            if TestCase.result_exception_key in testResult.keys(): output = f"{output}\nexception:  {testResult[TestCase.result_exception_key]}"
