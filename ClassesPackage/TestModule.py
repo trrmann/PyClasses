@@ -70,10 +70,10 @@ def resultsToString(**kwargs):
             key = case.testCaseID
             output = f"{output}\n{case.to_string(whitespace=True)}"
             testResult = fullResults[key]
-            if testResult[Test.result_eval_results_key]: output = f"{output}\n    status:  {Fore.GREEN}{Style.BRIGHT}{testResult[Test.result_eval_results_key]}{Style.RESET_ALL}"
-            else: output = f"{output}\n    status:  {Fore.RED}{Style.BRIGHT}{testResult[Test.result_eval_results_key]}{Style.RESET_ALL}"
-            if TestCase.result_output_key in testResult.keys(): output = f"{output}\n    output:  {testResult[TestCase.result_output_key]}"
-            if TestCase.result_std_output_key in testResult.keys(): output = f"{output}\n    std output:  {testResult[TestCase.result_std_output_key]}"
-            if TestCase.result_exception_key in testResult.keys(): output = f"{output}\n    exception:  {testResult[TestCase.result_exception_key]}"
+            if testResult[Test.result_eval_results_key]: output = f"{output}\n{Fore.BLUE}    status:  {Fore.GREEN}{Style.BRIGHT}{testResult[Test.result_eval_results_key]}{Style.RESET_ALL}"
+            else: output = f"{output}\n{Fore.BLUE}    status:  {Fore.RED}{Style.BRIGHT}{testResult[Test.result_eval_results_key]}{Style.RESET_ALL}"
+            if TestCase.result_output_key in testResult.keys(): output = f"{output}\n{Fore.BLUE}    output:  {Fore.BLACK}{Style.BRIGHT}{testResult[TestCase.result_output_key]}{Style.RESET_ALL}"
+            if TestCase.result_std_output_key in testResult.keys(): output = f"{output}\n{Fore.BLUE}    std output:  {Fore.BLACK}{testResult[TestCase.result_std_output_key]}{Style.RESET_ALL}"
+            if TestCase.result_exception_key in testResult.keys(): output = f"{output}\n{Fore.BLUE}    exception:  {Fore.RED}{testResult[TestCase.result_exception_key]}{Style.RESET_ALL}"
         return output
     return None
