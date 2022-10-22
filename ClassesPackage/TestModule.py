@@ -8,14 +8,18 @@ class Test(Classes):
 
     result_testName_key = "testName"
     result_test_result_key = "test_result"
+    result_test_pass_count_key = "test_pass_count"
+    result_test_fail_count_key = "test_fail_count"
+    result_test_fail_test_list_key = "test_fail_test_list"
+    result_test_count_key = "test_count"
     def __init__(self, testName: str, functionDictionary, className: str="Test", *args, **kwargs):
         super().__init__(className)
         self.result_eval_results_key = "eval_results"
         self.result_test_result_key = Test.result_test_result_key
-        self.result_test_pass_count_key = "test_pass_count"
-        self.result_test_fail_count_key = "test_fail_count"
-        self.result_test_fail_test_list_key = "test_fail_test_list"
-        self.result_test_count_key = "test_count"
+        self.result_test_pass_count_key = Test.result_test_pass_count_key
+        self.result_test_fail_count_key = Test.result_test_fail_count_key
+        self.result_test_fail_test_list_key = Test.result_test_fail_test_list_key
+        self.result_test_count_key = Test.result_test_count_key
         self.result_testName_key = Test.result_testName_key
         self.result_testCasesDefinition = "testCaseDefinitions"
         self.testName = str(testName)
