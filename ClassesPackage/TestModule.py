@@ -60,8 +60,9 @@ class Test(Classes):
 def resultsToString(**kwargs):
     if "fullResults" in kwargs.keys():
         fullResults = kwargs["fullResults"]           
-        output = f"{Fore.BLUE}{Style.BRIGHT}Test Name:  {fullResults[Test.result_testName_key]}{Style.RESET_ALL}"
-        output = f"{output}  status:  {fullResults[Test.result_test_result_key]}"
+        output = f"{Fore.BLUE}Test Name:  {Style.BRIGHT}{fullResults[Test.result_testName_key]}{Style.RESET_ALL}"
+        if fullResults[Test.result_test_result_key]: output = f"{output}{Fore.BLUE}  status:  {Fore.GREEN}{fullResults[Test.result_test_result_key]}{Style.RESET_ALL}"
+        else: output = f"{output}{Fore.BLUE}  status:  {Fore.RED}{fullResults[Test.result_test_result_key]}{Style.RESET_ALL}"
         output = f"{output}\n  pass/fail/count:  {fullResults[Test.result_test_pass_count_key]}/{fullResults[Test.result_test_fail_count_key]}/{fullResults[Test.result_test_count_key]}"
         output = f"{output}\n  failed case list:  {fullResults[Test.result_test_fail_test_list_key]}"
         testCases = fullResults[Test.result_testCasesDefinition]
