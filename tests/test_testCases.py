@@ -92,5 +92,3 @@ print(resultsToString(fullResults=Test( "unit/functional/regression test", {
             }
         )
     ])).execute()))
-
-print("x",t="t")
