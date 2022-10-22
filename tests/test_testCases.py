@@ -5,7 +5,7 @@ from ClassesPackage.TestModule import *
 from ClassesPackage.TestCaseModule import TestCase
 from ClassesPackage.TestCaseModule import *
 
-print(resultsToString(Test( "unit/functional/regression test", {
+print(resultsToString(fullResults=Test( "unit/functional/regression test", {
         "Classes": Classes,
         "TestCase": TestCase,
         "print": print,
