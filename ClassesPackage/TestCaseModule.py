@@ -6,6 +6,8 @@ import sys
 import os
 import hashlib
 
+# move this class to it's own package
+
 class TestCase(Classes):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
