@@ -4,7 +4,9 @@ from ClassesPackage.ClassesModule import Classes
 from ClassesPackage.TestModule import *
 from ClassesPackage.TestCaseModule import TestCase
 from ClassesPackage.TestCaseModule import *
+import os
 
+os.system("cls")
 print(resultsToString(fullResults=Test( "unit/functional/regression test", {
         "Classes": Classes,
         "TestCase": TestCase,
