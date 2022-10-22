@@ -97,7 +97,7 @@ class TestCase(Classes):
         return out
 
     def __repr__(self) -> str:
-        return f"{type(self).__name__}{self.to_string(whitespace=True)}"
+        return f"{type(self).__name__}{self.to_string()}"
 
     def md5(string: str=""):
         return {"size": len(str(string)), "hash": hashlib.md5(str(string)).hexdigest()}

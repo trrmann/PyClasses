@@ -1,11 +1,11 @@
 # test_testCases.py
 from ClassesPackage.ClassesModule import Classes
 
-from ClassesPackage.TestModule import Test
+from ClassesPackage.TestModule import *
 from ClassesPackage.TestCaseModule import TestCase
 from ClassesPackage.TestCaseModule import *
 
-print(Test( "unit/functional/regression test", {
+print(resultsToString(Test( "unit/functional/regression test", {
         "Classes": Classes,
         "TestCase": TestCase,
         "print": print,
@@ -88,4 +88,4 @@ print(Test( "unit/functional/regression test", {
                 "keyWordArguments" : None
             }
         )
-    ])).execute())
+    ])).execute()))
