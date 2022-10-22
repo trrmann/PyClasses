@@ -91,10 +91,10 @@ class TestCase(Classes):
         if (self.functionArguments != None) and (type(self.functionArguments)!=type(str(""))): out = f"{out}{Fore.CYAN}, functionArguments={Fore.YELLOW}{Style.BRIGHT}{self.functionArguments}{Style.RESET_ALL}"
         if self.functionKeyWordArguments != None: out = f"{out}{Fore.CYAN}, functionKeyWordArguments={Fore.YELLOW}{Style.BRIGHT}{self.functionKeyWordArguments}{Style.RESET_ALL}"
         if self.stdInInput != None: out = f"{out}{Fore.CYAN}, stdInInput=\"{Fore.YELLOW}{Style.BRIGHT}{self.stdInInput}{Fore.CYAN}\"{Style.RESET_ALL}"
-        if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)==type(str(""))): out = f"{out}{white3}, expectedOutputValueOf=\"{self.expectedOutputValueOf}\""
-        if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)!=type(str(""))): out = f"{out}{white3}, expectedOutputValueOf={self.expectedOutputValueOf}"
-        if self.expectedStdOutputValueOf != None: out = f"{out}{white3}, expectedStdOutputValueOf=\"{self.expectedStdOutputValueOf}\""
-        if self.expectedException != None: out = f"{out}{white3}, expectedException={self.expectedException}"
+        if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)==type(str(""))): out = f"{out}{Fore.CYAN}{white3}, expectedOutputValueOf=\"{Fore.GREEN}{self.expectedOutputValueOf}{Fore.CYAN}\"{Style.RESET_ALL}"
+        if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)!=type(str(""))): out = f"{out}{Fore.CYAN}{white3}, expectedOutputValueOf={Fore.GREEN}{self.expectedOutputValueOf}{Style.RESET_ALL}"
+        if self.expectedStdOutputValueOf != None: out = f"{out}{Fore.CYAN}{white3}, expectedStdOutputValueOf=\"{Fore.GREEN}{self.expectedStdOutputValueOf}{Fore.CYAN}\"{Style.RESET_ALL}"
+        if self.expectedException != None: out = f"{out}{Fore.CYAN}{white3}, expectedException={Fore.GREEN}{self.expectedException}{Style.RESET_ALL}"
         out = f"{out}){white1}"
         return out
 
