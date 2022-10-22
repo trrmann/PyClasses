@@ -69,3 +69,5 @@ def resultsToString(**kwargs):
             if TestCase.result_output_key in testResult.keys(): output = f"{output}\noutput:  {testResult[TestCase.result_output_key]}"
             if TestCase.result_std_output_key in testResult.keys(): output = f"{output}\nstd output:  {testResult[TestCase.result_std_output_key]}"
             if TestCase.result_exception_key in testResult.keys(): output = f"{output}\nexception:  {testResult[TestCase.result_exception_key]}"
+        return output
+    return None
