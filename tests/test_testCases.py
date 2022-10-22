@@ -86,7 +86,7 @@ print(resultsToString(fullResults=Test( "unit/functional/regression test", {
             expectedOutputValueOf = "5",
             expectedStdOutputValueOf = "Enter a value:  ",
             functionArguments = {
-                "arguments" : "Enter a value:  ",
+                "arguments" : ["Enter a value:  "],
                 "keyWordArguments" : None
             }
         )
