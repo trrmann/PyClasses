@@ -1,8 +1,6 @@
 # testModule.py
-
 from colorama import Fore
 from colorama import Style
-
 from ClassesPackage.ClassesModule import Classes
 from ClassesPackage.TestCaseModule import *
 

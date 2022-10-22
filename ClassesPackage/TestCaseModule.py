@@ -1,4 +1,6 @@
 # testCaseModule.py
+from colorama import Fore
+from colorama import Style
 from ClassesPackage.ClassesModule import Classes
 import sys
 import os
@@ -80,9 +82,9 @@ class TestCase(Classes):
             white1 = "\n"
             white2 = f"{white1}    "
             white3 = f"{white2}    "
-        out = f"{white1}("
-        out = f"{out}className=\"{self.className}\""
-        out = f"{out}, testCaseID=\"{self.testCaseID}\""
+        out = f"{white1}{Fore.CYAN}({Style.RESET_ALL}"
+        out = f"{out}{Fore.CYAN}className=\"{self.className}\"{Style.RESET_ALL}"
+        out = f"{out}{Fore.CYAN}, testCaseID=\"{Fore.BLUE}{Style.BRIGHT}{self.testCaseID}{Fore.CYAN}\"{Style.RESET_ALL}"
         out = f"{out}, testCaseName=\"{self.testCaseName}\""
         out = f"{out}{white2}, functionName=\"{self.functionName}\""
         if (self.functionArguments != None) and (type(self.functionArguments)==type(str(""))): out = f"{out}, functionArguments=\"{self.functionArguments}\""
