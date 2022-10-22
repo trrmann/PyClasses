@@ -46,6 +46,7 @@ class Test(Classes):
         return full_results
 
 def resultsToString(**kwargs):
+    print(kwargs)
     if "kwargs" in kwargs.keys():
         if "fullResults" in kwargs["kwargs"]:
             fullResults = kwargs["kwargs"]["fullResults"]           
