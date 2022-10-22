@@ -65,9 +65,9 @@ def resultsToString(**kwargs):
             key = case.testCaseID
             output = f"{output}\n{case.to_string(whitespace=True)}"
             testResult = fullResults[key]
-            output = f"{output}\nstatus:  {testResult[Test.result_eval_results_key]}"
-            if TestCase.result_output_key in testResult.keys(): output = f"{output}\noutput:  {testResult[TestCase.result_output_key]}"
-            if TestCase.result_std_output_key in testResult.keys(): output = f"{output}\nstd output:  {testResult[TestCase.result_std_output_key]}"
-            if TestCase.result_exception_key in testResult.keys(): output = f"{output}\nexception:  {testResult[TestCase.result_exception_key]}"
+            output = f"{output}\n    status:  {testResult[Test.result_eval_results_key]}"
+            if TestCase.result_output_key in testResult.keys(): output = f"{output}\n    output:  {testResult[TestCase.result_output_key]}"
+            if TestCase.result_std_output_key in testResult.keys(): output = f"{output}\n    std output:  {testResult[TestCase.result_std_output_key]}"
+            if TestCase.result_exception_key in testResult.keys(): output = f"{output}\n    exception:  {testResult[TestCase.result_exception_key]}"
         return output
     return None
