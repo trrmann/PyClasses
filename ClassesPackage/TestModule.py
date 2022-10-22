@@ -63,8 +63,8 @@ def resultsToString(**kwargs):
         output = f"{Fore.BLUE}Test Name:  {Style.BRIGHT}{fullResults[Test.result_testName_key]}{Style.RESET_ALL}"
         if fullResults[Test.result_test_result_key]: output = f"{output}{Fore.BLUE}  status:  {Fore.GREEN}{fullResults[Test.result_test_result_key]}{Style.RESET_ALL}"
         else: output = f"{output}{Fore.BLUE}  status:  {Fore.RED}{fullResults[Test.result_test_result_key]}{Style.RESET_ALL}"
-        output = f"{output}\n  pass/fail/count:  {Fore.GREEN}{Style.BRIGHT}{fullResults[Test.result_test_pass_count_key]}{Style.RESET_ALL}/{Fore.RED}{Style.BRIGHT}{fullResults[Test.result_test_fail_count_key]}{Style.RESET_ALL}/{Fore.BLUE}{Style.BRIGHT}{fullResults[Test.result_test_count_key]}{Style.RESET_ALL}"
-        output = f"{output}\n  failed case list:  {Fore.RED}{fullResults[Test.result_test_fail_test_list_key]}{Style.RESET_ALL}"
+        output = f"{output}\n{Fore.BLUE}  pass/fail/count:  {Fore.GREEN}{Style.BRIGHT}{fullResults[Test.result_test_pass_count_key]}{Style.RESET_ALL}/{Fore.RED}{Style.BRIGHT}{fullResults[Test.result_test_fail_count_key]}{Style.RESET_ALL}/{Fore.BLUE}{Style.BRIGHT}{fullResults[Test.result_test_count_key]}{Style.RESET_ALL}"
+        output = f"{output}\n{Fore.BLUE}  failed case list:  {Fore.RED}{fullResults[Test.result_test_fail_test_list_key]}{Style.RESET_ALL}"
         testCases = fullResults[Test.result_testCasesDefinition]
         for case in testCases:
             key = case.testCaseID
