@@ -64,13 +64,14 @@ def resultsToString(**kwargs):
         if fullResults[Test.result_test_result_key]: output = f"{output}{Fore.BLUE}  status:  {Fore.GREEN}{fullResults[Test.result_test_result_key]}{Style.RESET_ALL}"
         else: output = f"{output}{Fore.BLUE}  status:  {Fore.RED}{fullResults[Test.result_test_result_key]}{Style.RESET_ALL}"
         output = f"{output}\n  pass/fail/count:  {Fore.GREEN}{Style.BRIGHT}{fullResults[Test.result_test_pass_count_key]}{Style.RESET_ALL}/{Fore.RED}{Style.BRIGHT}{fullResults[Test.result_test_fail_count_key]}{Style.RESET_ALL}/{Fore.BLUE}{Style.BRIGHT}{fullResults[Test.result_test_count_key]}{Style.RESET_ALL}"
-        output = f"{output}\n  failed case list:  {fullResults[Test.result_test_fail_test_list_key]}"
+        output = f"{output}\n  failed case list:  {Fore.RED}{fullResults[Test.result_test_fail_test_list_key]}{Style.RESET_ALL}"
         testCases = fullResults[Test.result_testCasesDefinition]
         for case in testCases:
             key = case.testCaseID
             output = f"{output}\n{case.to_string(whitespace=True)}"
             testResult = fullResults[key]
-            output = f"{output}\n    status:  {testResult[Test.result_eval_results_key]}"
+            if testResult[Test.result_eval_results_key]: output = f"{output}\n    status:  {Fore.GREEN}{Style.BRIGHT}{testResult[Test.result_eval_results_key]}{Style.RESET_ALL}"
+            else: output = f"{output}\n    status:  {Fore.RED}{Style.BRIGHT}{testResult[Test.result_eval_results_key]}{Style.RESET_ALL}"
             if TestCase.result_output_key in testResult.keys(): output = f"{output}\n    output:  {testResult[TestCase.result_output_key]}"
             if TestCase.result_std_output_key in testResult.keys(): output = f"{output}\n    std output:  {testResult[TestCase.result_std_output_key]}"
             if TestCase.result_exception_key in testResult.keys(): output = f"{output}\n    exception:  {testResult[TestCase.result_exception_key]}"
