@@ -7,10 +7,11 @@ class Test(Classes):
         return super().__new__(cls)
 
     result_testName_key = "testName"
+    result_test_result_key = "test_result"
     def __init__(self, testName: str, functionDictionary, className: str="Test", *args, **kwargs):
         super().__init__(className)
         self.result_eval_results_key = "eval_results"
-        self.result_test_result_key = "test_result"
+        self.result_test_result_key = Test.result_test_result_key
         self.result_test_pass_count_key = "test_pass_count"
         self.result_test_fail_count_key = "test_fail_count"
         self.result_test_fail_test_list_key = "test_fail_test_list"
