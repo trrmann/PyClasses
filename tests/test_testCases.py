@@ -31,7 +31,7 @@ print(resultsToString(fullResults=Test( "unit/functional/regression test", {
         ),
         TestCase(
             "case 3",
-            "print test string",
+            "print test string exeption for invalid arguments",
             "print",
             #expectedStdOutputValueOf = "Test {'none': None}\n",
             expectedException = TypeError,

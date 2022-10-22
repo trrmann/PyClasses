@@ -289,12 +289,18 @@ class TestCase(Classes):
             else:
                 result = result and (resultsDictionary[self.result_std_output_key] == None)
         if self.expectedException != None:
-            if self.assertCase and self.assertFailMessage != None:
-                assert ((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException))), self.assertFailMessage
-            elif self.assertCase:
-                assert(((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException))))
+            if self.result_exception_key in resultsDictionary.keys():
+                if self.assertCase and self.assertFailMessage != None:
+                    assert ((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException))), self.assertFailMessage
+                elif self.assertCase:
+                    assert(((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException))))
+                else:
+                    result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException)))
             else:
-                result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException)))
+                if self.assertCase:
+                    assert self.result_exception_key in resultsDictionary.keys()
+                else:
+                    result = result and self.result_exception_key in resultsDictionary.keys()
         elif self.result_exception_key in resultsDictionary:
             if self.assertCase and self.assertFailMessage != None:
                 assert (resultsDictionary[self.result_exception_key] == None), self.assertFailMessage
