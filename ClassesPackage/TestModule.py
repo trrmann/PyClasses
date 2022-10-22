@@ -47,19 +47,18 @@ class Test(Classes):
 
 def resultsToString(**kwargs):
     print(kwargs)
-    if "kwargs" in kwargs.keys():
-        if "fullResults" in kwargs["kwargs"]:
-            fullResults = kwargs["kwargs"]["fullResults"]           
-            output = f"Test Name:  {fullResults[Test.result_testName_key]}"
-            output = f"{output}  status:  {fullResults[Test.result_test_result_key]}"
-            output = f"{output}\n  pass/fail/count:  {fullResults[Test.result_test_pass_count_key]}/{fullResults[Test.result_test_fail_count_key]}/{fullResults[Test.result_test_count_key]}"
-            output = f"{output}\n  failed case list:  {fullResults[Test.result_test_fail_test_list_key]}"
-            testCases = fullResults[Test.result_testCasesDefinition]
-            for case in testCases:
-                key = case.testCaseID
-                output = f"{output}\n{case.to_string(whitespace=True)}"
-                testResult = fullResults[key]
-                output = f"{output}\nstatus:  {testResult[Test.result_eval_results_key]}"
-                output = f"{output}\noutput:  {testResult[TestCase.result_output_key]}"
-                output = f"{output}\nstd output:  {testResult[TestCase.result_std_output_key]}"
-                output = f"{output}\nexception:  {testResult[TestCase.result_exception_key]}"
+    if "fullResults" in kwargs.keys():
+        fullResults = kwargs["fullResults"]           
+        output = f"Test Name:  {fullResults[Test.result_testName_key]}"
+        output = f"{output}  status:  {fullResults[Test.result_test_result_key]}"
+        output = f"{output}\n  pass/fail/count:  {fullResults[Test.result_test_pass_count_key]}/{fullResults[Test.result_test_fail_count_key]}/{fullResults[Test.result_test_count_key]}"
+        output = f"{output}\n  failed case list:  {fullResults[Test.result_test_fail_test_list_key]}"
+        testCases = fullResults[Test.result_testCasesDefinition]
+        for case in testCases:
+            key = case.testCaseID
+            output = f"{output}\n{case.to_string(whitespace=True)}"
+            testResult = fullResults[key]
+            output = f"{output}\nstatus:  {testResult[Test.result_eval_results_key]}"
+            output = f"{output}\noutput:  {testResult[TestCase.result_output_key]}"
+            output = f"{output}\nstd output:  {testResult[TestCase.result_std_output_key]}"
+            output = f"{output}\nexception:  {testResult[TestCase.result_exception_key]}"
