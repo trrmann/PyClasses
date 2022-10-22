@@ -146,10 +146,10 @@ class TestCase(Classes):
     def execute(self, **kwargs):
         functionDictionary = kwargs["functionDictionary"]
         resultsDictionary = {}
-        print(self.testCaseID)
-        print(self.functionName)
-        print(self.functionArguments)
-        print(self.functionKeyWordArguments)
+        #print(self.testCaseID)
+        #print(self.functionName)
+        #print(self.functionArguments)
+        #print(self.functionKeyWordArguments)
         inCase="none"
         TestCase.setup_method(self = self)
         try:
@@ -249,7 +249,7 @@ class TestCase(Classes):
         except Exception as ex:
             resultsDictionary[self.result_exception_key] = ex
         TestCase.teardown_method(self = self)
-        print(inCase)
+        #print(inCase)
         resultsDictionary[self.result_std_output_key] = TestCase.get_output(self = self)
         TestCase.cleanup(self = self)
         return resultsDictionary
