@@ -3,4 +3,6 @@ import CodeTestingPackage.TestErrorModule
 import CodeTestingPackage.TestCaseModule
 import CodeTestingPackage.TestCaseErrorModule
 
-CodeTestingPackage.test_testCases.py
+import CodeTestingPackage.test_testCases as test
+
+test
