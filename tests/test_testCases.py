@@ -1,9 +1,9 @@
 # test_testCases.py
 from ClassesPackage.ClassesModule import Classes
 
-from ClassesPackage.TestModule import *
-from ClassesPackage.TestCaseModule import TestCase
-from ClassesPackage.TestCaseModule import *
+from CodeTestingPackage.TestModule import *
+from CodeTestingPackage.TestCaseModule import TestCase
+from CodeTestingPackage.TestCaseModule import *
 import os
 
 os.system("cls")

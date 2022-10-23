@@ -2,7 +2,7 @@
 from colorama import Fore
 from colorama import Style
 from ClassesPackage.ClassesModule import Classes
-from ClassesPackage.TestCaseModule import *
+from CodeTestingPackage.TestCaseModule import *
 
 class Test(Classes):
     def __new__(cls, *args, **kwargs):
