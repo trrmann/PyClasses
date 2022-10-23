@@ -22,5 +22,3 @@ setuptools.setup(
     #install_requires = ["Math"],
     install_requires = []
 )
-
-CodeTestingPackage.test_testCases.py
