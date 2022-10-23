@@ -6,7 +6,7 @@ class TestError(ClassesError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, msg: str, classes: Test=Test()):
+    def __init__(self, msg: str, classes: Test=Test("undefined", {})):
         super().__init__(str(msg))
         self.classes = classes
 
