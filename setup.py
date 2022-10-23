@@ -1,4 +1,5 @@
 import setuptools
+import CodeTestingPackage
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -21,3 +22,5 @@ setuptools.setup(
     #install_requires = ["Math"],
     install_requires = []
 )
+
+CodeTestingPackage.test_testCases.py
