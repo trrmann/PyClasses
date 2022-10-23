@@ -6,7 +6,7 @@ class TestCaseError(TestError):
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, msg: str, classes: TestCase=TestCase("undefined","undefined",None)):
+    def __init__(self, msg: str, classes: TestCase=TestCase("undefined", "undefined", None)):
         super().__init__(str(msg))
         self.classes = classes
 

@@ -34,7 +34,7 @@ print(resultsToString(fullResults=Test( "unit/functional/regression test", {
             "print test string exeption for invalid arguments",
             "print",
             #expectedStdOutputValueOf = "Test {'none': None}\n",
-            expectedException = TypeError,
+            expectedExceptionOf = TypeError,
             functionArguments = {
                 "arguments" : ["Test"],
                 "keyWordArguments" : {"none": None}
@@ -73,7 +73,7 @@ print(resultsToString(fullResults=Test( "unit/functional/regression test", {
             "case 7",
             "raise error on float conversion when invalid string passed",
             "float",
-            expectedException=ValueError,
+            expectedExceptionOf=ValueError,
             functionArguments = {
                 "arguments" : ["failMe"],
                 "keyWordArguments" : None
