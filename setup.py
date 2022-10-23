@@ -17,7 +17,7 @@ setuptools.setup(
     },
     license = "GNU GPLv3",
     #packages = ["cse110-27"],
-    packages = ["ClassesPackage", "SciencePackage", "MathPackage"],
+    packages = ["ClassesPackage", "CodeTestingPackage", "SciencePackage", "MathPackage"],
     #install_requires = ["Math"],
     install_requires = []
 )
