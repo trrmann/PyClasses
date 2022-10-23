@@ -15,9 +15,11 @@ class TestCase(Classes):
     result_output_key = "output"
     result_std_output_key = "std_output"
     result_exception_key = "exception"
+    result_failure_details_Key = "failureDetails"
 
     inFileName = "test_input.txt"
     outFileName = "test_output.txt"
+
 
     # add value in
     # add instance of
@@ -36,8 +38,18 @@ class TestCase(Classes):
             assertCase: bool = False,
             assertFailMessage: str = None,
             expectedOutputValueOf = None,
+            expectedOutputValueIn = None,
+            expectedOutputInstanceOf = None,
+            expectedOutputInstanceIn = None,
+            expectedOutputInstanceOfAll = None,
+            expectedOutputTypeOf = None,
+            expectedOutputTypeIn = None,
+            expectedOutputMD5ChecksumOf = None,
+            expectedOutputMD5ChecksumIn = None,
             expectedStdOutputValueOf: str = None,
-            expectedException: Exception = None,
+            expectedStdOutputValueIn: str = None,
+            expectedExceptionOf: Exception = None,
+            expectedExceptionIn: Exception = None,
             className: str="TestCase",
             **functionArguments
         ):
@@ -73,8 +85,18 @@ class TestCase(Classes):
         self.assertCase = bool(assertCase)
         self.assertFailMessage = str(assertFailMessage)
         self.expectedOutputValueOf = expectedOutputValueOf
+        self.expectedOutputValueIn = expectedOutputValueIn
+        self.expectedOutputInstanceOf = expectedOutputInstanceOf
+        self.expectedOutputInstanceIn = expectedOutputInstanceIn
+        self.expectedOutputInstanceOfAll = expectedOutputInstanceOfAll
+        self.expectedOutputTypeOf = expectedOutputTypeOf
+        self.expectedOutputTypeIn = expectedOutputTypeIn
+        self.expectedOutputMD5ChecksumOf = expectedOutputMD5ChecksumOf
+        self.expectedOutputMD5ChecksumIn = expectedOutputMD5ChecksumIn
         self.expectedStdOutputValueOf = expectedStdOutputValueOf
-        self.expectedException = expectedException
+        self.expectedStdOutputValueIn = expectedStdOutputValueIn
+        self.expectedExceptionOf = expectedExceptionOf
+        self.expectedExceptionIn = expectedExceptionIn
 
     def to_string(self, whitespace: bool=False):
         white1 = ""
@@ -95,8 +117,18 @@ class TestCase(Classes):
         if self.stdInInput != None: out = f"{out}{Fore.CYAN}, stdInInput=\"{Fore.YELLOW}{Style.BRIGHT}{self.stdInInput}{Fore.CYAN}\"{Style.RESET_ALL}"
         if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)==type(str(""))): out = f"{out}{Fore.CYAN}{white3}, expectedOutputValueOf=\"{Fore.GREEN}{self.expectedOutputValueOf}{Fore.CYAN}\"{Style.RESET_ALL}"
         if (self.expectedOutputValueOf != None) and (type(self.expectedOutputValueOf)!=type(str(""))): out = f"{out}{Fore.CYAN}{white3}, expectedOutputValueOf={Fore.GREEN}{self.expectedOutputValueOf}{Style.RESET_ALL}"
+        if (self.expectedOutputValueIn != None): out = f"{out}{Fore.CYAN}{white3}, expectedOutputValueIn={Fore.GREEN}{self.expectedOutputValueIn}{Style.RESET_ALL}"
+        if (self.expectedOutputInstanceOf != None): out = f"{out}{Fore.CYAN}{white3}, expectedOutputInstanceOf={Fore.GREEN}{self.expectedOutputInstanceOf}{Style.RESET_ALL}"
+        if (self.expectedOutputInstanceIn != None): out = f"{out}{Fore.CYAN}{white3}, expectedOutputInstanceIn={Fore.GREEN}{self.expectedOutputInstanceIn}{Style.RESET_ALL}"
+        if (self.expectedOutputInstanceOfAll != None): out = f"{out}{Fore.CYAN}{white3}, expectedOutputInstanceOfAll={Fore.GREEN}{self.expectedOutputInstanceOfAll}{Style.RESET_ALL}"
+        if (self.expectedOutputTypeOf != None): out = f"{out}{Fore.CYAN}{white3}, expectedOutputTypeOf={Fore.GREEN}{self.expectedOutputTypeOf}{Style.RESET_ALL}"
+        if (self.expectedOutputTypeIn != None): out = f"{out}{Fore.CYAN}{white3}, expectedOutputTypeIn={Fore.GREEN}{self.expectedOutputTypeIn}{Style.RESET_ALL}"
+        if (self.expectedOutputMD5ChecksumOf != None): out = f"{out}{Fore.CYAN}{white3}, expectedOutputMD5ChecksumOf={Fore.GREEN}{self.expectedOutputMD5ChecksumOf}{Style.RESET_ALL}"
+        if (self.expectedOutputMD5ChecksumIn != None): out = f"{out}{Fore.CYAN}{white3}, expectedOutputMD5ChecksumIn={Fore.GREEN}{self.expectedOutputMD5ChecksumIn}{Style.RESET_ALL}"
         if self.expectedStdOutputValueOf != None: out = f"{out}{Fore.CYAN}{white3}, expectedStdOutputValueOf=\"{Fore.GREEN}{self.expectedStdOutputValueOf}{Fore.CYAN}\"{Style.RESET_ALL}"
-        if self.expectedException != None: out = f"{out}{Fore.CYAN}{white3}, expectedException={Fore.GREEN}{self.expectedException}{Style.RESET_ALL}"
+        if self.expectedStdOutputValueIn != None: out = f"{out}{Fore.CYAN}{white3}, expectedStdOutputValueIn={Fore.GREEN}{self.expectedStdOutputValueIn}{Fore.CYAN}{Style.RESET_ALL}"
+        if self.expectedExceptionOf != None: out = f"{out}{Fore.CYAN}{white3}, expectedExceptionOf={Fore.GREEN}{self.expectedExceptionOf}{Style.RESET_ALL}"
+        if self.expectedExceptionIn != None: out = f"{out}{Fore.CYAN}{white3}, expectedExceptionOf={Fore.GREEN}{self.expectedExceptionIn}{Style.RESET_ALL}"
         out = f"{out}){white1}"
         return out
 
@@ -168,6 +200,23 @@ class TestCase(Classes):
     def eval_results(self, **kwargs):
         resultsDictionary = kwargs["resultsDictionary"]
         result = True
+        """
+            expectedOutputValueIn = None,
+            expectedOutputInstanceOf = None,
+            expectedOutputInstanceIn = None,
+            expectedOutputInstanceOfAll = None,
+            expectedOutputTypeOf = None,
+            expectedOutputTypeIn = None,
+            expectedOutputMD5ChecksumOf = None,
+            expectedOutputMD5ChecksumIn = None,
+
+            expectedStdOutputValueIn: str = None,
+            expectedExceptionOf: Exception = None,
+            expectedExceptionIn: Exception = None,
+
+            result_failure_details_Key
+
+        """
         if self.expectedOutputValueOf != None:
             if self.assertCase and self.assertFailMessage != None:
                 assert TestCase.stringsEqual(resultsDictionary[self.result_output_key], self.expectedOutputValueOf), self.assertFailMessage
@@ -199,14 +248,14 @@ class TestCase(Classes):
                 assert((resultsDictionary[self.result_std_output_key] == None))
             else:
                 result = result and (resultsDictionary[self.result_std_output_key] == None)
-        if self.expectedException != None:
+        if self.expectedExceptionOf != None:
             if self.result_exception_key in resultsDictionary.keys():
                 if self.assertCase and self.assertFailMessage != None:
-                    assert ((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException))), self.assertFailMessage
+                    assert ((type(resultsDictionary[self.result_exception_key]) == self.expectedExceptionOf) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedExceptionOf))), self.assertFailMessage
                 elif self.assertCase:
-                    assert(((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException))))
+                    assert(((type(resultsDictionary[self.result_exception_key]) == self.expectedExceptionOf) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedExceptionOf))))
                 else:
-                    result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expectedException) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedException)))
+                    result = result and ((type(resultsDictionary[self.result_exception_key]) == self.expectedExceptionOf) or (type(resultsDictionary[self.result_exception_key]) == type(self.expectedExceptionOf)))
             else:
                 if self.assertCase:
                     assert self.result_exception_key in resultsDictionary.keys()

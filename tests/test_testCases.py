@@ -63,7 +63,7 @@ print(resultsToString(fullResults=Test( "unit/functional/regression test", {
             "case 6",
             "verify float is float",
             "float",
-            expectedOutputValueOf="1.5",
+            expectedOutputValueOf=1.5,
             functionArguments = {
                 "arguments" : [1.5],
                 "keyWordArguments" : None
